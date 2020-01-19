@@ -72,7 +72,7 @@ export const HomePage: React.FC = () => (
           </Box>
         </div>
         <Box height={space[7] * 3 + 'em'}>
-          <PlaneAnimation numPlanes={6} />
+          <PlaneAnimation numPlanes={8} />
         </Box>
       </ColoredBlade>
     </Box>

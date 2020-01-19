@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "gatsby build",
-    "deploy": "rsync -r -e ssh public/* john@apps.j0.hn:/apps/victoria-and/",
+    "deploy": "rsync -r -e ssh public/* john@apps.j0.hn:/apps/victoria-and/wedding",
     "develop": "gatsby develop",
     "format": "prettier {src/*,src/**/*} --write",
     "start": "yarn develop",

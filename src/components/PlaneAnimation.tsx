@@ -25,12 +25,8 @@ export const Plane: React.FC<{ color: ThemeColor }> = props => (
   </svg>
 )
 
-const PLANE_VARIANCE_X = 250
-const PLANE_VARIANCE_Y = 50
-
-function getPlaneX(t: number, a: number, b: number, c: number) {
-  return a * Math.sin(b * t) * Math.pow(-1, c)
-}
+const PLANE_VARIANCE_X = 120
+const PLANE_VARIANCE_Y = 80
 
 function getPlaneX2(
   t: number,
@@ -40,9 +36,9 @@ function getPlaneX2(
   c: number,
 ) {
   return (
-    a * Math.sin(amplitude * t) +
-    b * Math.sin(amplitude * t) +
-    c * Math.sin(amplitude * t)
+    a * Math.sin(amplitude * (t + c)) +
+    b * Math.cos(amplitude * (t + c)) /*  +
+    c * Math.sin(amplitude * t) */
   )
 }
 
@@ -76,9 +72,9 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
       zeroToNArray.map(_ => ({
         x: getRandomFloat(-1, 1),
         y: getRandomFloat(-1, 1),
-        a: getRandomFloat(-5, 5),
+        a: getRandomFloat(-2, 8),
         b: getRandomFloat(-5, 5),
-        c: getRandomFloat(-5, 5),
+        c: getRandomFloat(0, 20000),
       })),
     [],
   )
@@ -86,16 +82,15 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
   const attrsNArray = zeroToNArray.map(i => {
     const seed = randomSeeds[i]
     // dx/dy is change from center point
-    const dx = Math.round(
+    const dx =
       PLANE_VARIANCE_X * seed.x +
-        getPlaneX2(ts, 1 / 1000, seed.a, seed.b, seed.c),
-    )
-    const dy = Math.round(PLANE_VARIANCE_Y * seed.y)
-    const rotation = Math.round(
-      getPlaneX2(ts, 1 / 1000, seed.a, seed.b, seed.c),
-    )
+      getPlaneX2(ts, 1 / 1000, seed.a, seed.b, seed.c)
+    const dy = PLANE_VARIANCE_Y * seed.y
+    const rotation = getPlaneX2(ts, 1 / 1000, seed.a, seed.b, seed.c)
     return [dx, dy, rotation]
   })
+
+  const colorChoice: Array<keyof typeof colors> = Object.keys(colors) as any
 
   return (
     <Grid>
@@ -117,14 +112,14 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
         })}
         <svg width={offset.width} height={offset.height}>
           <g
-            transform={`matrix(1 0 0 -1 ${Math.round(
-              offset.width / 2,
-            )} ${Math.round(offset.height / 2)})`}
+            transform={`matrix(1 0 0 -1 ${offset.width / 2} ${offset.height /
+              2})`}
           >
             {zeroToNArray.map(i => {
               const [dx, dy, rotation] = attrsNArray[i]
-              const cx = Math.round(dx + -rotation * 1.5)
-              const cy = -Math.round((offset.height / 2 - dy) / 2)
+              const cx = dx + -rotation * 1.5
+              let cy = -(offset.height / 2)
+              cy += dy / 2
 
               return (
                 <path
@@ -132,8 +127,9 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
                     M ${dx} ${dy * -1}
                     C ${cx} ${cy}, ${cx} ${cy}, ${dx} -${offset.height / 2}
                   `.trim()}
-                  stroke="white"
+                  stroke={colors[colorChoice[i % (colorChoice.length - 1)]][5]}
                   fill="transparent"
+                  stroke-widh="5"
                   stroke-dasharray="4"
                 />
               )
