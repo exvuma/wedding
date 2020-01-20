@@ -1,6 +1,7 @@
-export const colors = { //TODO: work on colors
+export const colors = {
+  //TODO: work on colors
   red: [
-    '#fff8fa',// TODO: remove these heinous pinks
+    '#fff8fa', // TODO: remove these heinous pinks
     '#fcc9d8',
     '#f99bb7',
     '#ec4b78',
@@ -39,7 +40,7 @@ export const colors = { //TODO: work on colors
     '#5d5d5d',
     '#171717',
   ],
-  gold: [ 
+  gold: [
     '#faf4e3',
     '#f7e7bd',
     '#f3db98',
@@ -63,6 +64,7 @@ export const breakpoints = {
 }
 
 export const fontFamily = {
+  sansserif: 'sans serif',
   serif: "'Cormorant SC', serif",
   script: "'Calligraffitti', cursive",
 }
