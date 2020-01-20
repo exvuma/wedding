@@ -1,16 +1,16 @@
-export const colors = {
+export const colors = { //TODO: work on colors
   red: [
-    '#fff8fa',
+    '#fff8fa',// TODO: remove these heinous pinks
     '#fcc9d8',
     '#f99bb7',
     '#ec4b78',
     '#d51647',
-    '#b20027',
+    '#b70315', // More important shade of red
     '#800017',
     '#47000a',
   ],
   blue: [
-    '#fcfeff',
+    '#fcfeff', //TODO: remove these even more heinous blues
     '#e1f0fc',
     '#c6e3f9',
     '#95c4ec',
@@ -39,7 +39,7 @@ export const colors = {
     '#5d5d5d',
     '#171717',
   ],
-  gold: [
+  gold: [ 
     '#faf4e3',
     '#f7e7bd',
     '#f3db98',
