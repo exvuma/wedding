@@ -3,6 +3,7 @@ import { Box } from 'reflexbox'
 import { DefaultLayout } from '../layouts/DefaultLayout'
 import { ContainerSmall } from './Container'
 import floralUrl from '../img/Simple_reef.png'
+import backgroundUrl from '../img/green_splatter.png'
 import { fontFamily, fontSizes, space, colors } from '../theme'
 import {
   DetailsList,
@@ -41,7 +42,7 @@ export const HomePage: React.FC = () => (
             color: colors.gray[6],
           }}
         >
-          November 20, 2020
+          Getting Hitched
         </h1>
       </div>
     </ContainerSmall>
@@ -57,53 +58,57 @@ export const HomePage: React.FC = () => (
         </Box>
       </ColoredBlade>
     </Box>
-    <ContainerSmall>
-      <h2
-        style={{
-          fontFamily: fontFamily.script,
-          fontSize: fontSizes[7] + 'em',
-        }}
-      >
-        The Know
-        </h2>
-      <hr
-        style={{
-          border: 'none',
-          height: '1px',
-          background: colors.gray[3],
-        }}
-      />
-      <DetailsList>
-        <DetailsRow>
-          <DetailsRowDt>Do</DetailsRowDt>
-          <DetailsRowDd>Get Passport</DetailsRowDd>
-        </DetailsRow>
-        <DetailsRow>
-          <DetailsRowDt>Do</DetailsRowDt>
-          <DetailsRowDd>Plan to stay 3 all-inclusive nights at the Hyatt Ziva on the discounted room block</DetailsRowDd>
-        </DetailsRow>
-        <DetailsRow>
-          <DetailsRowDt>Do</DetailsRowDt>
-          <DetailsRowDd>Book flights in window 11/18/20 - 11/22/20</DetailsRowDd>
-        </DetailsRow>
-        <DetailsRow>
-          <DetailsRowDt>Do</DetailsRowDt>
-          <DetailsRowDd>Add your plus ones/many</DetailsRowDd>
-        </DetailsRow>
-        <DetailsRow>
-          <DetailsRowDt>Do</DetailsRowDt>
-          <DetailsRowDd>Fill out <a href="https://forms.gle/KmU48BDegew7tm3E8">form</a>.</DetailsRowDd>
-        </DetailsRow>
-        <DetailsRow>
-          <DetailsRowDt>Don't</DetailsRowDt>
-          <DetailsRowDd>Very important! Do NOT book hotel, Airbnb, or lodging</DetailsRowDd>
-        </DetailsRow>
-        <DetailsRow>
-          <DetailsRowDt>Don't</DetailsRowDt>
-          <DetailsRowDd>Send any wedding gifts. Your presence is our most important present</DetailsRowDd>
-        </DetailsRow>
-      </DetailsList>
-    </ContainerSmall>
+    <div style={{
+      backgroundImage: `url(${backgroundUrl})`,
+    }}>
+      <ContainerSmall>
+        <h2
+          style={{
+            fontFamily: fontFamily.script,
+            fontSize: fontSizes[7] + 'em',
+          }}
+        >
+          The Know
+          </h2>
+        <hr
+          style={{
+            border: 'none',
+            height: '1px',
+            background: colors.gray[3],
+          }}
+        />
+        <DetailsList>
+          <DetailsRow>
+            <DetailsRowDt>Do</DetailsRowDt>
+            <DetailsRowDd>Get Passport</DetailsRowDd>
+          </DetailsRow>
+          <DetailsRow>
+            <DetailsRowDt>Do</DetailsRowDt>
+            <DetailsRowDd>Plan to stay 3 all-inclusive nights at the Hyatt Ziva on the discounted room block</DetailsRowDd>
+          </DetailsRow>
+          <DetailsRow>
+            <DetailsRowDt>Do</DetailsRowDt>
+            <DetailsRowDd>Book flights in window 11/18/20 - 11/22/20</DetailsRowDd>
+          </DetailsRow>
+          <DetailsRow>
+            <DetailsRowDt>Do</DetailsRowDt>
+            <DetailsRowDd>Add your plus ones/many</DetailsRowDd>
+          </DetailsRow>
+          <DetailsRow>
+            <DetailsRowDt>Do</DetailsRowDt>
+            <DetailsRowDd>Fill out <a href="https://forms.gle/KmU48BDegew7tm3E8">form</a>.</DetailsRowDd>
+          </DetailsRow>
+          <DetailsRow>
+            <DetailsRowDt>Don't</DetailsRowDt>
+            <DetailsRowDd>Very important! Do NOT book hotel, Airbnb, or lodging</DetailsRowDd>
+          </DetailsRow>
+          <DetailsRow>
+            <DetailsRowDt>Don't</DetailsRowDt>
+            <DetailsRowDd>Send any wedding gifts. Your presence is our most important present</DetailsRowDd>
+          </DetailsRow>
+        </DetailsList>
+      </ContainerSmall>
+    </div>
     <Footer />
 
   </DefaultLayout >

@@ -2,13 +2,14 @@ import { ColoredBlade } from "./ColoredBlade"
 
 import { Box } from "reflexbox"
 
-import { space } from "../theme"
-
+import { space, colors } from "../theme"
+import floralUrl from "../img/white_reef_round.png"
 export const Footer = () => {
-  return (<ColoredBlade base="red" index={7}>
+  return (<ColoredBlade base="green" index={1}>
     <div style={{ zIndex: 2, position: 'relative' }}>
       <Box p={space[7] + 'em'} textAlign="center" >
-        <h2 style={{ color: '#F5DE99' }}>More details Coming Soon</h2>
+        <img src={floralUrl} style={{ width: "20%" }} />
+        <h2 style={{ color: colors.gold[6] }}>More details Coming Soon</h2>
       </Box>
     </div>
   </ColoredBlade>)
