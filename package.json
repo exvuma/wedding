@@ -1,4 +1,5 @@
 {
+  "name": "wedding",
   "scripts": {
     "build": "gatsby build",
     "deploy": "rsync -r -e ssh public/* john@apps.j0.hn:/apps/victoria-and/wedding",
@@ -8,7 +9,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "start-worker": "npm run build && wrangler preview --watch",
-    "publish": "npm run build && wrangler publish",
+    "publish": "npm run build && wrangler publish  -e prod",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "type-check": "tsc --noemit"
   },
