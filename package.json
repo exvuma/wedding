@@ -7,6 +7,8 @@
     "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "start-worker": "npm run build && wrangler preview --watch",
+    "publish": "npm run build && wrangler publish",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "type-check": "tsc --noemit"
   },
@@ -14,6 +16,7 @@
     "node": "10.*"
   },
   "dependencies": {
+    "@cloudflare/wrangler": "^1.6.0",
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
     "emotion-theming": "^10.0.19",
