@@ -47,7 +47,7 @@ export const Translation: React.FC<RigidBody> = props => (
     style={{
       position: 'absolute',
       left: '50%',
-      bottom: '200px',
+      bottom: '100px',
       marginLeft: -props.width / 2 + 'px',
       marginTop: -props.height / 2 + 'px',
       width: props.width + 'px',
@@ -102,11 +102,12 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
 
           return (
             <Translation
+              key={`plane-${i}`}
               width={20}
               height={20}
               x={dx}
               y={dy}
-              rotation={rotation}
+              rotation={rotation + 180}
             >
               <Plane color={colors.blue[0]} />
             </Translation>
@@ -114,20 +115,21 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
         })}
         <svg width={offset.width} height={offset.height}>
           <g
-            transform={`matrix(1 0 0 -1 ${offset.width / 2} ${offset.height -
-              200})`}
+            transform={`matrix(1 0 0 -1 ${offset.width / 2} ${offset.height /
+              2})`}
           >
             {zeroToNArray.map(i => {
               const [dx, dy, rotation] = attrsNArray[i]
-              const cx = dx + -rotation * 1.5
+              const cx = dx + rotation * 1.5
               let cy = -(offset.height / 2)
               cy += dy / 2
 
               return (
                 <path
+                  key={`line-${i}`}
                   d={`
-                    M ${dx} ${dy * -1}
-                    C ${cx} ${cy}, ${cx} ${cy}, ${dx} -${offset.height / 2}
+                    M ${dx} ${dy}
+                    C ${cx} ${cy}, ${cx} ${cy}, ${dx} -100
                   `.trim()}
                   stroke={colors[colorChoice[i % (colorChoice.length - 1)]][4]}
                   fill="transparent"
@@ -149,7 +151,7 @@ const translateUp = keyframes`
   }
 
   to {
-    background-position-y: 10000px;
+    background-position-y: -10000px;
   }
 `
 
@@ -171,7 +173,7 @@ const Gradient = styled.div`
   height: 100%;
   background: linear-gradient(
     to bottom,
-    ${colors.blue[5]} 15%,
+    ${colors.blue[6]} 15%,
     rgba(0, 0, 0, 0) 100%
   );
 
