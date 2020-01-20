@@ -91,7 +91,7 @@ export const HomePage: React.FC = () => (
         </DetailsRow>
         <DetailsRow>
           <DetailsRowDt>Do</DetailsRowDt>
-          <DetailsRowDd>Fill out form</DetailsRowDd>
+          <DetailsRowDd>Fill out <a href="https://forms.gle/KmU48BDegew7tm3E8">form</a>.</DetailsRowDd>
         </DetailsRow>
         <DetailsRow>
           <DetailsRowDt>Don't</DetailsRowDt>
