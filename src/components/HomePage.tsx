@@ -22,7 +22,7 @@ export const HomePage: React.FC = () => (
       <div
         style={{ textAlign: 'center', marginTop: - space[7] + 'em' }}
       >
-        <div style={{ maxWidth: '80%' }}>
+        <div style={{ maxWidth: '60%', margin: '0 auto' }}>
           <img src={floralUrl} />
         </div>
         <h2
