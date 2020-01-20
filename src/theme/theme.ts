@@ -64,7 +64,7 @@ export const breakpoints = {
 
 export const fontFamily = {
   serif: "'Cormorant SC', serif",
-  script: "'Great Vibes', cursive",
+  script: "'Calligraffitti', cursive",
 }
 
 export const baseFontSize = '15px'

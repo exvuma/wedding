@@ -45,7 +45,7 @@ export const DefaultLayout: React.FC = ({ children }) => (
           link={[
             {
               href:
-                'https://fonts.googleapis.com/css?family=Cormorant+SC|Great+Vibes&display=swap',
+                'https://fonts.googleapis.com/css?family=Cormorant+SC|Calligraffitti&display=swap',
               rel: 'stylesheet',
             },
           ]}

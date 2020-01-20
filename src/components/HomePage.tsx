@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from 'reflexbox'
 import { DefaultLayout } from '../layouts/DefaultLayout'
 import { ContainerSmall } from './Container'
-import floralUrl from '../img/A1.png'
+import floralUrl from '../img/Simple_reef.png'
 import { fontFamily, fontSizes, space, colors } from '../theme'
 import {
   DetailsList,
@@ -15,10 +15,11 @@ import { PlaneAnimation } from './PlaneAnimation'
 
 export const HomePage: React.FC = () => (
   <DefaultLayout>
+    {/* Todo make this responsive */}
+    <div style={{ maxWidth: '30%' }}>
+      <img src={floralUrl} />
+    </div>
     <ContainerSmall>
-      <div style={{ marginTop: '-2em' }}>
-        <img src={floralUrl} />
-      </div>
       <div
         style={{ textAlign: 'center', marginTop: -space[5] - space[8] + 'em' }}
       >
@@ -28,7 +29,7 @@ export const HomePage: React.FC = () => (
             fontSize: fontSizes[7] + 'em',
           }}
         >
-          J &amp; V
+          J + V
         </h2>
       </div>
       <div style={{ textAlign: 'center', marginTop: space[3] + 'em' }}>
@@ -39,29 +40,8 @@ export const HomePage: React.FC = () => (
             color: colors.gray[6],
           }}
         >
-          Announcing
+          November 20, 2020
         </h1>
-        <hr
-          style={{
-            border: 'none',
-            height: '1px',
-            background: colors.gray[3],
-          }}
-        />
-        <DetailsList>
-          <DetailsRow>
-            <DetailsRowDt>What</DetailsRowDt>
-            <DetailsRowDd>John and Victoria's wedding</DetailsRowDd>
-          </DetailsRow>
-          <DetailsRow>
-            <DetailsRowDt>When</DetailsRowDt>
-            <DetailsRowDd>November 20th, 2020</DetailsRowDd>
-          </DetailsRow>
-          <DetailsRow>
-            <DetailsRowDt>Where</DetailsRowDt>
-            <DetailsRowDd>Cancún, Mexico</DetailsRowDd>
-          </DetailsRow>
-        </DetailsList>
       </div>
     </ContainerSmall>
     <Box mt={space[7] + space[7] + 'em'} mb={space[4] + 'em'}>
@@ -76,5 +56,60 @@ export const HomePage: React.FC = () => (
         </Box>
       </ColoredBlade>
     </Box>
+    <ContainerSmall>
+      <h2
+        style={{
+          fontFamily: fontFamily.script,
+          fontSize: fontSizes[7] + 'em',
+        }}
+      >
+        The Know
+        </h2>
+      <hr
+        style={{
+          border: 'none',
+          height: '1px',
+          background: colors.gray[3],
+        }}
+      />
+      <DetailsList>
+        <DetailsRow>
+          <DetailsRowDt>Do</DetailsRowDt>
+          <DetailsRowDd>Get Passport</DetailsRowDd>
+        </DetailsRow>
+        <DetailsRow>
+          <DetailsRowDt>Do</DetailsRowDt>
+          <DetailsRowDd>Plan to stay 3 all-inclusive nights at the Hyatt Ziva on the discounted room block</DetailsRowDd>
+        </DetailsRow>
+        <DetailsRow>
+          <DetailsRowDt>Do</DetailsRowDt>
+          <DetailsRowDd>Book flights in window 11/18/20 - 11/22/20</DetailsRowDd>
+        </DetailsRow>
+        <DetailsRow>
+          <DetailsRowDt>Do</DetailsRowDt>
+          <DetailsRowDd>Add your plus ones/many</DetailsRowDd>
+        </DetailsRow>
+        <DetailsRow>
+          <DetailsRowDt>Do</DetailsRowDt>
+          <DetailsRowDd>Fill out form</DetailsRowDd>
+        </DetailsRow>
+        <DetailsRow>
+          <DetailsRowDt>Don't</DetailsRowDt>
+          <DetailsRowDd>Very important! Do NOT book hotel, Airbnb, or lodging</DetailsRowDd>
+        </DetailsRow>
+        <DetailsRow>
+          <DetailsRowDt>Don't</DetailsRowDt>
+          <DetailsRowDd>Send any wedding gifts. Your presence is our most important present</DetailsRowDd>
+        </DetailsRow>
+      </DetailsList>
+    </ContainerSmall>
+    <ColoredBlade base="red" index={5}>
+      <div style={{ zIndex: 2, position: 'relative' }}>
+        <Box p={space[7] + 'em'} textAlign="center">
+          <h2>More details Coming Soon</h2>
+        </Box>
+      </div>
+    </ColoredBlade>
+
   </DefaultLayout>
 )
