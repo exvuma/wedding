@@ -15,7 +15,7 @@ export const DetailsRow = styled.div`
 `
 
 export const DetailsRowDt = styled.dt`
-  color: ${colors.gray[7]};
+  font-weight: 700;
   width: ${space[8]}em;
   text-align: left;
 `

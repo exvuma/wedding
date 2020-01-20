@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSize, useMeasure } from 'react-use'
+import { useMeasure } from 'react-use'
 import { keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
 import { ThemeColor, colors } from '../theme'
@@ -47,7 +47,7 @@ export const Translation: React.FC<RigidBody> = props => (
     style={{
       position: 'absolute',
       left: '50%',
-      top: '50%',
+      bottom: '200px',
       marginLeft: -props.width / 2 + 'px',
       marginTop: -props.height / 2 + 'px',
       width: props.width + 'px',
@@ -90,7 +90,9 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
     return [dx, dy, rotation]
   })
 
-  const colorChoice: Array<keyof typeof colors> = Object.keys(colors) as any
+  const colorChoice: Array<keyof typeof colors> = Object.keys(colors).filter(
+    k => k !== 'blue',
+  ) as any
 
   return (
     <Grid>
@@ -112,8 +114,8 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
         })}
         <svg width={offset.width} height={offset.height}>
           <g
-            transform={`matrix(1 0 0 -1 ${offset.width / 2} ${offset.height /
-              2})`}
+            transform={`matrix(1 0 0 -1 ${offset.width / 2} ${offset.height -
+              200})`}
           >
             {zeroToNArray.map(i => {
               const [dx, dy, rotation] = attrsNArray[i]
@@ -127,9 +129,9 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
                     M ${dx} ${dy * -1}
                     C ${cx} ${cy}, ${cx} ${cy}, ${dx} -${offset.height / 2}
                   `.trim()}
-                  stroke={colors[colorChoice[i % (colorChoice.length - 1)]][5]}
+                  stroke={colors[colorChoice[i % (colorChoice.length - 1)]][4]}
                   fill="transparent"
-                  stroke-widh="5"
+                  stroke-width="2"
                   stroke-dasharray="4"
                 />
               )
@@ -169,7 +171,7 @@ const Gradient = styled.div`
   height: 100%;
   background: linear-gradient(
     to bottom,
-    ${colors.blue[7]} 15%,
+    ${colors.blue[5]} 15%,
     rgba(0, 0, 0, 0) 100%
   );
 
