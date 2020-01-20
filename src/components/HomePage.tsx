@@ -12,6 +12,7 @@ import {
 } from './DetailsList'
 import { ColoredBlade } from './ColoredBlade'
 import { PlaneAnimation } from './PlaneAnimation'
+import { Footer } from './Footer'
 
 export const HomePage: React.FC = () => (
   <DefaultLayout>
@@ -103,13 +104,7 @@ export const HomePage: React.FC = () => (
         </DetailsRow>
       </DetailsList>
     </ContainerSmall>
-    <ColoredBlade base="red" index={5}>
-      <div style={{ zIndex: 2, position: 'relative' }}>
-        <Box p={space[7] + 'em'} textAlign="center">
-          <h2>More details Coming Soon</h2>
-        </Box>
-      </div>
-    </ColoredBlade>
+    <Footer />
 
-  </DefaultLayout>
+  </DefaultLayout >
 )
