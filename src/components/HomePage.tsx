@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from 'reflexbox'
 import { DefaultLayout } from '../layouts/DefaultLayout'
 import { ContainerSmall } from './Container'
-import floralUrl from '../img/Simple_reef.png'
+import floralUrl from '../img/reef_made.png'
 import backgroundUrl from '../img/green_splatter.png'
 import { fontFamily, fontSizes, space, colors } from '../theme'
 import {
@@ -18,13 +18,13 @@ import { Footer } from './Footer'
 export const HomePage: React.FC = () => (
   <DefaultLayout>
     {/* Todo make this responsive */}
-    <div style={{ maxWidth: '30%' }}>
-      <img src={floralUrl} />
-    </div>
     <ContainerSmall>
       <div
-        style={{ textAlign: 'center', marginTop: -space[5] - space[8] + 'em' }}
+        style={{ textAlign: 'center', marginTop: - space[7] + 'em' }}
       >
+        <div style={{ maxWidth: '80%' }}>
+          <img src={floralUrl} />
+        </div>
         <h2
           style={{
             fontFamily: fontFamily.script,
