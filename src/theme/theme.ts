@@ -64,7 +64,7 @@ export const breakpoints = {
 }
 
 export const fontFamily = {
-  sansserif: 'sans serif',
+  sansserif: 'sans-serif',
   serif: "'Cormorant SC', serif",
   script: "'Calligraffitti', cursive",
 }
