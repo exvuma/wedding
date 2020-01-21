@@ -64,11 +64,19 @@ export const DefaultLayout: React.FC = ({ children }) => (
 
             p,
             li {
-              line-height: 1.6;
+              line-height: 2;
             }
 
             img {
               max-width: 100%;
+            }
+
+            a {
+              text-decoration: none;
+              color: ${colors.blue[5]};
+              &:hover {
+                text-decoration: underline;
+              }
             }
           `}
         />
