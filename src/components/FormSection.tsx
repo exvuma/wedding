@@ -7,7 +7,11 @@ export const FormSection: React.FC = () => {
   return (
     <FormSectionWrapper>
       <div data-mobile>
-        <Box textAlign="center" fontSize={fontSizes[3] + 'em'}>
+        <Box
+          textAlign="center"
+          fontSize={fontSizes[3] + 'em'}
+          paddingBottom={space[5] + 'em'}
+        >
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScNTtPxdosf-pkdo7VparHbKWMCrom15jqQuSVYPTeozbTP2g/viewform?usp=sf_link">
             Let us know if you can make it
           </a>
@@ -33,16 +37,16 @@ export const FormSection: React.FC = () => {
 }
 
 const FormSectionWrapper = styled.div`
-  [data-desktop] {
+  & [data-desktop] {
     display: none;
   }
 
   @media screen and (min-width: ${breakpoints.mobile}em) {
-    [data-desktop] {
+    & [data-desktop] {
       display: block;
     }
 
-    [data-mobile] {
+    & [data-mobile] {
       display: none;
     }
   }

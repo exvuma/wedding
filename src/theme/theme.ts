@@ -60,7 +60,7 @@ export type ThemeColor =
   | typeof colors.gold[number]
 
 export const breakpoints = {
-  mobile: 20,
+  mobile: 40,
 }
 
 export const fontFamily = {
