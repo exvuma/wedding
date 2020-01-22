@@ -34,7 +34,9 @@ export const HomePage: React.FC = () => (
         </p>
         <ul>
           <li>You need a passport</li>
-          <li>Plan to stay at least 3 nights in the window Novemeber 18th - 22nd</li>
+          <li>
+            Plan to stay at least 3 nights in the window November 18th - 22nd
+          </li>
           <li>
             <strong>Do not</strong> book a hotel, Airbnb, or any other lodging
             just yet
