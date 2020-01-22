@@ -6,6 +6,7 @@ import { fontFamily, space } from '../theme'
 import { ColoredBlade } from './ColoredBlade'
 import { FormSection } from './FormSection'
 import { Hero } from './Hero'
+import { Footer } from './Footer'
 
 export const HomePage: React.FC = () => (
   <DefaultLayout>
@@ -33,15 +34,15 @@ export const HomePage: React.FC = () => (
         </p>
         <ul>
           <li>You need a passport</li>
-          <li>Plan to arrive Novemeber 18th</li>
+          <li>Plan to stay at least 3 nights in the window Novemeber 18th - 22nd</li>
           <li>
             <strong>Do not</strong> book a hotel, Airbnb, or any other lodging
             just yet
             <ul>
               <li>We will send you information regarding the room block</li>
             </ul>
+            <li>You may buy flights now</li>
           </li>
-          <li>Don't send us any gifts!</li>
         </ul>
       </div>
       {/* <DetailsList>
@@ -102,5 +103,6 @@ export const HomePage: React.FC = () => (
     <ContainerSmall>
       <FormSection />
     </ContainerSmall>
+    <Footer />
   </DefaultLayout>
 )
