@@ -33,7 +33,12 @@ async function handleEvent(event) {
    * by configuring the function `mapRequestToAsset`
    */
   // options.mapRequestToAsset = handlePrefix(/^\/docs/)
+  if (url.protocol !== 'https:') {
+    let newURL = url
+    newURL.protocol = 'https:'
 
+    return Response.redirect(newURL)
+  }
   try {
     if (DEBUG) {
       // customize caching

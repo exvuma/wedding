@@ -2,14 +2,14 @@
   "name": "wedding",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "rsync -r -e ssh public/* john@apps.j0.hn:/apps/victoria-and/wedding",
+    "upload": "rsync -r -e ssh public/* john@apps.j0.hn:/apps/victoria-and/wedding",
     "develop": "gatsby develop",
     "format": "prettier {src/*,src/**/*} --write",
     "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "start-worker": "npm run build && wrangler preview --watch",
-    "publish": "npm run build && wrangler publish  -e prod",
+    "deploy": "npm run build && wrangler publish  -e prod",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "type-check": "tsc --noemit"
   },
