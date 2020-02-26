@@ -1,7 +1,7 @@
 {
   "name": "wedding",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build",
     "upload": "rsync -r -e ssh public/* john@apps.j0.hn:/apps/victoria-and/wedding",
     "develop": "gatsby develop",
     "format": "prettier {src/*,src/**/*} --write",
