@@ -1,12 +1,16 @@
 import React from 'react'
 import { Box } from 'reflexbox'
 import { DefaultLayout } from '../layouts/DefaultLayout'
-import { ContainerSmall } from './Container'
-import { fontFamily, space } from '../theme'
+import { ContainerSmall, Container } from './Container'
+import { fontFamily, space, colors } from '../theme'
 import { ColoredBlade } from './ColoredBlade'
 import { FormSection } from './FormSection'
 import { Hero } from './Hero'
 import { Footer } from './Footer'
+import { PartyProfileSection } from './PartyProfileSection'
+import { objectKeys } from '../utils/Object'
+import { profiles } from '../profiles'
+import { PartyProfileCards } from './PartyProfileCards'
 
 export const HomePage: React.FC = () => (
   <DefaultLayout>
@@ -105,6 +109,33 @@ export const HomePage: React.FC = () => (
     <ContainerSmall>
       <FormSection />
     </ContainerSmall>
-    <Footer />
+    <Box marginY={space[3] + 'em'}>
+      <ColoredBlade base="red" index={0}>
+        <Box
+          paddingY={space[3] + 'em'}
+          textAlign="center"
+          fontFamily={fontFamily.sansserif}
+        >
+          <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
+        </Box>
+      </ColoredBlade>
+      <Box marginTop={space[5] + 'em'}>
+        <Container>
+          <PartyProfileCards />
+        </Container>
+      </Box>
+    </Box>
+    {((n = 0) =>
+      ([0, 1, 2, 3, 4, 5, 6, 7] as const).map(i =>
+        objectKeys(colors).map(color => (
+          <PartyProfileSection
+            color={color}
+            index={i}
+            direction={n++ % 2 === 0 ? 'right' : 'left'}
+            profile={profiles[0]}
+          />
+        )),
+      ))()}
+    {/* <Footer /> */}
   </DefaultLayout>
 )

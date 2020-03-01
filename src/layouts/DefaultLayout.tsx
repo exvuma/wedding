@@ -4,7 +4,12 @@ import { StaticQuery, graphql } from 'gatsby'
 import 'modern-normalize'
 import { Global, css } from '@emotion/core'
 import styled from '@emotion/styled'
-import { colors, fontFamily } from '../theme/theme'
+import {
+  colors,
+  fontFamily,
+  breakpoints,
+  mobileBaseFontSize,
+} from '../theme/theme'
 import { baseFontSize } from '../theme/theme'
 
 const PageWrapper = styled.div``
@@ -60,6 +65,12 @@ export const DefaultLayout: React.FC = ({ children }) => (
               font-family: ${fontFamily.serif};
               font-size: ${baseFontSize};
               color: ${colors.gray[6]};
+            }
+
+            @media screen and (max-width: ${breakpoints.mobile}em) {
+              body {
+                font-size: ${mobileBaseFontSize};
+              }
             }
 
             p,

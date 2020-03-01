@@ -21,8 +21,8 @@ export const colors = {
     '#1b2647',
   ],
   green: [
-    '#b2c4b8',
-    '#a2c2ac',
+    '#e6f3eb',
+    '#c5decd',
     '#93bfa1',
     '#74b389',
     '#5a9e72',
@@ -69,7 +69,8 @@ export const fontFamily = {
   script: "'Calligraffitti', cursive",
 }
 
-export const baseFontSize = '15px'
+export const baseFontSize = '20px'
+export const mobileBaseFontSize = '15px'
 
 export const fontSizes = [0, 0.5, 1, 1.5, 2, 2.25, 2.8, 3.2, 5] as const
 
