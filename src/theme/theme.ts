@@ -64,8 +64,10 @@ export const breakpoints = {
 }
 
 export const fontFamily = {
-  sansserif: 'sans-serif',
-  serif: "'Cormorant SC', serif",
+  sansserif:
+    '-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif',
+  // serif: "'Cormorant SC', serif",
+  serif: "'Playfair Display'",
   script: "'Calligraffitti', cursive",
 }
 

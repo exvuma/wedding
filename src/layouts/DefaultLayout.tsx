@@ -58,19 +58,28 @@ export const DefaultLayout: React.FC = ({ children }) => (
         <Global
           styles={css`
             html {
-              background: ${colors.red[0]};
+              /* background: ${colors.red[0]}; */
+              background: white;
             }
 
             body {
               font-family: ${fontFamily.serif};
               font-size: ${baseFontSize};
-              color: ${colors.gray[6]};
+              color: ${colors.gray[7]};
             }
 
             @media screen and (max-width: ${breakpoints.mobile}em) {
               body {
                 font-size: ${mobileBaseFontSize};
               }
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+              font-weight: 400;
             }
 
             p,

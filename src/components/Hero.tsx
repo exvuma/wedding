@@ -12,11 +12,14 @@ export const Hero: React.FC = () => {
         </div>
         <h2
           style={{
-            fontFamily: fontFamily.script,
-            fontSize: fontSizes[7] + 'em',
+            fontFamily: fontFamily.serif,
+            fontSize: fontSizes[3] + 'em',
+            marginTop: space[3] + 'em',
+            marginBottom: -space[1] + 'em',
+            color: colors.gray[6],
           }}
         >
-          J &amp; V
+          John Fawcett &amp; Victoria Bernard
         </h2>
       </div>
       <div style={{ textAlign: 'center', marginTop: space[3] + 'em' }}>
@@ -24,13 +27,21 @@ export const Hero: React.FC = () => {
           style={{
             fontFamily: fontFamily.serif,
             fontSize: fontSizes[6] + 'em',
-            color: colors.gray[6],
+            color: colors.gray[7],
           }}
         >
           Getting Married
         </h1>
-        <h2>November 20th, 2020 - Cancún, Mexico</h2>
+        <SubHeading>November 20th, 2020 - Cancún, Mexico</SubHeading>
       </div>
     </div>
   )
 }
+
+const SubHeading = styled.h2`
+  font-family: ${fontFamily.sansserif};
+  font-size: 0.8em;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  margin-top: -${space[2]}em;
+`

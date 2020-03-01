@@ -20,7 +20,7 @@ type PartyProfileSectionProps = {
 
 export const PartyProfileSection: React.FC<PartyProfileSectionProps> = props => {
   return (
-    <Box marginY={space[3] + 'em'} fontFamily={fontFamily.sansserif}>
+    <Box marginY={space[3] + 'em'}>
       <ColoredBlade
         base={props.color}
         index={props.index}
@@ -34,7 +34,7 @@ export const PartyProfileSection: React.FC<PartyProfileSectionProps> = props => 
           }}
         >
           <Container>
-            <Box paddingY={space[4] + 'em'} textAlign={props.direction}>
+            <Box paddingTop={space[4] + 'em'} textAlign={props.direction}>
               <Flex
                 flexWrap="wrap"
                 ml={[0, -3]}
@@ -45,7 +45,17 @@ export const PartyProfileSection: React.FC<PartyProfileSectionProps> = props => 
               >
                 <Box display="flex" p={3} width={[1, 1 / 3]}></Box>
                 <Box display="flex" p={3} width={[1, 2 / 3]}>
-                  <h2>{props.profile.name}</h2>
+                  <h2
+                    style={{
+                      fontFamily: fontFamily.sansserif,
+                      textTransform: 'uppercase',
+                      letterSpacing: '10px',
+                      fontSize: '1.8em',
+                      fontWeight: 600,
+                    }}
+                  >
+                    {props.profile.name}
+                  </h2>
                 </Box>
               </Flex>
             </Box>
@@ -68,7 +78,7 @@ export const PartyProfileSection: React.FC<PartyProfileSectionProps> = props => 
               </div>
             </Box>
             <Box display="flex" p={3} width={[1, 2 / 3]}>
-              <p>{props.profile.bio}</p>
+              {props.profile.bio}
             </Box>
           </Flex>
         </Container>
