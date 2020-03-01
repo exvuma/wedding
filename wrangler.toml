@@ -11,7 +11,6 @@ entry-point = "workers-site"
 zone_id = "d65a2dc69a0f67ea7514971fb2e877d7"
 route = "turnonthefawcetts.com/*"
 
-
 [env.staging]
 zone_id = "d65a2dc69a0f67ea7514971fb2e877d7"
-route = "turnonthefawcetts.com/staging*"
+route = "staging.turnonthefawcetts.com*"
