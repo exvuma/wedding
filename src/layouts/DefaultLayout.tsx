@@ -88,6 +88,7 @@ export const DefaultLayout: React.FC = ({ children }) => (
             }
 
             img {
+              display: inline-block;
               max-width: 100%;
             }
 

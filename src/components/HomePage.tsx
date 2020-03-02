@@ -14,13 +14,14 @@ import { PartyProfileCards } from './PartyProfileCards'
 import { PartyProfileCards2 } from './PartyProfileCard2'
 import { Flipper } from 'react-flip-toolkit'
 import { PartyProfileDetail } from './PartyProfileDetail'
+import hyattPhotoUrl from '../img/Hyatt-Ziva-Exterior-Cancun-1500.jpg'
 
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
-  const flipKey = selectedProfile ? `flip-${selectedProfile.name}` : null
+  const flipKey = selectedProfile ? selectedProfile.name : null
 
   return (
-    <Flipper flipKey={flipKey}>
+    <Flipper flipKey={flipKey} decisionData={flipKey}>
       <DefaultLayout>
         {selectedProfile && flipKey && (
           <PartyProfileDetail
@@ -34,16 +35,30 @@ export const HomePage: React.FC = () => {
         <ContainerSmall>
           <Hero />
         </ContainerSmall>
-        <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
-          <ColoredBlade base="red" index={6}>
-            <div style={{ zIndex: 2, position: 'relative' }}>
-              <Box p={space[4] + 'em'} textAlign="center">
-                <h2 style={{ fontSize: '3em' }}>What to expect</h2>
-              </Box>
+        <Box marginTop={space[4] + 'em'}>
+          <ColoredBlade base="gray" index={7}>
+            <div
+              style={{
+                background: `url(${hyattPhotoUrl})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '36vw',
+                padding: '2em 0',
+                display: 'flex',
+                alignItems: 'flex-end',
+                justifyContent: 'space-around',
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: '3em',
+                  textShadow: '0 2px 3px rgba(0, 0, 0, 0.6)',
+                  margin: 0,
+                }}
+              >
+                What to expect
+              </h2>
             </div>
-            {/* <Box height={space[7] * 2 + 'em'}>
-              <PlaneAnimation numPlanes={8} />
-            </Box> */}
           </ColoredBlade>
         </Box>
         <ContainerSmall>
@@ -63,8 +78,8 @@ export const HomePage: React.FC = () => {
                 lodging just yet
                 <ul>
                   <li>We will send you information regarding the room block</li>
+                  <li>You may buy flights now</li>
                 </ul>
-                <li>You may buy flights now</li>
               </li>
             </ul>
           </div>
@@ -136,22 +151,23 @@ export const HomePage: React.FC = () => {
               <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
             </Box>
           </ColoredBlade>
-          <Box marginTop={space[5] + 'em'}>
+          {/* <Box marginTop={space[5] + 'em'}>
             <Container>
               <PartyProfileCards
                 onSelect={profile => setSelectedProfile(profile)}
               />
             </Container>
-          </Box>
+          </Box> */}
           <Box marginTop={space[5] + 'em'}>
             <Container>
               <PartyProfileCards2
                 onSelect={profile => setSelectedProfile(profile)}
+                selectedProfile={selectedProfile?.name}
               />
             </Container>
           </Box>
         </Box>
-        {((n = 0) =>
+        {/* ((n = 0) =>
           ([0, 1, 2, 3, 4, 5, 6, 7] as const).map(i =>
             objectKeys(colors).map(color => (
               <PartyProfileSection
@@ -161,7 +177,7 @@ export const HomePage: React.FC = () => {
                 profile={profiles[0]}
               />
             )),
-          ))()}
+          ))() */}
         {/* <Footer /> */}
       </DefaultLayout>
     </Flipper>

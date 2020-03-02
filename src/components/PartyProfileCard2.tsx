@@ -4,14 +4,22 @@ import styled from '@emotion/styled'
 import { Box, Flex } from 'reflexbox'
 import { Grid, GridItem } from './Grid'
 import { profiles } from '../profiles'
+import { Flipped } from 'react-flip-toolkit'
 
-export type SelectableProfile = { onSelect: (profile: Profile) => void }
+export type SelectableProfile = {
+  onSelect: (profile: Profile) => void
+  selectedProfile?: string
+}
 
 export const PartyProfileCards2: React.FC<SelectableProfile> = props => (
   <Grid columns={4} margin="0 0 12vh">
     {profiles.map((profile, i) => (
       <GridItem key={profile.name + i}>
-        <PartyProfileCard2 profile={profile} onSelect={props.onSelect} />
+        <PartyProfileCard2
+          profile={profile}
+          onSelect={props.onSelect}
+          selectedProfile={props.selectedProfile}
+        />
       </GridItem>
     ))}
   </Grid>
@@ -28,13 +36,19 @@ type PartyProfileCard2Props = SelectableProfile & {
 }
 
 export const PartyProfileCard2: React.FC<PartyProfileCard2Props> = props => {
+  if (props.selectedProfile === props.profile.name) return null
+
   return (
     <CardWrapper onClick={() => props.onSelect(props.profile)}>
-      <CardBackground>
-        <CardPhotoFrame>
-          <img src={props.profile.photoUrl} />
-        </CardPhotoFrame>
-      </CardBackground>
+      <Flipped flipId={`${props.profile.name}-profileBackground`}>
+        <CardBackground>
+          <CardPhotoFrame>
+            <Flipped flipId={`${props.profile.name}-profileImg`}>
+              <img src={props.profile.photoUrl} />
+            </Flipped>
+          </CardPhotoFrame>
+        </CardBackground>
+      </Flipped>
       <Box marginTop={space[1] + 'em'}>
         <CardName>{props.profile.name}</CardName>
         <CardTitle>Groomsman</CardTitle>

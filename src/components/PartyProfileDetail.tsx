@@ -14,10 +14,10 @@ export const PartyProfileDetail: React.FC<{
   return (
     <Details ref={el}>
       <div className="details__bg details__bg--up" />
-      <Flipped flipId={`${props.parentId}-profiletBackground`}>
+      <Flipped flipId={`${props.profile.name}-profileBackground`}>
         <div className="details__bg details__bg--down" />
       </Flipped>
-      <Flipped flipId={`${props.parentId}-guitarImg`} spring="wobbly">
+      <Flipped flipId={`${props.profile.name}-profileImg`}>
         <img className="details__img" src={props.profile.photoUrl} />
       </Flipped>
       <h2 className="details__title" data-fade-in>
