@@ -20,6 +20,7 @@
     "@cloudflare/wrangler": "^1.6.0",
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
+    "@types/react-sticky": "^6.0.3",
     "emotion-theming": "^10.0.19",
     "gatsby": "^2.18.3",
     "gatsby-image": "^2.2.33",
@@ -36,7 +37,9 @@
     "react-flip-toolkit": "^7.0.8",
     "react-helmet": "^5.2.1",
     "react-spring": "^8.0.27",
+    "react-sticky": "^6.0.3",
     "react-use": "^13.20.0",
+    "react-waypoint": "^9.0.2",
     "reflexbox": "^4.0.6"
   },
   "devDependencies": {

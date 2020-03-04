@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Box } from 'reflexbox'
 import { DefaultLayout } from '../layouts/DefaultLayout'
 import { ContainerSmall, Container } from './Container'
@@ -18,8 +18,13 @@ import hyattPhotoUrl from '../img/Hyatt-Ziva-Exterior-Cancun-1500.jpg'
 
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
-  const flipKey = selectedProfile ? selectedProfile.name : null
 
+  const flipKey = selectedProfile ? `flip-${selectedProfile.name}` : null
+  // const BlockWithRef = React.forwardRef(({ props, ref, children }) => {
+  //   return children && children.length
+  //     ? children.map((child: any) => <child innerRef={ref} {...props} />)
+  //     : ''
+  // })
   return (
     <Flipper flipKey={flipKey} decisionData={flipKey}>
       <DefaultLayout>
@@ -124,8 +129,8 @@ export const HomePage: React.FC = () => {
               </DetailsRowDd>
             </DetailsRow>
           </DetailsList> */}
-        </ContainerSmall>
-        {/* <Box mt={space[7] + 'em'} mb={space[7] + 'em'}>
+
+          {/* <Box mt={space[7] + 'em'} mb={space[7] + 'em'}>
           <ColoredBlade
             base="red"
             index={6}
@@ -138,17 +143,38 @@ export const HomePage: React.FC = () => {
             </div>
           </ColoredBlade>
         </Box> */}
-        <ContainerSmall>
-          <FormSection />
-        </ContainerSmall>
-        <Box marginY={space[3] + 'em'}>
-          <ColoredBlade base="red" index={0}>
-            <Box
-              paddingY={space[3] + 'em'}
-              textAlign="center"
-              fontFamily={fontFamily.sansserif}
-            >
-              <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
+          {/* <Waypoint
+            onEnter={({}) => {
+              setnavState('Form')
+            }}
+          >
+            <ContainerSmall id="form">
+              <FormSection />
+            </ContainerSmall>
+          </Waypoint> */}
+          <Box marginY={space[3] + 'em'}>
+            <ColoredBlade base="red" index={0}>
+              <Box
+                paddingY={space[3] + 'em'}
+                textAlign="center"
+                fontFamily={fontFamily.sansserif}
+              >
+                <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
+              </Box>
+            </ColoredBlade>
+            <Box marginTop={space[5] + 'em'}>
+              <Container>
+                <PartyProfileCards
+                  onSelect={profile => setSelectedProfile(profile)}
+                />
+              </Container>
+            </Box>
+            <Box marginTop={space[5] + 'em'}>
+              <Container>
+                <PartyProfileCards2
+                  onSelect={profile => setSelectedProfile(profile)}
+                />
+              </Container>
             </Box>
           </ColoredBlade>
           {/* <Box marginTop={space[5] + 'em'}>
