@@ -6,6 +6,7 @@ import { fontFamily, space, colors } from '../theme'
 import { ColoredBlade } from './ColoredBlade'
 import { FormSection } from './FormSection'
 import { Hero } from './Hero'
+import { Waypoint } from 'react-waypoint'
 import { Footer } from './Footer'
 import { PartyProfileSection, Profile } from './PartyProfileSection'
 import { objectKeys } from '../utils/Object'
@@ -15,75 +16,92 @@ import { PartyProfileCards2 } from './PartyProfileCard2'
 import { Flipper } from 'react-flip-toolkit'
 import { PartyProfileDetail } from './PartyProfileDetail'
 import hyattPhotoUrl from '../img/Hyatt-Ziva-Exterior-Cancun-1500.jpg'
+import { StickyContainer, Sticky } from 'react-sticky'
+import { Navbar } from './Navbar'
 
+type tabId = 'home' | 'book' | 'faqs' | 'party'
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
-  const flipKey = selectedProfile ? selectedProfile.name : null
+  const [activeTab, setActiveTab] = useState<tabId>('home')
 
+  const flipKey = selectedProfile ? `flip-${selectedProfile.name}` : null
   return (
-    <Flipper flipKey={flipKey} decisionData={flipKey}>
-      <DefaultLayout>
-        {selectedProfile && flipKey && (
-          <PartyProfileDetail
-            profile={selectedProfile}
-            parentId={flipKey}
-            onClose={() => setSelectedProfile(null)}
-          />
+    <StickyContainer>
+      <Sticky>
+        {({ style }) => (
+          <header style={style}>
+            <Navbar activeTab={activeTab} />
+          </header>
         )}
-
-        {/* Todo make this responsive */}
-        <ContainerSmall>
-          <Hero />
-        </ContainerSmall>
-        <Box marginTop={space[4] + 'em'}>
-          <ColoredBlade base="gray" index={7}>
-            <div
-              style={{
-                background: `url(${hyattPhotoUrl})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                height: '36vw',
-                padding: '2em 0',
-                display: 'flex',
-                alignItems: 'flex-end',
-                justifyContent: 'space-around',
-              }}
-            >
-              <h2
-                style={{
-                  fontSize: '3em',
-                  textShadow: '0 2px 3px rgba(0, 0, 0, 0.6)',
-                  margin: 0,
-                }}
-              >
-                What to expect
-              </h2>
+      </Sticky>
+      <Flipper flipKey={flipKey} decisionData={flipKey}>
+        <DefaultLayout>
+          {selectedProfile && flipKey && (
+            <PartyProfileDetail
+              profile={selectedProfile}
+              parentId={flipKey}
+              onClose={() => setSelectedProfile(null)}
+            />
+          )}
+          {/* Todo make this responsive */}
+          <Waypoint
+            debug={true}
+            onEnter={({}) => {
+              console.log('setnavState')
+              setActiveTab('home')
+            }}
+          >
+            <div>
+              <ContainerSmall>
+                <Hero />
+              </ContainerSmall>
+              <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
+                <ColoredBlade base="red" index={6}>
+                  <div style={{ zIndex: 2, position: 'relative' }}>
+                    <Box p={space[4] + 'em'} textAlign="center">
+                      <h2 style={{ fontSize: '3em' }}>What to expect</h2>
+                    </Box>
+                  </div>
+                  {/* <Box height={space[7] * 2 + 'em'}>
+              <PlaneAnimation numPlanes={8} />
+            </Box> */}
+                </ColoredBlade>
+              </Box>
             </div>
-          </ColoredBlade>
-        </Box>
-        <ContainerSmall>
-          <div>
-            <p>
-              John and Victoria are getting married. This is not the official
-              invitation, but here are some things you should know:
-            </p>
-            <ul>
-              <li>You need a passport</li>
-              <li>
-                Plan to stay at least 3 nights in the window November 18th -
-                22nd
-              </li>
-              <li>
-                <strong>Do not</strong> book a hotel, Airbnb, or any other
-                lodging just yet
-                <ul>
-                  <li>We will send you information regarding the room block</li>
-                  <li>You may buy flights now</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          {/* <DetailsList>
+          </Waypoint>
+          <Waypoint
+            debug={true}
+            onEnter={({}) => {
+              setActiveTab('book')
+            }}
+          >
+            <div>
+              <ContainerSmall>
+                <div>
+                  <p>
+                    John and Victoria are getting married. This is not the
+                    official invitation, but here are some things you should
+                    know:
+                  </p>
+                  <ul>
+                    <li>You need a passport</li>
+                    <li>
+                      Plan to stay at least 3 nights in the window November 18th
+                      - 22nd
+                    </li>
+                    <li>
+                      <strong>Do not</strong> book a hotel, Airbnb, or any other
+                      lodging just yet
+                      <ul>
+                        <li>
+                          We will send you information regarding the room block
+                        </li>
+                      </ul>
+                      <li>You may buy flights now</li>
+                    </li>
+                  </ul>
+                </div>
+                {/* <DetailsList>
             <DetailsRow>
               <DetailsRowDt>Do</DetailsRowDt>
               <DetailsRowDd>Get Passport</DetailsRowDd>
@@ -124,8 +142,10 @@ export const HomePage: React.FC = () => {
               </DetailsRowDd>
             </DetailsRow>
           </DetailsList> */}
-        </ContainerSmall>
-        {/* <Box mt={space[7] + 'em'} mb={space[7] + 'em'}>
+              </ContainerSmall>
+            </div>
+          </Waypoint>
+          {/* <Box mt={space[7] + 'em'} mb={space[7] + 'em'}>
           <ColoredBlade
             base="red"
             index={6}
@@ -138,36 +158,43 @@ export const HomePage: React.FC = () => {
             </div>
           </ColoredBlade>
         </Box> */}
-        <ContainerSmall>
-          <FormSection />
-        </ContainerSmall>
-        <Box marginY={space[3] + 'em'}>
-          <ColoredBlade base="red" index={0}>
-            <Box
-              paddingY={space[3] + 'em'}
-              textAlign="center"
-              fontFamily={fontFamily.sansserif}
-            >
-              <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
-            </Box>
-          </ColoredBlade>
-          {/* <Box marginTop={space[5] + 'em'}>
-            <Container>
-              <PartyProfileCards
-                onSelect={profile => setSelectedProfile(profile)}
-              />
-            </Container>
-          </Box> */}
-          <Box marginTop={space[5] + 'em'}>
-            <Container>
-              <PartyProfileCards2
-                onSelect={profile => setSelectedProfile(profile)}
-                selectedProfile={selectedProfile?.name}
-              />
-            </Container>
-          </Box>
-        </Box>
-        {/* ((n = 0) =>
+          <ContainerSmall>
+            <FormSection />
+          </ContainerSmall>
+          <Waypoint
+            onEnter={({}) => {
+              setActiveTab('party')
+            }}
+          >
+            <div>
+              <Box marginY={space[3] + 'em'}>
+                <ColoredBlade base="red" index={0}>
+                  <Box
+                    paddingY={space[3] + 'em'}
+                    textAlign="center"
+                    fontFamily={fontFamily.sansserif}
+                  >
+                    <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
+                  </Box>
+                </ColoredBlade>
+                <Box marginTop={space[5] + 'em'}>
+                  <Container>
+                    <PartyProfileCards
+                      onSelect={profile => setSelectedProfile(profile)}
+                    />
+                  </Container>
+                </Box>
+                <Box marginTop={space[5] + 'em'}>
+                  <Container>
+                    <PartyProfileCards2
+                      onSelect={profile => setSelectedProfile(profile)}
+                    />
+                  </Container>
+                </Box>
+              </Box>
+            </div>
+          </Waypoint>
+          {/* ((n = 0) =>
           ([0, 1, 2, 3, 4, 5, 6, 7] as const).map(i =>
             objectKeys(colors).map(color => (
               <PartyProfileSection
@@ -178,8 +205,9 @@ export const HomePage: React.FC = () => {
               />
             )),
           ))() */}
-        {/* <Footer /> */}
-      </DefaultLayout>
-    </Flipper>
+          {/* <Footer /> */}
+        </DefaultLayout>
+      </Flipper>
+    </StickyContainer>
   )
 }
