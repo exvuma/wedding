@@ -9,8 +9,8 @@ export type NavProps = {
 
 const tabTitles = [
   { title: 'John and Victoria', id: 'home' },
-  { title: 'Book', id: 'book' },
   { title: 'About Us', id: 'about' },
+  { title: 'Book', id: 'book' },
   { title: 'FAQs', id: 'faqs' },
   { title: 'Wedding Party', id: 'party' },
 ] as const
@@ -22,7 +22,7 @@ export const Navbar: React.FC<NavProps> = ({ activeTab }) => {
     <ColoredBlade base="red" index={1}>
       <div style={{ zIndex: 99, display: 'flex' }}>
         {tabTitles.map(tab => (
-          <Box key={tab.id} p={space[7] + 'em'} textAlign="center">
+          <Box key={tab.id} p={space[1] + 'em'} textAlign="center">
             <a href={'#' + tab.id}>
               <h2
                 style={
