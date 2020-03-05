@@ -33,58 +33,46 @@ export const HomePage: React.FC = () => {
             onClose={() => setSelectedProfile(null)}
           />
         )}
-      </Sticky>
-      <Flipper flipKey={flipKey}>
-        <DefaultLayout>
-          {selectedProfile && flipKey && (
-            <PartyProfileDetail
-              profile={selectedProfile}
-              parentId={flipKey}
-              onClose={() => setSelectedProfile(null)}
-            />
-          )}
 
-          {/* Todo make this responsive */}
-          <ContainerSmall>
-            <Hero />
-          </ContainerSmall>
-          <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
-            <ColoredBlade base="red" index={6}>
-              <div style={{ zIndex: 2, position: 'relative' }}>
-                <Box p={space[4] + 'em'} textAlign="center">
-                  <h2 style={{ fontSize: '3em' }}>What to expect</h2>
-                </Box>
-              </div>
-              {/* <Box height={space[7] * 2 + 'em'}>
+        {/* Todo make this responsive */}
+        <ContainerSmall>
+          <Hero />
+        </ContainerSmall>
+        <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
+          <ColoredBlade base="red" index={6}>
+            <div style={{ zIndex: 2, position: 'relative' }}>
+              <Box p={space[4] + 'em'} textAlign="center">
+                <h2 style={{ fontSize: '3em' }}>What to expect</h2>
+              </Box>
+            </div>
+            {/* <Box height={space[7] * 2 + 'em'}>
               <PlaneAnimation numPlanes={8} />
             </Box> */}
-            </ColoredBlade>
-          </Box>
-          <ContainerSmall>
-            <div>
-              <p>
-                John and Victoria are getting married. This is not the official
-                invitation, but here are some things you should know:
-              </p>
-              <ul>
-                <li>You need a passport</li>
-                <li>
-                  Plan to stay at least 3 nights in the window November 18th -
-                  22nd
-                </li>
-                <li>
-                  <strong>Do not</strong> book a hotel, Airbnb, or any other
-                  lodging just yet
-                  <ul>
-                    <li>
-                      We will send you information regarding the room block
-                    </li>
-                  </ul>
-                  <li>You may buy flights now</li>
-                </li>
-              </ul>
-            </div>
-            {/* <DetailsList>
+          </ColoredBlade>
+        </Box>
+        <ContainerSmall>
+          <div>
+            <p>
+              John and Victoria are getting married. This is not the official
+              invitation, but here are some things you should know:
+            </p>
+            <ul>
+              <li>You need a passport</li>
+              <li>
+                Plan to stay at least 3 nights in the window November 18th -
+                22nd
+              </li>
+              <li>
+                <strong>Do not</strong> book a hotel, Airbnb, or any other
+                lodging just yet
+                <ul>
+                  <li>We will send you information regarding the room block</li>
+                </ul>
+                <li>You may buy flights now</li>
+              </li>
+            </ul>
+          </div>
+          {/* <DetailsList>
             <DetailsRow>
               <DetailsRowDt>Do</DetailsRowDt>
               <DetailsRowDd>Get Passport</DetailsRowDd>
@@ -125,8 +113,8 @@ export const HomePage: React.FC = () => {
               </DetailsRowDd>
             </DetailsRow>
           </DetailsList> */}
-          </ContainerSmall>
-          {/* <Box mt={space[7] + 'em'} mb={space[7] + 'em'}>
+        </ContainerSmall>
+        {/* <Box mt={space[7] + 'em'} mb={space[7] + 'em'}>
           <ColoredBlade
             base="red"
             index={6}
@@ -139,33 +127,32 @@ export const HomePage: React.FC = () => {
             </div>
           </ColoredBlade>
         </Box> */}
-          <ContainerSmall>
-            <FormSection />
-          </ContainerSmall>
-          <Box marginY={space[3] + 'em'}>
-            <ColoredBlade base="red" index={0}>
-              <Box
-                paddingY={space[3] + 'em'}
-                textAlign="center"
-                fontFamily={fontFamily.sansserif}
-              >
-                <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
-              </Box>
-            </ColoredBlade>
-            <Box marginTop={space[5] + 'em'}>
-              <Container>
-                <PartyProfileCards
-                  onSelect={profile => setSelectedProfile(profile)}
-                />
-              </Container>
+        <ContainerSmall>
+          <FormSection />
+        </ContainerSmall>
+        <Box marginY={space[3] + 'em'}>
+          <ColoredBlade base="red" index={0}>
+            <Box
+              paddingY={space[3] + 'em'}
+              textAlign="center"
+              fontFamily={fontFamily.sansserif}
+            >
+              <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
             </Box>
-            <Box marginTop={space[5] + 'em'}>
-              <Container>
-                <PartyProfileCards2
-                  onSelect={profile => setSelectedProfile(profile)}
-                />
-              </Container>
-            </Box>
+          </ColoredBlade>
+          <Box marginTop={space[5] + 'em'}>
+            <Container>
+              <PartyProfileCards
+                onSelect={profile => setSelectedProfile(profile)}
+              />
+            </Container>
+          </Box>
+          <Box marginTop={space[5] + 'em'}>
+            <Container>
+              <PartyProfileCards2
+                onSelect={profile => setSelectedProfile(profile)}
+              />
+            </Container>
           </Box>
         </Box>
         {/* ((n = 0) =>
