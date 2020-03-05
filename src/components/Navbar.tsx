@@ -6,19 +6,17 @@ export type NavProps = {
   // id of the active tab
   activeTab: string
 }
-export type tabId = 'home' | 'book' | 'faqs' | 'party' | 'about'
-type tabType = {
-  title: string
-  id: tabId
-}[]
 
-const tabTitles: tabType = [
+const tabTitles = [
   { title: 'John and Victoria', id: 'home' },
   { title: 'Book', id: 'book' },
   { title: 'About Us', id: 'about' },
   { title: 'FAQs', id: 'faqs' },
   { title: 'Wedding Party', id: 'party' },
-]
+] as const
+
+export type TabId = typeof tabTitles[number]['id']
+
 export const Navbar: React.FC<NavProps> = ({ activeTab }) => {
   return (
     <ColoredBlade base="red" index={1}>
