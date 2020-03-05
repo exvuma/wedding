@@ -13,6 +13,7 @@ import { objectKeys } from '../utils/Object'
 import { profiles } from '../profiles'
 import { PartyProfileCards } from './PartyProfileCards'
 import { PartyProfileCards2 } from './PartyProfileCard2'
+import { Book } from './sections/Book'
 import { Flipper } from 'react-flip-toolkit'
 import { PartyProfileDetail } from './PartyProfileDetail'
 import hyattPhotoUrl from '../img/Hyatt-Ziva-Exterior-Cancun-1500.jpg'
@@ -47,7 +48,6 @@ export const HomePage: React.FC = () => {
           <Waypoint
             debug={true}
             onEnter={({}) => {
-              console.log('setnavState')
               setActiveTab('home')
             }}
           >
@@ -57,7 +57,8 @@ export const HomePage: React.FC = () => {
               </ContainerSmall>
               <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
                 <ColoredBlade base="red" index={6}>
-                  <div style={{ zIndex: 2, position: 'relative' }}>
+                  <div style={{ zIndex: 2 }}>
+                    {/* <div style={{ zIndex: 2, position: 'relative' }}> */}
                     <Box p={space[4] + 'em'} textAlign="center">
                       <h2 style={{ fontSize: '3em' }}>What to expect</h2>
                     </Box>
@@ -76,32 +77,9 @@ export const HomePage: React.FC = () => {
             }}
           >
             <div>
-              <ContainerSmall>
-                <div>
-                  <p>
-                    John and Victoria are getting married. This is not the
-                    official invitation, but here are some things you should
-                    know:
-                  </p>
-                  <ul>
-                    <li>You need a passport</li>
-                    <li>
-                      Plan to stay at least 3 nights in the window November 18th
-                      - 22nd
-                    </li>
-                    <li>
-                      <strong>Do not</strong> book a hotel, Airbnb, or any other
-                      lodging just yet
-                      <ul>
-                        <li>
-                          We will send you information regarding the room block
-                        </li>
-                      </ul>
-                      <li>You may buy flights now</li>
-                    </li>
-                  </ul>
-                </div>
-                {/* <DetailsList>
+              <Book />
+
+              {/* <DetailsList>
             <DetailsRow>
               <DetailsRowDt>Do</DetailsRowDt>
               <DetailsRowDd>Get Passport</DetailsRowDd>
@@ -142,7 +120,6 @@ export const HomePage: React.FC = () => {
               </DetailsRowDd>
             </DetailsRow>
           </DetailsList> */}
-              </ContainerSmall>
             </div>
           </Waypoint>
           {/* <Box mt={space[7] + 'em'} mb={space[7] + 'em'}>
@@ -164,6 +141,9 @@ export const HomePage: React.FC = () => {
           <Waypoint
             onEnter={({}) => {
               setActiveTab('party')
+            }}
+            onLeave={({}) => {
+              setActiveTab('home')
             }}
           >
             <div>
