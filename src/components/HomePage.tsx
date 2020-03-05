@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { Box } from 'reflexbox'
 import { DefaultLayout } from '../layouts/DefaultLayout'
 import { ContainerSmall, Container } from './Container'
@@ -33,60 +33,58 @@ export const HomePage: React.FC = () => {
             onClose={() => setSelectedProfile(null)}
           />
         )}
+      </Sticky>
+      <Flipper flipKey={flipKey}>
+        <DefaultLayout>
+          {selectedProfile && flipKey && (
+            <PartyProfileDetail
+              profile={selectedProfile}
+              parentId={flipKey}
+              onClose={() => setSelectedProfile(null)}
+            />
+          )}
 
-        {/* Todo make this responsive */}
-        <ContainerSmall>
-          <Hero />
-        </ContainerSmall>
-        <Box marginTop={space[4] + 'em'}>
-          <ColoredBlade base="gray" index={7}>
-            <div
-              style={{
-                background: `url(${hyattPhotoUrl})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                height: '36vw',
-                padding: '2em 0',
-                display: 'flex',
-                alignItems: 'flex-end',
-                justifyContent: 'space-around',
-              }}
-            >
-              <h2
-                style={{
-                  fontSize: '3em',
-                  textShadow: '0 2px 3px rgba(0, 0, 0, 0.6)',
-                  margin: 0,
-                }}
-              >
-                What to expect
-              </h2>
-            </div>
-          </ColoredBlade>
-        </Box>
-        <ContainerSmall>
-          <div>
-            <p>
-              John and Victoria are getting married. This is not the official
-              invitation, but here are some things you should know:
-            </p>
-            <ul>
-              <li>You need a passport</li>
-              <li>
-                Plan to stay at least 3 nights in the window November 18th -
-                22nd
-              </li>
-              <li>
-                <strong>Do not</strong> book a hotel, Airbnb, or any other
-                lodging just yet
-                <ul>
-                  <li>We will send you information regarding the room block</li>
+          {/* Todo make this responsive */}
+          <ContainerSmall>
+            <Hero />
+          </ContainerSmall>
+          <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
+            <ColoredBlade base="red" index={6}>
+              <div style={{ zIndex: 2, position: 'relative' }}>
+                <Box p={space[4] + 'em'} textAlign="center">
+                  <h2 style={{ fontSize: '3em' }}>What to expect</h2>
+                </Box>
+              </div>
+              {/* <Box height={space[7] * 2 + 'em'}>
+              <PlaneAnimation numPlanes={8} />
+            </Box> */}
+            </ColoredBlade>
+          </Box>
+          <ContainerSmall>
+            <div>
+              <p>
+                John and Victoria are getting married. This is not the official
+                invitation, but here are some things you should know:
+              </p>
+              <ul>
+                <li>You need a passport</li>
+                <li>
+                  Plan to stay at least 3 nights in the window November 18th -
+                  22nd
+                </li>
+                <li>
+                  <strong>Do not</strong> book a hotel, Airbnb, or any other
+                  lodging just yet
+                  <ul>
+                    <li>
+                      We will send you information regarding the room block
+                    </li>
+                  </ul>
                   <li>You may buy flights now</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          {/* <DetailsList>
+                </li>
+              </ul>
+            </div>
+            {/* <DetailsList>
             <DetailsRow>
               <DetailsRowDt>Do</DetailsRowDt>
               <DetailsRowDd>Get Passport</DetailsRowDd>
@@ -127,7 +125,7 @@ export const HomePage: React.FC = () => {
               </DetailsRowDd>
             </DetailsRow>
           </DetailsList> */}
-
+          </ContainerSmall>
           {/* <Box mt={space[7] + 'em'} mb={space[7] + 'em'}>
           <ColoredBlade
             base="red"
@@ -141,20 +139,9 @@ export const HomePage: React.FC = () => {
             </div>
           </ColoredBlade>
         </Box> */}
-          <Waypoint
-            onEnter={({}) => {
-              setActiveTab('party')
-            }}
-            onLeave={({}) => {
-              setActiveTab('home')
-            }}
-          >
-            <>
-              <ContainerSmall>
-                <FormSection />
-              </ContainerSmall>
-            </>
-          </Waypoint>
+          <ContainerSmall>
+            <FormSection />
+          </ContainerSmall>
           <Box marginY={space[3] + 'em'}>
             <ColoredBlade base="red" index={0}>
               <Box
@@ -179,21 +166,6 @@ export const HomePage: React.FC = () => {
                 />
               </Container>
             </Box>
-          </ColoredBlade>
-          {/* <Box marginTop={space[5] + 'em'}>
-            <Container>
-              <PartyProfileCards
-                onSelect={profile => setSelectedProfile(profile)}
-              />
-            </Container>
-          </Box> */}
-          <Box marginTop={space[5] + 'em'}>
-            <Container>
-              <PartyProfileCards2
-                onSelect={profile => setSelectedProfile(profile)}
-                selectedProfile={selectedProfile?.name}
-              />
-            </Container>
           </Box>
         </Box>
         {/* ((n = 0) =>
