@@ -4,7 +4,6 @@ import { DefaultLayout } from '../layouts/DefaultLayout'
 import { ContainerSmall, Container } from './Container'
 import { fontFamily, space } from '../theme'
 import { ColoredBlade } from './ColoredBlade'
-import { FormSection } from './FormSection'
 import { Hero } from './Hero'
 import { Waypoint } from 'react-waypoint'
 import { Profile } from './PartyProfileSection'
@@ -15,6 +14,7 @@ import { Flipper } from 'react-flip-toolkit'
 import { PartyProfileDetail } from './PartyProfileDetail'
 import { StickyContainer, Sticky } from 'react-sticky'
 import { Navbar } from './Navbar'
+import { Faq } from './sections/Faq'
 
 type tabId = 'home' | 'book' | 'faqs' | 'party'
 export const HomePage: React.FC = () => {
@@ -56,7 +56,7 @@ export const HomePage: React.FC = () => {
                   <div style={{ zIndex: 2 }}>
                     {/* <div style={{ zIndex: 2, position: 'relative' }}> */}
                     <Box p={space[4] + 'em'} textAlign="center">
-                      <h2 style={{ fontSize: '3em' }}>What to expect</h2>
+                      <h2 style={{ fontSize: '3em' }}>How to Book</h2>
                     </Box>
                   </div>
                   {/* <Box height={space[7] * 2 + 'em'}>
@@ -76,9 +76,17 @@ export const HomePage: React.FC = () => {
               <Book />
             </div>
           </Waypoint>
-          <ContainerSmall>
-            <FormSection />
-          </ContainerSmall>
+          <Waypoint
+            onEnter={({}) => {
+              setActiveTab('faqs')
+            }}
+          >
+            <>
+              <ContainerSmall>
+                <Faq />
+              </ContainerSmall>
+            </>
+          </Waypoint>
           <Waypoint
             onEnter={({}) => {
               setActiveTab('party')
