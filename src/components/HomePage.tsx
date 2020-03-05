@@ -16,15 +16,13 @@ import { Flipper } from 'react-flip-toolkit'
 import { PartyProfileDetail } from './PartyProfileDetail'
 import hyattPhotoUrl from '../img/Hyatt-Ziva-Exterior-Cancun-1500.jpg'
 
+type tabId = 'home' | 'book' | 'faqs' | 'party'
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
 
+  const [activeTab, setActiveTab] = useState<tabId>('home')
+
   const flipKey = selectedProfile ? `flip-${selectedProfile.name}` : null
-  // const BlockWithRef = React.forwardRef(({ props, ref, children }) => {
-  //   return children && children.length
-  //     ? children.map((child: any) => <child innerRef={ref} {...props} />)
-  //     : ''
-  // })
   return (
     <Flipper flipKey={flipKey} decisionData={flipKey}>
       <DefaultLayout>
@@ -143,15 +141,20 @@ export const HomePage: React.FC = () => {
             </div>
           </ColoredBlade>
         </Box> */}
-          {/* <Waypoint
+          <Waypoint
             onEnter={({}) => {
-              setnavState('Form')
+              setActiveTab('party')
+            }}
+            onLeave={({}) => {
+              setActiveTab('home')
             }}
           >
-            <ContainerSmall id="form">
-              <FormSection />
-            </ContainerSmall>
-          </Waypoint> */}
+            <>
+              <ContainerSmall>
+                <FormSection />
+              </ContainerSmall>
+            </>
+          </Waypoint>
           <Box marginY={space[3] + 'em'}>
             <ColoredBlade base="red" index={0}>
               <Box
