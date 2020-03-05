@@ -9,7 +9,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "start-worker": "npm run build && wrangler preview --watch",
-    "deploy": "npm run build && wrangler publish  -e prod",
+    "deploy": "npm run build && wrangler publish  -e",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "type-check": "tsc --noemit"
   },
@@ -49,5 +49,6 @@
     "gatsby-plugin-react-svg": "^2.1.2",
     "prettier": "^1.19.1",
     "typescript": "^3.7.3"
-  }
+  },
+  "version": "0.0.0"
 }
