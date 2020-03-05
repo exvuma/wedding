@@ -1,4 +1,4 @@
-import { ContainerSmall, Container } from '../Container'
+import { ContainerSmall } from '../Container'
 export const Faq: React.FC = () => (
   <ContainerSmall>
     <div>
@@ -7,6 +7,7 @@ export const Faq: React.FC = () => (
           <strong>
             What day should I arrive? Leave? The wedding party will arrive
           </strong>
+          <br />
           Wednesday, 11/18. You can stay as long as you like, but keep in mind
           all guests are required to a minimum of three nights. We recommend
           coming at least the day before 11/19, staying for the weekend, and

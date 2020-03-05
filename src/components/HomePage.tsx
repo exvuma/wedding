@@ -13,10 +13,11 @@ import { Book } from './sections/Book'
 import { Flipper } from 'react-flip-toolkit'
 import { PartyProfileDetail } from './PartyProfileDetail'
 import { StickyContainer, Sticky } from 'react-sticky'
-import { Navbar } from './Navbar'
+import { Navbar, tabId } from './Navbar'
 import { Faq } from './sections/Faq'
+import { PlaneAnimation } from './PlaneAnimation'
+import { About } from './sections/About'
 
-type tabId = 'home' | 'book' | 'faqs' | 'party'
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
   const [activeTab, setActiveTab] = useState<tabId>('home')
@@ -47,23 +48,30 @@ export const HomePage: React.FC = () => {
               setActiveTab('home')
             }}
           >
-            <div>
+            <div id="home">
               <ContainerSmall>
                 <Hero />
               </ContainerSmall>
+            </div>
+          </Waypoint>
+          <Waypoint
+            onEnter={({}) => {
+              setActiveTab('about')
+            }}
+          >
+            <div id="about">
               <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
                 <ColoredBlade base="red" index={6}>
                   <div style={{ zIndex: 2 }}>
-                    {/* <div style={{ zIndex: 2, position: 'relative' }}> */}
                     <Box p={space[4] + 'em'} textAlign="center">
-                      <h2 style={{ fontSize: '3em' }}>How to Book</h2>
+                      <h2 style={{ fontSize: '3em' }}>About Us</h2>
                     </Box>
                   </div>
-                  {/* <Box height={space[7] * 2 + 'em'}>
-              <PlaneAnimation numPlanes={8} />
-            </Box> */}
                 </ColoredBlade>
               </Box>
+              <ContainerSmall>
+                <About />
+              </ContainerSmall>
             </div>
           </Waypoint>
           <Waypoint
@@ -72,7 +80,20 @@ export const HomePage: React.FC = () => {
               setActiveTab('book')
             }}
           >
-            <div>
+            <div id="book">
+              <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
+                <ColoredBlade base="red" index={6}>
+                  <div style={{ zIndex: 2 }}>
+                    {/* <div style={{ zIndex: 2, position: 'relative' }}> */}
+                    <Box p={space[4] + 'em'} textAlign="center">
+                      <h2 style={{ fontSize: '3em' }}>Book</h2>
+                    </Box>
+                  </div>
+                  <Box height={space[7] * 2 + 'em'}>
+                    <PlaneAnimation numPlanes={8} />
+                  </Box>
+                </ColoredBlade>
+              </Box>
               <Book />
             </div>
           </Waypoint>
@@ -81,21 +102,18 @@ export const HomePage: React.FC = () => {
               setActiveTab('faqs')
             }}
           >
-            <>
+            <div id="faqs">
               <ContainerSmall>
                 <Faq />
               </ContainerSmall>
-            </>
+            </div>
           </Waypoint>
           <Waypoint
             onEnter={({}) => {
               setActiveTab('party')
             }}
-            onLeave={({}) => {
-              setActiveTab('home')
-            }}
           >
-            <div>
+            <div id="party">
               <Box marginY={space[3] + 'em'}>
                 <ColoredBlade base="red" index={0}>
                   <Box
