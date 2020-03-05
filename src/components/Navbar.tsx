@@ -20,7 +20,7 @@ export const Navbar: React.FC<NavProps> = ({ activeTab }) => {
     <ColoredBlade base="red" index={1}>
       <div style={{ zIndex: 99, display: 'flex' }}>
         {tabTitles.map(tab => (
-          <Box p={space[7] + 'em'} textAlign="center">
+          <Box key={tab.id} p={space[7] + 'em'} textAlign="center">
             <h2
               style={
                 tab.id === activeTab

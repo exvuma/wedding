@@ -6,6 +6,7 @@ import { fontFamily, space, colors } from '../theme'
 import { ColoredBlade } from './ColoredBlade'
 import { FormSection } from './FormSection'
 import { Hero } from './Hero'
+import { Waypoint } from 'react-waypoint'
 import { Footer } from './Footer'
 import { PartyProfileSection, Profile } from './PartyProfileSection'
 import { objectKeys } from '../utils/Object'
@@ -21,14 +22,11 @@ import { Navbar } from './Navbar'
 type tabId = 'home' | 'book' | 'faqs' | 'party'
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
-
   const [activeTab, setActiveTab] = useState<tabId>('home')
 
   const flipKey = selectedProfile ? `flip-${selectedProfile.name}` : null
   return (
     <StickyContainer>
-      {/* </StickyContainer> */}
-      {/* <Flipper flipKey={flipKey}> */}
       <Sticky>
         {({ style }) => (
           <header style={style}>
@@ -45,48 +43,65 @@ export const HomePage: React.FC = () => {
               onClose={() => setSelectedProfile(null)}
             />
           )}
-
           {/* Todo make this responsive */}
-          <ContainerSmall>
-            <Hero />
-          </ContainerSmall>
-          <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
-            <ColoredBlade base="red" index={6}>
-              <div style={{ zIndex: 2, position: 'relative' }}>
-                <Box p={space[4] + 'em'} textAlign="center">
-                  <h2 style={{ fontSize: '3em' }}>What to expect</h2>
-                </Box>
-              </div>
-              {/* <Box height={space[7] * 2 + 'em'}>
+          <Waypoint
+            debug={true}
+            onEnter={({}) => {
+              console.log('setnavState')
+              setActiveTab('home')
+            }}
+          >
+            <div>
+              <ContainerSmall>
+                <Hero />
+              </ContainerSmall>
+              <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
+                <ColoredBlade base="red" index={6}>
+                  <div style={{ zIndex: 2, position: 'relative' }}>
+                    <Box p={space[4] + 'em'} textAlign="center">
+                      <h2 style={{ fontSize: '3em' }}>What to expect</h2>
+                    </Box>
+                  </div>
+                  {/* <Box height={space[7] * 2 + 'em'}>
               <PlaneAnimation numPlanes={8} />
             </Box> */}
-            </ColoredBlade>
-          </Box>
-          <ContainerSmall>
+                </ColoredBlade>
+              </Box>
+            </div>
+          </Waypoint>
+          <Waypoint
+            debug={true}
+            onEnter={({}) => {
+              setActiveTab('book')
+            }}
+          >
             <div>
-              <p>
-                John and Victoria are getting married. This is not the official
-                invitation, but here are some things you should know:
-              </p>
-              <ul>
-                <li>You need a passport</li>
-                <li>
-                  Plan to stay at least 3 nights in the window November 18th -
-                  22nd
-                </li>
-                <li>
-                  <strong>Do not</strong> book a hotel, Airbnb, or any other
-                  lodging just yet
+              <ContainerSmall>
+                <div>
+                  <p>
+                    John and Victoria are getting married. This is not the
+                    official invitation, but here are some things you should
+                    know:
+                  </p>
                   <ul>
+                    <li>You need a passport</li>
                     <li>
-                      We will send you information regarding the room block
+                      Plan to stay at least 3 nights in the window November 18th
+                      - 22nd
+                    </li>
+                    <li>
+                      <strong>Do not</strong> book a hotel, Airbnb, or any other
+                      lodging just yet
+                      <ul>
+                        <li>
+                          We will send you information regarding the room block
+                        </li>
+                      </ul>
+                      <li>You may buy flights now</li>
                     </li>
                   </ul>
-                  <li>You may buy flights now</li>
-                </li>
-              </ul>
-            </div>
-            {/* <DetailsList>
+                </div>
+                {/* <DetailsList>
             <DetailsRow>
               <DetailsRowDt>Do</DetailsRowDt>
               <DetailsRowDd>Get Passport</DetailsRowDd>
@@ -127,7 +142,9 @@ export const HomePage: React.FC = () => {
               </DetailsRowDd>
             </DetailsRow>
           </DetailsList> */}
-          </ContainerSmall>
+              </ContainerSmall>
+            </div>
+          </Waypoint>
           {/* <Box mt={space[7] + 'em'} mb={space[7] + 'em'}>
           <ColoredBlade
             base="red"
@@ -144,31 +161,39 @@ export const HomePage: React.FC = () => {
           <ContainerSmall>
             <FormSection />
           </ContainerSmall>
-          <Box marginY={space[3] + 'em'}>
-            <ColoredBlade base="red" index={0}>
-              <Box
-                paddingY={space[3] + 'em'}
-                textAlign="center"
-                fontFamily={fontFamily.sansserif}
-              >
-                <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
+          <Waypoint
+            onEnter={({}) => {
+              setActiveTab('party')
+            }}
+          >
+            <div>
+              <Box marginY={space[3] + 'em'}>
+                <ColoredBlade base="red" index={0}>
+                  <Box
+                    paddingY={space[3] + 'em'}
+                    textAlign="center"
+                    fontFamily={fontFamily.sansserif}
+                  >
+                    <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
+                  </Box>
+                </ColoredBlade>
+                <Box marginTop={space[5] + 'em'}>
+                  <Container>
+                    <PartyProfileCards
+                      onSelect={profile => setSelectedProfile(profile)}
+                    />
+                  </Container>
+                </Box>
+                <Box marginTop={space[5] + 'em'}>
+                  <Container>
+                    <PartyProfileCards2
+                      onSelect={profile => setSelectedProfile(profile)}
+                    />
+                  </Container>
+                </Box>
               </Box>
-            </ColoredBlade>
-            <Box marginTop={space[5] + 'em'}>
-              <Container>
-                <PartyProfileCards
-                  onSelect={profile => setSelectedProfile(profile)}
-                />
-              </Container>
-            </Box>
-            <Box marginTop={space[5] + 'em'}>
-              <Container>
-                <PartyProfileCards2
-                  onSelect={profile => setSelectedProfile(profile)}
-                />
-              </Container>
-            </Box>
-          </Box>
+            </div>
+          </Waypoint>
           {/* ((n = 0) =>
           ([0, 1, 2, 3, 4, 5, 6, 7] as const).map(i =>
             objectKeys(colors).map(color => (
