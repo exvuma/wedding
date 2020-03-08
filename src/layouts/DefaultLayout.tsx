@@ -12,7 +12,10 @@ import {
 } from '../theme/theme'
 import { baseFontSize } from '../theme/theme'
 
-const PageWrapper = styled.div``
+const PageWrapper = styled.div`
+  /* Size of the navbar */
+  padding-top: 3.4em;
+`
 
 interface StaticQueryProps {
   site: {

@@ -2,12 +2,13 @@ import React from 'react'
 import { space, breakpoints, fontSizes, fontFamily, colors } from '../theme'
 import styled from '@emotion/styled'
 import floralUrl from '../img/reef_made.png'
+import { ContainerSmall } from './Container'
 
 export const Hero: React.FC = () => {
   return (
-    <div>
+    <ContainerSmall>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ maxWidth: '60%', margin: '0 auto' }}>
+        <div style={{ maxWidth: '60%', paddingTop: '2em', margin: '0 auto' }}>
           <img src={floralUrl} />
         </div>
         <h2
@@ -34,7 +35,7 @@ export const Hero: React.FC = () => {
         </h1>
         <SubHeading>November 20th, 2020 - Cancún, Mexico</SubHeading>
       </div>
-    </div>
+    </ContainerSmall>
   )
 }
 

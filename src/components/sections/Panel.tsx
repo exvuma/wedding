@@ -7,6 +7,7 @@ type PanelProps = {
 export const Panel: React.FC<PanelProps> = ({ setActiveTab, id, children }) => (
   <Waypoint
     debug={true}
+    topOffset="50px"
     onEnter={({}) => {
       setActiveTab(id)
     }}
