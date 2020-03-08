@@ -65,40 +65,6 @@ export const HomePage: React.FC = () => {
             </ContainerSmall>
           </Panel>
           <Panel id="book" setActiveTab={setActiveTab}>
-            <ColoredBlade base="blue" index={6}>
-              <Flex>
-                {/* <Flex pt={space[7] + 'em'} pb={space[4] + 'em'}> */}
-                <Box style={{ position: 'relative' }} flex={1}>
-                  <PlaneAnimation numPlanes={4} centerWidth={50} />
-                </Box>
-                <Box
-                  flex={1}
-                  style={{ position: 'relative', textAlign: 'center' }}
-                >
-                  <PlaneAnimation numPlanes={0} centerWidth={50} />
-                  <h2
-                    style={{
-                      fontSize: '3em',
-                      marginTop: space[3] + 'em',
-                      marginBottom: space[1] + 'em',
-                    }}
-                  >
-                    Book
-                  </h2>
-                </Box>
-                <Box style={{ position: 'relative' }} flex={1}>
-                  blah
-                  <PlaneAnimation numPlanes={4} centerWidth={50} />
-                </Box>
-              </Flex>
-            </ColoredBlade>
-            <ColoredBlade base="red" index={6}>
-              <Box p={space[4] + 'em'} textAlign="center">
-                <h2 style={{ fontSize: '3em' }}>
-                  Do NOT Book Off the Room Block!
-                </h2>
-              </Box>
-            </ColoredBlade>
             <Book />
           </Panel>
           <Panel id="faqs" setActiveTab={setActiveTab}>

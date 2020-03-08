@@ -1,5 +1,10 @@
 import { ContainerSmall, Container } from '../Container'
-export const Book: React.FC = () => (
+import { ColoredBlade } from '../ColoredBlade'
+import { Flex, Box } from 'reflexbox'
+import { PlaneAnimation } from '../PlaneAnimation'
+import { space } from '../../theme'
+import React from 'react'
+export const BookContent: React.FC = () => (
   <ContainerSmall>
     <div>
       <p>
@@ -40,3 +45,38 @@ export const Book: React.FC = () => (
     </div>
   </ContainerSmall>
 )
+export const Book: React.FC = () => {
+  return (
+    <>
+      <ColoredBlade base="blue" index={6}>
+        <Flex>
+          {/* <Flex pt={space[7] + 'em'} pb={space[4] + 'em'}> */}
+          <Box style={{ position: 'relative' }} flex={1}>
+            <PlaneAnimation numPlanes={4} centerWidth={50} />
+          </Box>
+          <Box flex={1} style={{ position: 'relative', textAlign: 'center' }}>
+            <PlaneAnimation numPlanes={0} centerWidth={50} />
+            <h2
+              style={{
+                fontSize: '3em',
+                marginTop: space[3] + 'em',
+                marginBottom: space[1] + 'em',
+              }}
+            >
+              Book
+            </h2>
+          </Box>
+          <Box style={{ position: 'relative' }} flex={1}>
+            <PlaneAnimation numPlanes={4} centerWidth={50} />
+          </Box>
+        </Flex>
+      </ColoredBlade>
+      <ColoredBlade base="red" index={6}>
+        <Box p={space[4] + 'em'} textAlign="center">
+          <h2 style={{ fontSize: '3em' }}>Do NOT Book Off the Room Block!</h2>
+        </Box>
+      </ColoredBlade>
+      <BookContent />
+    </>
+  )
+}
