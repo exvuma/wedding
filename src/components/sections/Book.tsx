@@ -52,10 +52,10 @@ export const Book: React.FC = () => {
         <Flex>
           {/* <Flex pt={space[7] + 'em'} pb={space[4] + 'em'}> */}
           <Box style={{ position: 'relative' }} flex={1}>
-            <PlaneAnimation numPlanes={4} centerWidth={50} />
+            <PlaneAnimation numPlanes={4} />
           </Box>
           <Box flex={1} style={{ position: 'relative', textAlign: 'center' }}>
-            <PlaneAnimation numPlanes={0} centerWidth={50} />
+            <PlaneAnimation numPlanes={0} />
             <h2
               style={{
                 fontSize: '3em',
@@ -67,7 +67,7 @@ export const Book: React.FC = () => {
             </h2>
           </Box>
           <Box style={{ position: 'relative' }} flex={1}>
-            <PlaneAnimation numPlanes={4} centerWidth={50} />
+            <PlaneAnimation numPlanes={4} />
           </Box>
         </Flex>
       </ColoredBlade>
