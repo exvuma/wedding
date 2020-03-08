@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box } from 'reflexbox'
+import { Box, Flex } from 'reflexbox'
 import { DefaultLayout } from '../layouts/DefaultLayout'
 import { ContainerSmall, Container } from './Container'
 import { fontFamily, space } from '../theme'
@@ -58,26 +58,6 @@ export const HomePage: React.FC = () => {
           </ContainerSmall>
         </Panel>
         <Panel id="book" setActiveTab={setActiveTab}>
-          <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
-            <ColoredBlade base="red" index={6}>
-              <div style={{ zIndex: 2 }}>
-                {/* <div style={{ zIndex: 2, position: 'relative' }}> */}
-                <Box p={space[4] + 'em'} textAlign="center">
-                  <h2 style={{ fontSize: '3em' }}>Book</h2>
-                </Box>
-              </div>
-              <Box height={space[7] * 2 + 'em'}>
-                <PlaneAnimation numPlanes={8} />
-              </Box>
-            </ColoredBlade>
-            <ColoredBlade base="red" index={6}>
-              <Box p={space[4] + 'em'} textAlign="center">
-                <h2 style={{ fontSize: '3em' }}>
-                  Do NOT Book Off the Room Block!
-                </h2>
-              </Box>
-            </ColoredBlade>
-          </Box>
           <Book />
         </Panel>
         <Panel id="faqs" setActiveTab={setActiveTab}>
