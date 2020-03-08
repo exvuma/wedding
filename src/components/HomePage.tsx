@@ -18,6 +18,8 @@ import { Faq } from './sections/Faq'
 import { PlaneAnimation } from './PlaneAnimation'
 import { About } from './sections/About'
 import { Panel } from './sections/Panel'
+import lamePic from '../img/about_us/IMG_20190811_130244.jpg'
+import lamePic2 from '../img/about_us/20170527_193518.jpg'
 
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
@@ -50,6 +52,8 @@ export const HomePage: React.FC = () => {
             </ColoredBlade>
           </Box>
           <ContainerSmall>
+            <img src={lamePic} />
+            <img src={lamePic2} />
             <About />
           </ContainerSmall>
         </Panel>
@@ -66,10 +70,22 @@ export const HomePage: React.FC = () => {
                 <PlaneAnimation numPlanes={8} />
               </Box>
             </ColoredBlade>
+            <ColoredBlade base="red" index={6}>
+              <Box p={space[4] + 'em'} textAlign="center">
+                <h2 style={{ fontSize: '3em' }}>
+                  Do NOT Book Off the Room Block!
+                </h2>
+              </Box>
+            </ColoredBlade>
           </Box>
           <Book />
         </Panel>
         <Panel id="faqs" setActiveTab={setActiveTab}>
+          <ColoredBlade base="red" index={6}>
+            <Box p={space[4] + 'em'} textAlign="center">
+              <h2 style={{ fontSize: '3em' }}>FAQs</h2>
+            </Box>
+          </ColoredBlade>
           <ContainerSmall>
             <Faq />
           </ContainerSmall>
