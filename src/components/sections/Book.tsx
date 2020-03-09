@@ -19,12 +19,25 @@ export const BookContent: React.FC = () => (
     </div>
   </ContainerSmall>
 )
+export const BookContentAlso: React.FC = () => (
+  <ContainerSmall>
+    <div>
+      <p>
+        To travel to Cancun also:
+        <ul>
+          <li>Have a passport</li>
+          <li>Book flights with or without help of travel agent</li>
+        </ul>
+      </p>
+    </div>
+  </ContainerSmall>
+)
 const Notice = styled.div`
   margin: 1em 0;
   font-family: ${fontFamily.sansserif};
   font-size: ${fontSizes[2]}em;
 `
-const CardWrapper = styled.div`
+const StepWrapper = styled.div`
   background: white;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000001' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   border-radius: 3px;
@@ -144,10 +157,10 @@ const ContentDetails3: React.FC = () => (
 )
 
 export const Steps: React.FC = () => (
-  <Flex p={100}>
+  <Flex px={6} py={0}>
     <Box style={{ flex: 1, margin: space[6] * 6 }}>
       {/* <Box style={{ flex: 1, margin: space[6] }}> */}
-      <CardWrapper>
+      <StepWrapper>
         <CircleFrame offset={[0, 0]}>
           <div>1</div>
         </CircleFrame>
@@ -158,10 +171,10 @@ export const Steps: React.FC = () => (
         <Button href="https://www.destinationweddings.com/Weddings/Guests/AttendaWedding.aspx?dw_weddingcode=MARRYTHEJOHN&dw_bname=Bernard">
           <div>Book Now</div>
         </Button>
-      </CardWrapper>
+      </StepWrapper>
     </Box>
     <Box style={{ flex: 1, margin: space[6] * 6 }}>
-      <CardWrapper>
+      <StepWrapper>
         <CircleFrame offset={[0, 0]}>
           <div>2</div>
         </CircleFrame>
@@ -169,10 +182,10 @@ export const Steps: React.FC = () => (
         <StepsDetails>
           <ContentDetails2></ContentDetails2>
         </StepsDetails>
-      </CardWrapper>
+      </StepWrapper>
     </Box>
     <Box style={{ flex: 1, margin: space[6] * 6 }}>
-      <CardWrapper>
+      <StepWrapper>
         <CircleFrame offset={[0, 0]}>
           <div>3</div>
         </CircleFrame>
@@ -180,7 +193,7 @@ export const Steps: React.FC = () => (
         <StepsDetails>
           <ContentDetails3></ContentDetails3>
         </StepsDetails>
-      </CardWrapper>
+      </StepWrapper>
     </Box>
   </Flex>
 )
@@ -211,12 +224,13 @@ export const Book: React.FC = () => {
         </Flex>
       </ColoredBlade>
       <ColoredBlade base="gold" index={5}>
-        <Box p={space[4] + 'em'} textAlign="center">
+        <Box p={space[1] + 'em'} textAlign="center">
           <Notice>Do not book off the room block!</Notice>
         </Box>
       </ColoredBlade>
       <BookContent />
       <Steps />
+      <BookContentAlso />
     </>
   )
 }
