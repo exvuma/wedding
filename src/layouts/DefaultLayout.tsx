@@ -12,10 +12,7 @@ import {
 } from '../theme/theme'
 import { baseFontSize } from '../theme/theme'
 
-const PageWrapper = styled.div`
-  /* Size of the navbar */
-  padding-top: 3.4em;
-`
+const PageWrapper = styled.div``
 
 interface StaticQueryProps {
   site: {
@@ -82,6 +79,7 @@ export const DefaultLayout: React.FC = ({ children }) => (
             h3,
             h4,
             h5 {
+              font-family: ${fontFamily.sansserif};
               font-weight: 400;
             }
 

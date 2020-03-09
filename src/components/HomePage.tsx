@@ -5,17 +5,14 @@ import { ContainerSmall, Container } from './Container'
 import { fontFamily, space } from '../theme'
 import { ColoredBlade } from './ColoredBlade'
 import { Hero } from './Hero'
-import { Waypoint } from 'react-waypoint'
 import { Profile } from './PartyProfileSection'
 import { PartyProfileCards } from './PartyProfileCards'
 import { PartyProfileCards2 } from './PartyProfileCard2'
 import { Book } from './sections/Book'
 import { Flipper } from 'react-flip-toolkit'
 import { PartyProfileDetail } from './PartyProfileDetail'
-import { StickyContainer, Sticky } from 'react-sticky'
 import { Navbar, TabId } from './Navbar'
 import { Faq } from './sections/Faq'
-import { PlaneAnimation } from './PlaneAnimation'
 import { About } from './sections/About'
 import { Panel } from './sections/Panel'
 import lamePic from '../img/about_us/IMG_20190811_130244.jpg'
@@ -36,28 +33,15 @@ export const HomePage: React.FC = () => {
             onClose={() => setSelectedProfile(null)}
           />
         )}
-        <Navbar activeTab={activeTab} />
         {/* Todo make this responsive */}
         <Panel id="home" setActiveTab={setActiveTab}>
           <Hero />
         </Panel>
+        <Navbar activeTab={activeTab} />
         <Panel id="about" setActiveTab={setActiveTab}>
-          <Box mt={space[7] + 'em'} mb={space[4] + 'em'}>
-            <ColoredBlade base="red" index={6}>
-              <div style={{ zIndex: 2 }}>
-                <Box p={space[4] + 'em'} textAlign="center">
-                  <h2 style={{ fontSize: '3em' }}>About Us</h2>
-                </Box>
-              </div>
-            </ColoredBlade>
-          </Box>
-          <ContainerSmall>
-            <img src={lamePic} />
-            <img src={lamePic2} />
-            <About />
-          </ContainerSmall>
+          <About />
         </Panel>
-        <Panel id="book" setActiveTab={setActiveTab}>
+        {/* <Panel id="book" setActiveTab={setActiveTab}>
           <Book />
         </Panel>
         <Panel id="faqs" setActiveTab={setActiveTab}>
@@ -69,7 +53,7 @@ export const HomePage: React.FC = () => {
           <ContainerSmall>
             <Faq />
           </ContainerSmall>
-        </Panel>
+        </Panel> */}
         <Panel id="party" setActiveTab={setActiveTab}>
           <Box marginY={space[3] + 'em'}>
             <ColoredBlade base="red" index={0}>

@@ -1,10 +1,8 @@
 import React from 'react'
-import { Box } from 'reflexbox'
 import styled from '@emotion/styled'
 import Media from 'react-media'
 import { HamburgerSpin } from 'react-animated-burgers'
-import { space, colors, fontFamily, breakpoints } from '../theme'
-import { Flipper } from 'react-flip-toolkit'
+import { colors, fontFamily, breakpoints } from '../theme'
 
 export type NavProps = {
   activeTab: TabId
@@ -82,6 +80,7 @@ const NavbarMobile: React.FC<NavProps> = ({ activeTab }) => {
                     fancy={false}
                     href={'#' + tab.id}
                     active={activeTab === tab.id}
+                    onClick={() => setIsOpen(false)}
                   >
                     {tab.title}
                   </NavbarNavLink>
@@ -95,14 +94,14 @@ const NavbarMobile: React.FC<NavProps> = ({ activeTab }) => {
 }
 
 const NavbarWrapper = styled.header`
-  position: fixed;
+  position: sticky;
   z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
   background: white;
   border-bottom: solid 1px ${colors.gray[4]};
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 `
 
 const NavbarNav = styled.ul`
@@ -126,19 +125,22 @@ const NavbarNavItem = styled.li`
 
 const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
   display: inline-block;
-  padding: ${({ fancy }) => (fancy ? '1.7em 3em 1.3em' : '1.5em 3em')};
+  padding: ${({ fancy }) => (fancy ? '1.7em 2em 1.3em' : '1.5em 2em')};
   line-height: 0;
   font-family: ${({ fancy }) =>
     fancy ? fontFamily.script : fontFamily.sansserif};
   color: ${({ active }) => (active ? colors.gray[6] : colors.gray[5])};
   font-size: ${({ fancy }) => (fancy ? '1.5em' : '1em')};
-  white-space: ${({ fancy }) => (fancy ? 'nowrap' : 'wrap')};
+  white-space: nowrap;
   transition: all 0.2s ease-out;
 `
 
 const MobileNavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  & ${NavbarNavLink} {
+    padding-left: 1em;
+  }
 `
 
 const MobileNavbarNavContainer = styled.div`

@@ -53,7 +53,7 @@ const Details = styled.div`
   bottom: 0;
   left: 0;
   padding: 40vh 0 10vh 10vw;
-  z-index: 1000;
+  z-index: 100000;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
