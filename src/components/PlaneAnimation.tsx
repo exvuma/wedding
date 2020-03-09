@@ -41,7 +41,10 @@ function getPlaneX2(
     c * Math.sin(amplitude * t) */
   )
 }
-
+/**
+ * Move around by position
+ * @param props
+ */
 export const Translation: React.FC<RigidBody> = props => (
   <div
     style={{
@@ -61,11 +64,13 @@ export const Translation: React.FC<RigidBody> = props => (
 
 type PlaneAnimationProps = {
   numPlanes: number
+  colorBackground?: keyof typeof colors
 }
 
 export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
   const [ts] = useAnimationFrame()
   const [ref, offset] = useMeasure()
+  const { colorBackground = 'blue' } = props
   const zeroToNArray = [...Array(props.numPlanes)].map((_, i) => i)
   const randomSeeds = React.useMemo(
     () =>
@@ -91,12 +96,13 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
   })
 
   const colorChoice: Array<keyof typeof colors> = Object.keys(colors).filter(
-    k => k !== 'blue',
+    k => k !== colorBackground,
   ) as any
 
   return (
-    <Grid>
-      <Gradient ref={ref}>
+    <>
+      <Grid />
+      <Gradient colorBackground={colorBackground} ref={ref}>
         {zeroToNArray.map(i => {
           const [dx, dy, rotation] = attrsNArray[i]
 
@@ -109,7 +115,7 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
               y={dy}
               rotation={rotation + 180}
             >
-              <Plane color={colors.blue[0]} />
+              <Plane color={colors[colorBackground][0]} />
             </Translation>
           )
         })}
@@ -141,7 +147,7 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
           </g>
         </svg>
       </Gradient>
-    </Grid>
+    </>
   )
 }
 
@@ -164,16 +170,17 @@ const dashAnimation = keyframes`
     stroke-dashoffset: 24px;
   }
 `
-
-const Gradient = styled.div`
+/* const Gradient = styled.div` */
+const Gradient = styled<'div', { colorBackground: keyof typeof colors }>('div')`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
-    ${colors.blue[6]} 15%,
+    ${props => colors[props.colorBackground][6]} 15%,
     rgba(0, 0, 0, 0) 100%
   );
 
@@ -181,9 +188,10 @@ const Gradient = styled.div`
     animation: ${dashAnimation} 1s linear infinite;
   }
 `
+/* ${colors[colorBackground][6]} 15%, */
 
-const Grid = styled.div`
-  z-index: 1;
+export const Grid = styled.div`
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;

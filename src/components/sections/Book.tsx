@@ -72,7 +72,6 @@ const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
   margin: 0 auto;
   padding: ${space[2]}em;
   border-radius: 100%;
-  // border: solid 15px ${colors.gray[1]};
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -200,36 +199,39 @@ export const Steps: React.FC = () => (
 export const Book: React.FC = () => {
   return (
     <>
-      <ColoredBlade base="gray" index={3}>
+      <ColoredBlade base="gray" index={0}>
         <Flex mx={space[6]}>
           {/* <Flex pt={space[7] + 'em'} pb={space[4] + 'em'}> */}
           <Box style={{ position: 'relative' }} flex={1}>
-            <PlaneAnimation numPlanes={4} />
+            <PlaneAnimation colorBackground={'gray'} numPlanes={4} />
           </Box>
           <Box flex={1} style={{ position: 'relative', textAlign: 'center' }}>
-            <PlaneAnimation numPlanes={0} />
+            <PlaneAnimation colorBackground={'gray'} numPlanes={0} />
             <h2
               style={{
                 fontSize: '3em',
+                color: colors.gray[6],
                 marginTop: space[3] + 'em',
                 marginBottom: space[1] + 'em',
+                zIndex: 100000,
+                position: 'relative',
               }}
             >
               Book
             </h2>
           </Box>
           <Box style={{ position: 'relative' }} flex={1}>
-            <PlaneAnimation numPlanes={4} />
+            <PlaneAnimation colorBackground={'gray'} numPlanes={4} />
           </Box>
         </Flex>
       </ColoredBlade>
+      <BookContent />
+      <Steps />
       <ColoredBlade base="gold" index={5}>
         <Box p={space[1] + 'em'} textAlign="center">
           <Notice>Do not book off the room block!</Notice>
         </Box>
       </ColoredBlade>
-      <BookContent />
-      <Steps />
       <BookContentAlso />
     </>
   )
