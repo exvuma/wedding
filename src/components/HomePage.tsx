@@ -35,9 +35,9 @@ export const HomePage: React.FC = () => {
           />
         )}
         {/* Todo make this responsive */}
-        <Panel id="home" setActiveTab={setActiveTab}>
+        {/* <Panel id="home" setActiveTab={setActiveTab}>
           <Hero />
-        </Panel>
+        </Panel> */}
         <Navbar activeTab={activeTab} />
         {/* <Panel id="about" setActiveTab={setActiveTab}>
           <About />
