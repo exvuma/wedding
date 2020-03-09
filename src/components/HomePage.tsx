@@ -34,14 +34,14 @@ export const HomePage: React.FC = () => {
           />
         )}
         {/* Todo make this responsive */}
-        <Panel id="home" setActiveTab={setActiveTab}>
+        {/* <Panel id="home" setActiveTab={setActiveTab}>
           <Hero />
-        </Panel>
+        </Panel> */}
         <Navbar activeTab={activeTab} />
-        <Panel id="about" setActiveTab={setActiveTab}>
+        {/* <Panel id="about" setActiveTab={setActiveTab}>
           <About />
-        </Panel>
-        {/* <Panel id="book" setActiveTab={setActiveTab}>
+        </Panel> */}
+        <Panel id="book" setActiveTab={setActiveTab}>
           <Book />
         </Panel>
         <Panel id="faqs" setActiveTab={setActiveTab}>
@@ -53,7 +53,7 @@ export const HomePage: React.FC = () => {
           <ContainerSmall>
             <Faq />
           </ContainerSmall>
-        </Panel> */}
+        </Panel>
         <Panel id="party" setActiveTab={setActiveTab}>
           <Box marginY={space[3] + 'em'}>
             <ColoredBlade base="red" index={0}>

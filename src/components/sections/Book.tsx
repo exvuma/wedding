@@ -19,6 +19,11 @@ export const BookContent: React.FC = () => (
     </div>
   </ContainerSmall>
 )
+const Notice = styled.div`
+  margin: 1em 0;
+  font-family: ${fontFamily.sansserif};
+  font-size: ${fontSizes[2]}em;
+`
 const CardWrapper = styled.div`
   background: white;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000001' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
@@ -205,9 +210,9 @@ export const Book: React.FC = () => {
           </Box>
         </Flex>
       </ColoredBlade>
-      <ColoredBlade base="red" index={6}>
+      <ColoredBlade base="gold" index={5}>
         <Box p={space[4] + 'em'} textAlign="center">
-          <h2 style={{ fontSize: '3em' }}>Do NOT Book Off the Room Block!</h2>
+          <Notice>Do not book off the room block!</Notice>
         </Box>
       </ColoredBlade>
       <BookContent />
