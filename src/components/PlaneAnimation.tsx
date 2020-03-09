@@ -1,5 +1,5 @@
 import React from 'react'
-import { useMeasure } from 'react-use'
+import { useSize, useMeasure } from 'react-use'
 import { keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
 import { ThemeColor, colors } from '../theme'
@@ -14,7 +14,8 @@ type RigidBody = {
   y: number
   rotation: number
 }
-
+// Resources for path animation https://css-tricks.com/svg-path-syntax-illustrated-guide/
+// http://tutorials.jenkov.com/svg/path-element.html
 export const Plane: React.FC<{ color: ThemeColor }> = props => (
   <svg fill={props.color} width="20" height="20">
     <path
@@ -25,9 +26,12 @@ export const Plane: React.FC<{ color: ThemeColor }> = props => (
   </svg>
 )
 
+// How much variance between these values we want when randomly placing planes
 const PLANE_VARIANCE_X = 120
 const PLANE_VARIANCE_Y = 80
 
+// Gets the plane angle/rotation
+// this was sort of random I was just guessing
 function getPlaneX2(
   t: number,
   amplitude: number,
@@ -41,16 +45,13 @@ function getPlaneX2(
     c * Math.sin(amplitude * t) */
   )
 }
-/**
- * Move around by position
- * @param props
- */
+
 export const Translation: React.FC<RigidBody> = props => (
   <div
     style={{
       position: 'absolute',
       left: '50%',
-      bottom: '100px',
+      top: '50%',
       marginLeft: -props.width / 2 + 'px',
       marginTop: -props.height / 2 + 'px',
       width: props.width + 'px',
@@ -69,8 +70,8 @@ type PlaneAnimationProps = {
 
 export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
   const [ts] = useAnimationFrame()
-  const [ref, offset] = useMeasure()
   const { colorBackground = 'blue' } = props
+  const [svgContainerRef, svgContainerRefOffset] = useMeasure()
   const zeroToNArray = [...Array(props.numPlanes)].map((_, i) => i)
   const randomSeeds = React.useMemo(
     () =>
@@ -94,15 +95,15 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
     const rotation = getPlaneX2(ts, 1 / 1000, seed.a, seed.b, seed.c)
     return [dx, dy, rotation]
   })
-
   const colorChoice: Array<keyof typeof colors> = Object.keys(colors).filter(
     k => k !== colorBackground,
   ) as any
+  //   const colorChoice: Array<keyof typeof colors> = Object.keys(colors) as any
 
   return (
     <>
       <Grid />
-      <Gradient colorBackground={colorBackground} ref={ref}>
+      <Gradient colorBackground={colorBackground} ref={svgContainerRef}>
         {zeroToNArray.map(i => {
           const [dx, dy, rotation] = attrsNArray[i]
 
@@ -113,33 +114,35 @@ export const PlaneAnimation: React.FC<PlaneAnimationProps> = props => {
               height={20}
               x={dx}
               y={dy}
-              rotation={rotation + 180}
+              rotation={rotation}
             >
               <Plane color={colors[colorBackground][0]} />
             </Translation>
           )
         })}
-        <svg width={offset.width} height={offset.height}>
+        <svg
+          width={svgContainerRefOffset.width}
+          height={svgContainerRefOffset.height}
+        >
           <g
-            transform={`matrix(1 0 0 -1 ${offset.width / 2} ${offset.height /
-              2})`}
+            transform={`matrix(1 0 0 -1 ${svgContainerRefOffset.width /
+              2} ${svgContainerRefOffset.height / 2})`}
           >
             {zeroToNArray.map(i => {
               const [dx, dy, rotation] = attrsNArray[i]
-              const cx = dx + rotation * 1.5
-              let cy = -(offset.height / 2)
-              cy += dy / 2
+              const cx = dx + -rotation * 1.5
 
               return (
                 <path
                   key={`line-${i}`}
                   d={`
-                    M ${dx} ${dy}
-                    C ${cx} ${cy}, ${cx} ${cy}, ${dx} -100
+                    M ${dx} ${dy * -1}
+                    C ${cx} ${dy * -1}, ${cx} -${svgContainerRefOffset.height /
+                    2}, ${dx} -${svgContainerRefOffset.height / 2}
                   `.trim()}
-                  stroke={colors[colorChoice[i % (colorChoice.length - 1)]][4]}
+                  stroke={colors[colorChoice[i % (colorChoice.length - 1)]][5]}
                   fill="transparent"
-                  stroke-width="2"
+                  stroke-widh="5"
                   stroke-dasharray="4"
                 />
               )
@@ -157,7 +160,7 @@ const translateUp = keyframes`
   }
 
   to {
-    background-position-y: -10000px;
+    background-position-y: 10000px;
   }
 `
 
@@ -170,7 +173,7 @@ const dashAnimation = keyframes`
     stroke-dashoffset: 24px;
   }
 `
-/* const Gradient = styled.div` */
+
 const Gradient = styled<'div', { colorBackground: keyof typeof colors }>('div')`
   position: absolute;
   top: 0;
@@ -188,9 +191,8 @@ const Gradient = styled<'div', { colorBackground: keyof typeof colors }>('div')`
     animation: ${dashAnimation} 1s linear infinite;
   }
 `
-/* ${colors[colorBackground][6]} 15%, */
 
-export const Grid = styled.div`
+const Grid = styled.div`
   z-index: 2;
   position: absolute;
   top: 0;

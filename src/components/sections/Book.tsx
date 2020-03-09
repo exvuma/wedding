@@ -205,7 +205,14 @@ export const Book: React.FC = () => {
           <Box style={{ position: 'relative' }} flex={1}>
             <PlaneAnimation colorBackground={'gray'} numPlanes={4} />
           </Box>
-          <Box flex={1} style={{ position: 'relative', textAlign: 'center' }}>
+          <Box
+            display="flex"
+            flex={1}
+            style={{ position: 'relative', textAlign: 'center' }}
+            height="20em"
+            alignItems="flex-end"
+            justifyContent="space-around"
+          >
             <PlaneAnimation colorBackground={'gray'} numPlanes={0} />
             <h2
               style={{
