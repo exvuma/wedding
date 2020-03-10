@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { colors } from '../theme'
+import { colors, newColors } from '../theme'
 
 export const ColoredBlade = styled<
   'div',
@@ -24,13 +24,13 @@ function getForegroundColor(
 ) {
   if (base === 'gray') {
     if (index < 5) {
-      return colors[base][7]
+      return newColors.DarkShades
     } else {
-      return 'white'
+      return newColors.LightShades
     }
   }
 
-  if (index < 3) return colors[base][7]
+  if (index < 3) return newColors.DarkShades
 
-  return 'white'
+  return newColors.LightShades
 }

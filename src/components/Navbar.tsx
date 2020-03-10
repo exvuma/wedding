@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Media from 'react-media'
 import { HamburgerSpin } from 'react-animated-burgers'
-import { colors, fontFamily, breakpoints } from '../theme'
+import { colors, fontFamily, breakpoints, newColors } from '../theme'
 
 export type NavProps = {
   activeTab: TabId
@@ -66,7 +66,7 @@ const NavbarMobile: React.FC<NavProps> = ({ activeTab }) => {
         {homeTab.title}
       </NavbarNavLink>
       <HamburgerSpin
-        barColor={colors.gray[6]}
+        barColor={newColors.MainColor}
         isActive={isOpen}
         toggleButton={() => setIsOpen(!isOpen)}
       />
@@ -100,8 +100,8 @@ const NavbarWrapper = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  background: white;
-  border-bottom: solid 1px ${colors.gray[4]};
+  background: ${newColors.MainColor};
+  border-bottom: solid 1px ${newColors.MainColor};
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 `
 
@@ -130,7 +130,9 @@ const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
   line-height: 0;
   font-family: ${({ fancy }) =>
     fancy ? fontFamily.script : fontFamily.sansserif};
-  color: ${({ active }) => (active ? colors.gray[6] : colors.gray[5])};
+  color: ${({ active }) =>
+    active ? newColors.LightShades : newColors.LightShades};
+  text-decoration: ${({ active }) => (active ? 'underline' : 'none')};
   font-size: ${({ fancy }) => (fancy ? '1.5em' : '1em')};
   white-space: nowrap;
   transition: all 0.2s ease-out;
@@ -152,5 +154,5 @@ const MobileNavbarNavContainer = styled.div`
   top: 4.6em;
   padding-bottom: 4.6em;
   overflow-y: scroll;
-  background: white;
+  background: ${newColors.LightShades};
 `

@@ -1,7 +1,7 @@
 import React, { Component, useRef } from 'react'
 import { Flipped } from 'react-flip-toolkit'
 import { Profile } from './PartyProfileSection'
-import { colors, fontFamily } from '../theme'
+import { colors, fontFamily, newColors } from '../theme'
 import styled from '@emotion/styled'
 
 export const PartyProfileDetail: React.FC<{
@@ -72,7 +72,7 @@ const Details = styled.div`
   & .details__bg--up {
     top: 0;
     height: 100vh;
-    background: white;
+    background: ${newColors.LightShades};
   }
 
   & .details__bg--down {
@@ -131,7 +131,7 @@ const Details = styled.div`
     background: none;
     cursor: pointer;
     font-size: 0.85em;
-    color: ${colors.gray[5]};
+    color: ${newColors.DarkShades};
   }
 
   & .icon {

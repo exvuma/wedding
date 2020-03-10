@@ -2,35 +2,38 @@ import { ContainerSmall } from '../Container'
 import { ColoredBlade } from '../ColoredBlade'
 import { Flex, Box } from 'reflexbox'
 import { PlaneAnimation } from '../PlaneAnimation'
-import { space, colors, fontSizes, fontFamily } from '../../theme'
+import { space, colors, fontSizes, fontFamily, newColors } from '../../theme'
 import React from 'react'
 import styled from '@emotion/styled'
 import registerScreenShotUrl2 from '../../img/Register_screenshot2.png'
+import { Title } from '../Utils/TItle'
 
-export const BookContent: React.FC = () => (
+const BookContentEl: React.FC = ({ children }) => (
   <ContainerSmall>
-    <div>
-      <p>
-        We’re getting married at the beautiful Hyatt Ziva in Cancun Mexico. We
-        want you there to share our special day with us more than any gift on a
-        registry.
-      </p>
-      <p>Book your hotel reservation as soon as possible by: </p>
+    <div style={{ color: newColors.LightShades }}>
+      <p>{children}</p>
     </div>
   </ContainerSmall>
 )
+
+export const BookContent: React.FC = () => (
+  <>
+    <p>
+      We’re getting married at the beautiful Hyatt Ziva in Cancun Mexico. We
+      want you there to share our special day with us more than any gift on a
+      registry.
+    </p>
+    <p>Book your hotel reservation as soon as possible by: </p>
+  </>
+)
 export const BookContentAlso: React.FC = () => (
-  <ContainerSmall>
-    <div>
-      <p>
-        To travel to Cancun also:
-        <ul>
-          <li>Have a passport</li>
-          <li>Book flights with or without help of travel agent</li>
-        </ul>
-      </p>
-    </div>
-  </ContainerSmall>
+  <p>
+    To travel to Cancun also:
+    <ul>
+      <li>Have a passport</li>
+      <li>Book flights with or without help of travel agent</li>
+    </ul>
+  </p>
 )
 const Notice = styled.div`
   margin: 1em 0;
@@ -38,7 +41,7 @@ const Notice = styled.div`
   font-size: ${fontSizes[2]}em;
 `
 const StepWrapper = styled.div`
-  background: white;
+  background: ${newColors.LightShades};
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000001' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   border-radius: 3px;
   padding: ${space[2]}em;
@@ -49,7 +52,7 @@ const StepWrapper = styled.div`
   transform: scale(1);
   transition: all 0.2s ease-out;
   height: 100%;
-  border-top: solid 8px ${colors.red[5]};
+  border-top: solid 8px ${newColors.MainColor};
   &:hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -76,9 +79,9 @@ const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${colors.red[5]};
+  background: ${newColors.MainColor};
   & > div {
-    color: white;
+    color: ${newColors.LightShades};
     font-size: ${fontSizes[5]}em;
   }
 `
@@ -93,12 +96,12 @@ const Button = styled('a')`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${colors.red[5]};
+  background: ${newColors.MainColor};
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
   & > div {
-    color: white;
+    color: ${newColors.LightShades};
     font-size: ${fontSizes[2]}em;
   }
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -113,12 +116,13 @@ const Button = styled('a')`
 const StepsTitle = styled.h2`
   font-family: ${fontFamily.serif};
   margin: 1em 0 0 0;
+  color: ${newColors.VeryDarkShade};
 `
 const StepsDetails = styled.p`
   font-family: ${fontFamily.sansserif};
   font-size: 0.8em;
   letter-spacing: 1px;
-  color: ${colors.gray[5]};
+  color: ${newColors.DarkShades};
   font-size: ${fontSizes[2]}em;
   margin: ${space[1]}em 0 ${space[1]}em 0;
   transition: all 0.3s linear;
@@ -239,7 +243,9 @@ export const Book: React.FC = () => {
           <Notice>Do not book off the room block!</Notice>
         </Box>
       </ColoredBlade>
-      <BookContentAlso />
-    </>
+      <BookContentEl>
+        <BookContentAlso />
+      </BookContentEl>
+    </div>
   )
 }

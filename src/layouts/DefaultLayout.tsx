@@ -9,6 +9,7 @@ import {
   fontFamily,
   breakpoints,
   mobileBaseFontSize,
+  newColors,
 } from '../theme/theme'
 import { baseFontSize } from '../theme/theme'
 
@@ -58,14 +59,13 @@ export const DefaultLayout: React.FC = ({ children }) => (
         <Global
           styles={css`
             html {
-              /* background: ${colors.red[0]}; */
-              background: white;
+              background: ${newColors.LightShades};
             }
 
             body {
               font-family: ${fontFamily.serif};
               font-size: ${baseFontSize};
-              color: ${colors.gray[7]};
+              color: ${newColors.DarkShades};
             }
 
             @media screen and (max-width: ${breakpoints.mobile}em) {
