@@ -17,6 +17,7 @@ import { About } from './sections/About'
 import { Panel } from './utils/Panel'
 import lamePic from '../img/about_us/IMG_20190811_130244.jpg'
 import lamePic2 from '../img/about_us/20170527_193518.jpg'
+import { Itinerary } from './sections/Itinerary'
 
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
@@ -43,6 +44,9 @@ export const HomePage: React.FC = () => {
         </Panel> */}
         <Panel id="book" setActiveTab={setActiveTab}>
           <Book />
+        </Panel>
+        <Panel id="itinerary" setActiveTab={setActiveTab}>
+          <Itinerary />
         </Panel>
         <Panel id="faqs" setActiveTab={setActiveTab}>
           <ColoredBlade base="red" index={6}>
