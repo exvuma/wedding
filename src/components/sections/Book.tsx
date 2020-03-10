@@ -202,43 +202,13 @@ export const Steps: React.FC = () => (
 )
 export const Book: React.FC = () => {
   return (
-    <>
-      <ColoredBlade base="gray" index={0}>
-        <Flex mx={space[6]}>
-          {/* <Flex pt={space[7] + 'em'} pb={space[4] + 'em'}> */}
-          <Box style={{ position: 'relative' }} flex={1}>
-            <PlaneAnimation colorBackground={'gray'} numPlanes={4} />
-          </Box>
-          <Box
-            display="flex"
-            flex={1}
-            style={{ position: 'relative', textAlign: 'center' }}
-            height="20em"
-            alignItems="flex-end"
-            justifyContent="space-around"
-          >
-            <PlaneAnimation colorBackground={'gray'} numPlanes={0} />
-            <h2
-              style={{
-                fontSize: '3em',
-                color: colors.gray[6],
-                marginTop: space[3] + 'em',
-                marginBottom: space[1] + 'em',
-                zIndex: 100000,
-                position: 'relative',
-              }}
-            >
-              Book
-            </h2>
-          </Box>
-          <Box style={{ position: 'relative' }} flex={1}>
-            <PlaneAnimation colorBackground={'gray'} numPlanes={4} />
-          </Box>
-        </Flex>
-      </ColoredBlade>
-      <BookContent />
+    <div style={{ background: newColors.DarkShades }}>
+      <Title color={newColors.LightShades}>Book</Title>
+      <BookContentEl>
+        <BookContent />
+      </BookContentEl>
       <Steps />
-      <ColoredBlade base="gold" index={5}>
+      <ColoredBlade base="gold" index={5} theme={{}}>
         <Box p={space[1] + 'em'} textAlign="center">
           <Notice>Do not book off the room block!</Notice>
         </Box>
