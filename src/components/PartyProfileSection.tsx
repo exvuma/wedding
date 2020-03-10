@@ -1,5 +1,12 @@
 import React from 'react'
-import { space, breakpoints, fontSizes, fontFamily, colors } from '../theme'
+import {
+  space,
+  breakpoints,
+  fontSizes,
+  fontFamily,
+  colors,
+  newColors,
+} from '../theme'
 import styled from '@emotion/styled'
 import { Box, Flex } from 'reflexbox'
 import { ColoredBlade } from './ColoredBlade'
@@ -97,7 +104,7 @@ const PhotoWrapper = styled<
 >('div')(props => ({
   marginTop: `-16.5em`,
   padding: `${space[2]}em`,
-  background: 'white',
+  background: newColors.LightShades,
   borderRadius: `${space[1]}em`,
   transform:
     props.direction === 'left'

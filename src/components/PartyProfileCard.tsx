@@ -1,5 +1,12 @@
 import React from 'react'
-import { space, breakpoints, fontSizes, fontFamily, colors } from '../theme'
+import {
+  space,
+  breakpoints,
+  fontSizes,
+  fontFamily,
+  colors,
+  newColors,
+} from '../theme'
 import styled from '@emotion/styled'
 import { Box, Flex } from 'reflexbox'
 import { ColoredBlade } from './ColoredBlade'
@@ -38,14 +45,14 @@ const CardTitle = styled.h3`
   font-size: 0.8em;
   letter-spacing: 2.2px;
   text-transform: uppercase;
-  color: ${colors.gray[4]};
+  color: ${newColors.MainColor};
   font-size: ${fontSizes[2]}em;
   margin: ${space[1]}em 0 0 0;
   transition: all 0.3s linear;
 `
 
 const CardWrapper = styled.div`
-  background: white;
+  background: ${newColors.LightShades};
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000001' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   border-radius: 3px;
   padding: ${space[2]}em;
