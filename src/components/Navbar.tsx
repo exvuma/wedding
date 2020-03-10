@@ -12,6 +12,7 @@ const tabTitles = [
   { title: 'About Us', id: 'about' },
   { title: 'Book', id: 'book' },
   { title: 'John and Victoria', id: 'home' },
+  { title: 'Itinerary', id: 'itinerary' },
   { title: 'FAQs', id: 'faqs' },
   { title: 'Wedding Party', id: 'party' },
 ] as const
