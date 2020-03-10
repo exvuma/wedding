@@ -5,30 +5,36 @@ import { CardWrapper } from '../utils/CardWrapper'
 import { colors } from '../../theme/theme'
 
 const itineraryItems = [
-  { description: 'Rehearsal Dinner', date: '11/19/2020' },
-  { description: 'Ceremony', date: '11/20/2020', time: '3pm' },
-  { description: 'Reception', date: '11/20/2020', time: '6pm' },
-  { description: 'Group Event', time: 'TBD but expect', date: '11/21/2020' },
+  { description: 'Rehearsal Dinner', date: 'November 19th, 2020' },
+  { description: 'Ceremony', date: 'November 20th, 2020', time: '3pm' },
+  { description: 'Reception', date: 'November 20th, 2020', time: '6pm' },
+  {
+    description: 'Group Event',
+    time: 'TBD but expect',
+    date: 'November 21th, 2020',
+  },
 ] as const
 export const Itinerary: React.FC = () => (
   <ContainerSmall>
-    <CardWrapper>
-      <h1>Itinerary</h1>
-      <p>More details coming soon! All you need to know now is:</p>
-      <div>
-        <Table>
-          <tbody>
-            {itineraryItems.map(item => (
-              <Tr>
-                <Td>{item.description}:</Td>
-                <Td>{item.time ? item.time : ''}</Td>
-                <Td>{item.date}</Td>
-              </Tr>
-            ))}
-          </tbody>
-        </Table>
-      </div>
-    </CardWrapper>
+    <div style={{ marginBottom: '1em' }}>
+      <CardWrapper>
+        <h1>Itinerary</h1>
+        <p>More details coming soon! All you need to know now is:</p>
+        <div>
+          <Table>
+            <tbody>
+              {itineraryItems.map(item => (
+                <Tr>
+                  <Td>{item.description}:</Td>
+                  <Td>{item.time ? item.time : ''}</Td>
+                  <Td>{item.date}</Td>
+                </Tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
+      </CardWrapper>
+    </div>
   </ContainerSmall>
 )
 export const Tr = styled('tr')``
