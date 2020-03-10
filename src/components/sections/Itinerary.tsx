@@ -2,24 +2,26 @@ import { ContainerSmall } from '../Container'
 import styled from '@emotion/styled'
 import { CSSProperties } from 'react'
 import { CardWrapper } from '../utils/CardWrapper'
+import { colors } from '../../theme/theme'
 
 const itineraryItems = [
-  { description: 'Group Event: TBD but', date: 'expect 11/21/2020' },
-  { description: 'Rehearsal Dinner:', date: '11/19/2020' },
-  { description: 'Ceremony:', date: '11/20/2020 3pm' },
-  { description: 'Reception:', date: '11/20/2020 6pm' },
+  { description: 'Rehearsal Dinner', date: '11/19/2020' },
+  { description: 'Ceremony', date: '11/20/2020', time: '3pm' },
+  { description: 'Reception', date: '11/20/2020', time: '6pm' },
+  { description: 'Group Event', time: 'TBD but expect', date: '11/21/2020' },
 ] as const
 export const Itinerary: React.FC = () => (
   <ContainerSmall>
     <CardWrapper>
       <h1>Itinerary</h1>
+      <p>More details coming soon! All you need to know now is:</p>
       <div>
         <Table>
           <tbody>
-            More details coming soon! All you need to know now is:
             {itineraryItems.map(item => (
               <Tr>
-                <Td>{item.description}</Td>
+                <Td>{item.description}:</Td>
+                <Td>{item.time ? item.time : ''}</Td>
                 <Td>{item.date}</Td>
               </Tr>
             ))}
@@ -34,6 +36,7 @@ export const Td = styled<'td', {}>('td')`
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
+  padding: 1em 0;
 `
 
 export const Table = styled<
@@ -47,10 +50,11 @@ export const Table = styled<
   position: relative;
   width: 100%;
   & ${Td} :first-child {
-    text-align: center;
+    text-align: left;
   }
   & ${Td} :last-child {
     text-align: right;
+    color: ${colors.red[5]};
   }
   & ${Tr} {
     text-align: center;
