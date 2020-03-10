@@ -14,9 +14,10 @@ import { PartyProfileDetail } from './PartyProfileDetail'
 import { Navbar, TabId } from './Navbar'
 import { Faq } from './sections/Faq'
 import { About } from './sections/About'
-import { Panel } from './sections/Panel'
+import { Panel } from './utils/Panel'
 import lamePic from '../img/about_us/IMG_20190811_130244.jpg'
 import lamePic2 from '../img/about_us/20170527_193518.jpg'
+import { Itinerary } from './sections/Itinerary'
 
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
@@ -38,11 +39,14 @@ export const HomePage: React.FC = () => {
           <Hero />
         </Panel>
         <Navbar activeTab={activeTab} />
-        <Panel id="about" setActiveTab={setActiveTab}>
+        {/* <Panel id="about" setActiveTab={setActiveTab}>
           <About />
-        </Panel>
-        {/* <Panel id="book" setActiveTab={setActiveTab}>
+        </Panel> */}
+        <Panel id="book" setActiveTab={setActiveTab}>
           <Book />
+        </Panel>
+        <Panel id="itinerary" setActiveTab={setActiveTab}>
+          <Itinerary />
         </Panel>
         <Panel id="faqs" setActiveTab={setActiveTab}>
           <ColoredBlade base="red" index={6}>
@@ -53,7 +57,7 @@ export const HomePage: React.FC = () => {
           <ContainerSmall>
             <Faq />
           </ContainerSmall>
-        </Panel> */}
+        </Panel>
         <Panel id="party" setActiveTab={setActiveTab}>
           <Box marginY={space[3] + 'em'}>
             <ColoredBlade base="red" index={0}>
