@@ -3,15 +3,15 @@ export const newColors = {
   Info: ' #151e1a', //	 "RacingGreen",
   Success: '#728342', // "Dingley",
   Warning: '#ef720a', // "Christine",
-  LightRed: '#ff959f',
+  LightRed: '#fff7fa',
   Danger: '#f44336', // "Pomegranate",
   // main
-  LightShades: '#F4F0ED', //light green
-  LightAccent: '#9ACABD', // goldish
-  MainColor: '#B70315',
-  DarkAccent: '#B58C83', //grey
-  DarkShades: '#262430',
-  VeryDarkShade: '#000000',
+  LightShades: '#F4F0ED', // off white
+  LightAccent: '#9ACABD', // rose goldish
+  MainColor: '#B70315', // red
+  DarkAccent: '#B58C83', //blue green
+  DarkShades: '#262430', //dark purple
+  VeryDarkShade: '#000000', //blach
   Grey: '#cdccd6',
 } as const
 function ColorLuminance(hex: string, lum: any) {
@@ -44,27 +44,27 @@ console.log(
 export const colors = {
   //TODO: work on colors
   red: [
-    ColorLuminance(newColors.LightRed, 1),
-    ColorLuminance(newColors.LightRed, 0.9),
-    ColorLuminance(newColors.MainColor, 0.3),
+    ColorLuminance(newColors.LightRed, 0.6),
+    // ColorLuminance(newColors.LightRed, -0.2),
+    // ColorLuminance(newColors.LightRed, -0.6),
+    ColorLuminance(newColors.LightRed, 0.4),
     ColorLuminance(newColors.MainColor, 0),
-    ColorLuminance(newColors.MainColor, -0.2),
     ColorLuminance(newColors.MainColor, -0.4),
     ColorLuminance(newColors.MainColor, -0.8),
   ],
-  blue: [
+  purple: [
     ColorLuminance(newColors.DarkShades, 0.8),
-    ColorLuminance(newColors.DarkShades, 0.7),
+    // ColorLuminance(newColors.DarkShades, 0.7),
     ColorLuminance(newColors.DarkShades, 0.3),
     ColorLuminance(newColors.DarkShades, 0),
     ColorLuminance(newColors.DarkShades, -0.2),
-    ColorLuminance(newColors.DarkShades, -0.4),
+    // ColorLuminance(newColors.DarkShades, -0.4),
     ColorLuminance(newColors.DarkShades, -0.8),
   ],
-  green: [
+  rose: [
     ColorLuminance(newColors.DarkAccent, 0.8),
-    ColorLuminance(newColors.DarkAccent, 0.7),
-    ColorLuminance(newColors.DarkAccent, 0.3),
+    // ColorLuminance(newColors.DarkAccent, 0.7),
+    // ColorLuminance(newColors.DarkAccent, 0.3),
     ColorLuminance(newColors.DarkAccent, 0),
     ColorLuminance(newColors.DarkAccent, -0.2),
     ColorLuminance(newColors.DarkAccent, -0.4),
@@ -72,16 +72,12 @@ export const colors = {
   ],
   gray: [
     ColorLuminance(newColors.Grey, 0.8),
-    ColorLuminance(newColors.Grey, 0.7),
-    ColorLuminance(newColors.Grey, 0.3),
     ColorLuminance(newColors.Grey, 0),
     ColorLuminance(newColors.Grey, -0.2),
     ColorLuminance(newColors.Grey, -0.4),
     ColorLuminance(newColors.Grey, -0.8),
   ],
-  gold: [
-    ColorLuminance(newColors.LightAccent, 0.8),
-    ColorLuminance(newColors.LightAccent, 0.7),
+  aqua: [
     ColorLuminance(newColors.LightAccent, 0.3),
     ColorLuminance(newColors.LightAccent, 0),
     ColorLuminance(newColors.LightAccent, -0.2),
@@ -89,16 +85,24 @@ export const colors = {
     ColorLuminance(newColors.LightAccent, -0.8),
   ],
 } as const
-// const color = Object.keys(oldColors).map(mainColor=>{
-//   oldColors[mainColor].map
+
+// const showHex = () => {
+//   const allColors = Object.keys(colors)
+//     .map(key => colors[key].map(color => color))
+//     .reduce((prev, cur) => [...prev, ...cur], [])
+//     .map(color => {
+//       return { color }
+//     })
+//   console.log('allColors', allColors)
 // }
+// showHex()
 
 export type ThemeColor =
   | typeof colors.red[number]
-  | typeof colors.blue[number]
-  | typeof colors.green[number]
+  | typeof colors.purple[number]
+  | typeof colors.rose[number]
   | typeof colors.gray[number]
-  | typeof colors.gold[number]
+  | typeof colors.aqua[number]
 
 export const breakpoints = {
   mobile: 40,

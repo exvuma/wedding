@@ -95,9 +95,10 @@ export const DefaultLayout: React.FC = ({ children }) => (
 
             a {
               text-decoration: none;
-              color: ${colors.blue[5]};
+              color: ${colors.red[2]};
               &:hover {
                 text-decoration: underline;
+                color: ${colors.red[2]};
               }
             }
           `}

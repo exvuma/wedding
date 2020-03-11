@@ -5,5 +5,5 @@ export const Title = styled<'h2', { color?: string }>('h2')`
   text-align: center;
   padding-top: 1em;
   font-size: 3em;
-  color: ${({ color }) => color || newColors.LightShades};
+  color: ${({ color }) => color || newColors.DarkShades};
 `

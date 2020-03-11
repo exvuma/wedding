@@ -60,7 +60,7 @@ export const Table = styled<
   }
   & ${Td} :last-child {
     text-align: right;
-    color: ${colors.red[5]};
+    color: ${colors.red[2]};
   }
   & ${Tr} {
     text-align: center;

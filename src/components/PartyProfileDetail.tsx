@@ -27,7 +27,7 @@ export const PartyProfileDetail: React.FC<{
         className="details__deco"
         data-fade-in
         style={{
-          background: colors.red[5],
+          background: colors.red[4],
         }}
       />
       <h3 className="details__subtitle" data-fade-in>
@@ -97,7 +97,7 @@ const Details = styled.div`
   & .details__title {
     margin: -1.5em 0 0.1em;
     font-size: 2.5em;
-    color: ${colors.gray[7]};
+    color: ${colors.gray[4]};
     font-family: ${fontFamily.serif};
     font-weight: 700;
   }
@@ -113,7 +113,7 @@ const Details = styled.div`
     letter-spacing: 0.115em;
     font-size: 1.75em;
     font-family: ${fontFamily.sansserif};
-    color: ${colors.gray[6]};
+    color: ${colors.gray[4]};
   }
 
   & .details__description {

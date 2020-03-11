@@ -35,13 +35,13 @@ export const HomePage: React.FC = () => {
           />
         )}
         {/* Todo make this responsive */}
-        {/* <Panel id="home" setActiveTab={setActiveTab}>
+        <Panel id="home" setActiveTab={setActiveTab}>
           <Hero />
-        </Panel> */}
+        </Panel>
         <Navbar activeTab={activeTab} />
-        {/* <Panel id="about" setActiveTab={setActiveTab}>
+        <Panel id="about" setActiveTab={setActiveTab}>
           <About />
-        </Panel> */}
+        </Panel>
         <Panel id="book" setActiveTab={setActiveTab}>
           <Book />
         </Panel>
@@ -49,26 +49,26 @@ export const HomePage: React.FC = () => {
           <Itinerary />
         </Panel>
         <Panel id="faqs" setActiveTab={setActiveTab}>
-          <ColoredBlade base="red" index={6}>
-            <Box p={space[4] + 'em'} textAlign="center">
-              <h2 style={{ fontSize: '3em' }}>FAQs</h2>
-            </Box>
-          </ColoredBlade>
+          {/* <ColoredBlade base="red" index={6}> */}
+          <Box p={space[4] + 'em'} textAlign="center">
+            <h2 style={{ fontSize: '3em' }}>FAQs</h2>
+          </Box>
+          {/* </ColoredBlade> */}
           <ContainerSmall>
             <Faq />
           </ContainerSmall>
         </Panel>
         <Panel id="party" setActiveTab={setActiveTab}>
           <Box marginY={space[3] + 'em'}>
-            <ColoredBlade base="red" index={0}>
-              <Box
-                paddingY={space[3] + 'em'}
-                textAlign="center"
-                fontFamily={fontFamily.sansserif}
-              >
-                <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
-              </Box>
-            </ColoredBlade>
+            {/* <ColoredBlade base="red" index={0}> */}
+            <Box
+              paddingY={space[3] + 'em'}
+              textAlign="center"
+              fontFamily={fontFamily.sansserif}
+            >
+              <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
+            </Box>
+            {/* </ColoredBlade> */}
             <Box marginTop={space[5] + 'em'}>
               <Container>
                 <PartyProfileCards
@@ -76,13 +76,13 @@ export const HomePage: React.FC = () => {
                 />
               </Container>
             </Box>
-            <Box marginTop={space[5] + 'em'}>
+            {/* <Box marginTop={space[5] + 'em'}>
               <Container>
                 <PartyProfileCards2
                   onSelect={profile => setSelectedProfile(profile)}
                 />
               </Container>
-            </Box>
+            </Box> */}
           </Box>
         </Panel>
       </DefaultLayout>

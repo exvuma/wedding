@@ -21,7 +21,7 @@ export type Profile = {
 type PartyProfileSectionProps = {
   profile: Profile
   color: keyof typeof colors
-  index: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+  index: 0 | 1 | 2 | 3 | 4 //| 5 | 6 | 7
   direction: 'left' | 'right'
 }
 

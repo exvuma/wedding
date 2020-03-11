@@ -10,7 +10,7 @@ import { SmallHr } from '../Hr'
 
 export const About: React.FC = () => (
   <Box marginBottom={space[5] + 'em'}>
-    <ColoredBlade base="blue" index={7}>
+    <ColoredBlade base="aqua" index={4}>
       <Background>
         <ContainerSmall>
           <Box
@@ -64,7 +64,7 @@ const PhotoBorder = styled.div`
     content: '';
     width: 100%;
     height: 5em;
-    background: ${colors.red[0]};
+    background: ${colors.aqua[1]};
     position: absolute;
     left: 0;
     bottom: 0;
@@ -75,7 +75,7 @@ const PhotoBorder = styled.div`
 const JohnStory: React.FC<> = () => (
   <>
     <h2>Can you believe it?</h2>
-    <SmallHr color={colors.red[5]} />
+    <SmallHr color={colors.red[2]} />
     <h3>
       <em>A foreward from John</em>
     </h3>
@@ -86,7 +86,7 @@ const JohnStory: React.FC<> = () => (
       night from a trip to California.
     </p>
     <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-      <SmallHr color={colors.gold[5]} />
+      <SmallHr color={colors.rose[2]} />
     </div>
     <p>
       I had been stressing about just <em>what I was going to do</em> pop the

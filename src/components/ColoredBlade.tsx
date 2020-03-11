@@ -5,7 +5,7 @@ export const ColoredBlade = styled<
   'div',
   {
     base: keyof typeof colors
-    index: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 //colors
+    index: 0 | 1 | 2 | 3 | 4 //| 5 | 6 | 7 //colors
     customBg?: string
   }
 >('div')(props => ({

@@ -11,6 +11,7 @@ export type NavProps = {
 const tabTitles = [
   { title: 'About Us', id: 'about' },
   { title: 'Book', id: 'book' },
+  { title: 'Place Holder', id: 'place' },
   { title: 'John and Victoria', id: 'home' },
   { title: 'Itinerary', id: 'itinerary' },
   { title: 'FAQs', id: 'faqs' },
@@ -66,7 +67,7 @@ const NavbarMobile: React.FC<NavProps> = ({ activeTab }) => {
         {homeTab.title}
       </NavbarNavLink>
       <HamburgerSpin
-        barColor={newColors.MainColor}
+        barColor={colors.red[4]}
         isActive={isOpen}
         toggleButton={() => setIsOpen(!isOpen)}
       />
@@ -100,8 +101,8 @@ const NavbarWrapper = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  background: ${newColors.MainColor};
-  border-bottom: solid 1px ${newColors.MainColor};
+  background: ${colors.gray[1]};
+  border-bottom: solid 1px ${colors.gray[3]};
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 `
 
@@ -130,8 +131,7 @@ const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
   line-height: 0;
   font-family: ${({ fancy }) =>
     fancy ? fontFamily.script : fontFamily.sansserif};
-  color: ${({ active }) =>
-    active ? newColors.LightShades : newColors.LightShades};
+  color: ${({ active }) => (active ? colors.red[2] : newColors.LightShades)};
   text-decoration: ${({ active }) => (active ? 'underline' : 'none')};
   font-size: ${({ fancy }) => (fancy ? '1.5em' : '1em')};
   white-space: nowrap;

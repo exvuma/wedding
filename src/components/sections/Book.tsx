@@ -1,16 +1,16 @@
 import { ContainerSmall } from '../Container'
-import { ColoredBlade } from '../ColoredBlade'
+// import { ColoredBlade } from '../ColoredBlade'
 import { Flex, Box } from 'reflexbox'
 import { PlaneAnimation } from '../PlaneAnimation'
 import { space, colors, fontSizes, fontFamily, newColors } from '../../theme'
 import React from 'react'
 import styled from '@emotion/styled'
 import registerScreenShotUrl2 from '../../img/Register_screenshot2.png'
-import { Title } from '../Utils/TItle'
+import { Title } from '../utils/Title'
 
 const BookContentEl: React.FC = ({ children }) => (
   <ContainerSmall>
-    <div style={{ color: newColors.LightShades }}>
+    <div style={{ color: newColors.DarkShade }}>
       <p>{children}</p>
     </div>
   </ContainerSmall>
@@ -52,7 +52,7 @@ const StepWrapper = styled.div`
   transform: scale(1);
   transition: all 0.2s ease-out;
   height: 100%;
-  border-top: solid 8px ${newColors.MainColor};
+  border-top: solid 8px ${colors.red[2]};
   &:hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -79,7 +79,7 @@ const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${newColors.MainColor};
+  background: ${colors.red[2]};
   & > div {
     color: ${newColors.LightShades};
     font-size: ${fontSizes[5]}em;
@@ -96,7 +96,7 @@ const Button = styled('a')`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${newColors.MainColor};
+  background: ${colors.red[2]};
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
@@ -202,17 +202,18 @@ export const Steps: React.FC = () => (
 )
 export const Book: React.FC = () => {
   return (
-    <div style={{ background: newColors.DarkShades }}>
-      <Title color={newColors.LightShades}>Book</Title>
+    <div>
+      {/* <div style={{ background: newColors.DarkShades }}> */}
+      <Title>Book</Title>
       <BookContentEl>
         <BookContent />
       </BookContentEl>
       <Steps />
-      <ColoredBlade base="gold" index={5} theme={{}}>
-        <Box p={space[1] + 'em'} textAlign="center">
-          <Notice>Do not book off the room block!</Notice>
-        </Box>
-      </ColoredBlade>
+      {/* <ColoredBlade base="gold" index={5} theme={{}}> */}
+      <Box p={space[1] + 'em'} textAlign="center" color={colors.aqua[2]}>
+        <Notice>Do not book off the room block!</Notice>
+      </Box>
+      {/* </ColoredBlade> */}
       <BookContentEl>
         <BookContentAlso />
       </BookContentEl>
