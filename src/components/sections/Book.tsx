@@ -1,7 +1,5 @@
 import { ContainerSmall } from '../Container'
-// import { ColoredBlade } from '../ColoredBlade'
 import { Flex, Box } from 'reflexbox'
-import { PlaneAnimation } from '../PlaneAnimation'
 import { space, colors, fontSizes, fontFamily, newColors } from '../../theme'
 import React from 'react'
 import styled from '@emotion/styled'
@@ -10,7 +8,7 @@ import { Title } from '../utils/Title'
 
 const BookContentEl: React.FC = ({ children }) => (
   <ContainerSmall>
-    <div style={{ color: newColors.DarkShade }}>
+    <div style={{ color: newColors.DarkShades }}>
       <p>{children}</p>
     </div>
   </ContainerSmall>
@@ -38,6 +36,7 @@ export const BookContentAlso: React.FC = () => (
 const Notice = styled.div`
   margin: 1em 0;
   font-family: ${fontFamily.sansserif};
+  /* color: ${colors.rose[3]}; */
   font-size: ${fontSizes[2]}em;
 `
 const StepWrapper = styled.div`
@@ -209,12 +208,14 @@ export const Book: React.FC = () => {
         <BookContent />
       </BookContentEl>
       <Steps />
-      {/* <ColoredBlade base="gold" index={5} theme={{}}> */}
-      <Box p={space[1] + 'em'} textAlign="center" color={colors.aqua[2]}>
-        <Notice>Do not book off the room block!</Notice>
-      </Box>
-      {/* </ColoredBlade> */}
       <BookContentEl>
+        <Box
+          p={space[1] + 'em'}
+          textAlign="center"
+          style={{ background: colors.aqua[1] }}
+        >
+          <Notice>Do not book off the room block!</Notice>
+        </Box>
         <BookContentAlso />
       </BookContentEl>
     </div>

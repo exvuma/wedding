@@ -50,14 +50,7 @@ export const HomePage: React.FC = () => {
           <Itinerary />
         </Panel>
         <Panel id="faqs" setActiveTab={setActiveTab}>
-          {/* <ColoredBlade base="red" index={6}> */}
-          <Box p={space[4] + 'em'} textAlign="center">
-            <Title style={{ fontSize: '3em' }}>FAQs</Title>
-          </Box>
-          {/* </ColoredBlade> */}
-          <ContainerSmall>
-            <Faq />
-          </ContainerSmall>
+          <Faq />
         </Panel>
         <Panel id="party" setActiveTab={setActiveTab}>
           <Box marginY={space[3] + 'em'}>
