@@ -219,7 +219,16 @@ export const profiles = [
     photoUrl: lauraPhotoUrl,
     bio: (
       <>
-        <p>Victoria’s best friend. They met at UCLA during sorority rush  - though the sorority didn’t work out for V 😐-  she knew she wanted to be Laura’s sister for life. V stalked Laura’s first waitressing job at O’haras where they ended up working together. Shortly after, they became best friends /  roommates / soulmates in Westwood and again in Santa Monica. Laura gives unconditional love even after trauma, vast amounts of lost shoes, and beautifully ruined borrowed outfits. Laura has visited John and V in Austin more than anyone else. Laura was also the very first of the wedding party to meet our first adopted child - Cersei. No one can make us laugh or love like Laura.</p>
+        <p>
+          My best friend. We met at UCLA during sorority rush - though the
+          sorority didn’t work out for me 😐- I knew I wanted to be Laura’s
+          sister for life. So I stalked Laura’s first waitressing job at O’haras
+          where we ended up working together. Shortly after, we became best
+          friends / roommates / soulmates in Westwood and again in Santa Monica.
+          Laura has visited John and in Austin more than anyone else. Laura was
+          also the very first of the wedding party to meet our first adopted
+          child - Cersei. No one can make us laugh or love like Laura.
+        </p>
       </>
     ),
   },
@@ -228,8 +237,16 @@ export const profiles = [
     photoUrl: amyPhotoUrl,
     bio: (
       <>
-        <p>Amy is Victoria’s oldest sister and has been a very “non-impartial” surrogate mother to her whole life. From constant hip-riding, diaper changes, and prom night party chaperoning their love has never wavered. Amy couldn’t be prouder of the little ‘puker’ she ‘raised.’ Bragging everywhere she goes about her little masterpiece who has been so studious, successful, self-aware, and hardworking has felt almost surreal. Although on the outside she might seem to be taking all credit, she knows that the thing she is most proud is that Victoria really started as this ‘little person’ that did it all on her own and finding a match like John.
-</p>
+        <p>
+          Amy is my oldest sister and when I was born I became her real life
+          baby doll. Though having an extreme overprotective older sister your
+          whole life may not have seemed that much fun for me, Amy was a cool
+          surrogate mom (...well aside from holding my hand in parking lots
+          until 16 wasn’t that cool). From constant hip-riding, diaper changes,
+          and prom night party chaperoning our love has never wavered. Amy says
+          she couldn’t be prouder of me, her little ‘puker’, she claims to have
+          ‘raised’ for finding such a man like John.
+        </p>
       </>
     ),
   },
@@ -238,7 +255,16 @@ export const profiles = [
     photoUrl: guliettePhotoUrl,
     bio: (
       <>
-        <p>There is no one with quite as many funny stories as Guliette. The slightly older middle sister to little miss Pookieness22. Best friends from the days of Barbie Dolls, and putting fire ant piles down each others pants. They know how to keep each other laughing, and right out of the midst of trouble. The saying two peas in a pod used to make us bashful, but we now find it endearing. The love we have for one another will continue to thrive far beyond the childhood we once shared in the backwoods of rural Texas, and in the buzzing streets of Silicon Valley.</p>
+        <p>
+          There is no one with quite as many funny stories as Guliette. She’s my
+          slightly older middle sister. Best friends from the days of Barbie
+          Dolls, and putting fire ant piles down each others pants, we know how
+          to keep each other laughing, and right out of the midst of trouble.
+          The saying two peas in a pod used to make us bashful, but we now find
+          it endearing. The love we have for one another will continue to thrive
+          far beyond the childhood we once shared in the backwoods of rural
+          Texas, and in the buzzing streets of Silicon Valley.
+        </p>
       </>
     ),
   },
@@ -247,7 +273,14 @@ export const profiles = [
     photoUrl: sofiaPhotoUrl,
     bio: (
       <>
-        <p>At UCLA Sofia and Victoria became friends through a love of venturing from Westwood into LA’s party capital - Hollywood. What started out as a relationship based on partying quickly evolved as they recognized a shared drive for fitness and career goals. Sofia made Victoria family by introducing her to Sofia’s phenomenal sister, Christina, where they were all three roommates. </p>
+        <p>
+          At UCLA Sofia and I became friends through a love of venturing from
+          Westwood into LA’s party capital - Hollywood. What started out as a
+          relationship based on partying quickly evolved as we recognized a
+          shared drive for fitness and career goals. Sofia made me family by
+          introducing me to Sofia’s phenomenal sister, Christina, where we were
+          all three roommates.
+        </p>
       </>
     ),
   },
@@ -256,7 +289,14 @@ export const profiles = [
     photoUrl: christinaPhotoUrl,
     bio: (
       <>
-        <p>Since middle school Christina and I have been through so much together: car accidents, diagnoses, abandoned Christmases and not to mention all the trouble we’ve gotten each other in. She’s always been there to adopt me, make me laugh and put my life back together no matter what. I knew I wanted her in my wedding since the moment she exited the Valley Christian uniform one for a Castilero one. </p>
+        <p>
+          Since middle school Christina and I have been through so much
+          together: car accidents, diagnoses, abandoned Christmases and not to
+          mention all the trouble we’ve gotten each other in. She’s always been
+          there to adopt me, make me laugh and put my life back together no
+          matter what. I knew I wanted her in my wedding since the moment she
+          exited the Valley Christian uniform one for a Castilero one.
+        </p>
       </>
     ),
   },
@@ -265,7 +305,12 @@ export const profiles = [
     photoUrl: amandaPhotoUrl,
     bio: (
       <>
-        <p>Amanda we call Trillo because though her name is shared by many, she is a true one of a kind. Pooks has known Amanda since middle school and got to really be friends on the cheer squad at Pioneer High. They were roommates in LA where they turned into true life long friends. </p>
+        <p>
+          Amanda we call Trillo because though her name is shared by many, she
+          is a true one of a kind. I have known Amanda since middle school and
+          we got to really be friends on the cheer squad at Pioneer High. We
+          were roommates in LA where we turned into true life long friends.
+        </p>
       </>
     ),
   },
@@ -274,7 +319,14 @@ export const profiles = [
     photoUrl: tanyaPhotoUrl,
     bio: (
       <>
-        <p>V’s absolute best friend is Austin, even their pups Graham and Mister are BFFs. We love Tanya because she motivates us to get up on the microphone not just on karaoke night’s but every night of the week. Victoria’s beauty artist turned a dull burnette into a brilliant blonde.  She shares a deep relationship with Jesus and is one beautifully hilarious being. </p>
+        <p>
+          My absolute best friend is Austin, even our pups Graham and Mister are
+          BFFs. We love Tanya because she motivates John and me to get up on the
+          microphone not just on karaoke night’s but every night of the week. As
+          my beauty artist, Tauns turned me as a dull burnette into a brilliant
+          blonde. She shares a deep relationship with Jesus and is one
+          beautifully hilarious being.
+        </p>
       </>
     ),
   },
