@@ -59,7 +59,7 @@ export const DefaultLayout: React.FC = ({ children }) => (
         <Global
           styles={css`
             html {
-              background: ${newColors.LightShades};
+              background: ${newColors.White};
             }
 
             body {
@@ -81,6 +81,7 @@ export const DefaultLayout: React.FC = ({ children }) => (
             h5 {
               font-family: ${fontFamily.sansserif};
               font-weight: 400;
+              color: ${colors.red[2]};
             }
 
             p,

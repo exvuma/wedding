@@ -18,6 +18,7 @@ import { Panel } from './utils/Panel'
 import lamePic from '../img/about_us/IMG_20190811_130244.jpg'
 import lamePic2 from '../img/about_us/20170527_193518.jpg'
 import { Itinerary } from './sections/Itinerary'
+import { Title } from './utils/Title'
 
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
@@ -51,7 +52,7 @@ export const HomePage: React.FC = () => {
         <Panel id="faqs" setActiveTab={setActiveTab}>
           {/* <ColoredBlade base="red" index={6}> */}
           <Box p={space[4] + 'em'} textAlign="center">
-            <h2 style={{ fontSize: '3em' }}>FAQs</h2>
+            <Title style={{ fontSize: '3em' }}>FAQs</Title>
           </Box>
           {/* </ColoredBlade> */}
           <ContainerSmall>
@@ -66,7 +67,7 @@ export const HomePage: React.FC = () => {
               textAlign="center"
               fontFamily={fontFamily.sansserif}
             >
-              <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
+              <Title style={{ fontSize: '3em' }}>Meet the wedding party</Title>
             </Box>
             {/* </ColoredBlade> */}
             <Box marginTop={space[5] + 'em'}>

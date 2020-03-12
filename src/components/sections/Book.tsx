@@ -96,7 +96,7 @@ const Button = styled('a')`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${colors.red[2]};
+  background: ${colors.rose[2]};
   padding: 15px 32px;
   text-align: center;
   display: inline-block;

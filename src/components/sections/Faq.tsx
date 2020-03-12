@@ -1,7 +1,15 @@
 import { ContainerSmall } from '../Container'
 export const Faq: React.FC = () => (
   <ContainerSmall>
-    <div>
+    <div
+      style={{
+        fontSize: '1.2em',
+        display: 'block',
+        fontFamily: 'Helvetica Neue',
+        marginTop: '2em',
+        marginBottom: '0.5em',
+      }}
+    >
       <ul>
         <li>
           <strong>What day should I arrive? Leave?</strong>
@@ -35,3 +43,8 @@ export const Faq: React.FC = () => (
     </div>
   </ContainerSmall>
 )
+// + font-size: 1.2em;
+// + font-family: Helvetica Neue;
+// + margin-top: 2em;
+// + display: block;
+// + margin-bottom: 0.5em;

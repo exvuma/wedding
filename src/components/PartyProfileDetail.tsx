@@ -113,7 +113,7 @@ const Details = styled.div`
     letter-spacing: 0.115em;
     font-size: 1.75em;
     font-family: ${fontFamily.sansserif};
-    color: ${colors.gray[4]};
+    color: ${colors.red[2]};
   }
 
   & .details__description {

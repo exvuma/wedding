@@ -12,6 +12,7 @@ export const newColors = {
   DarkAccent: '#B58C83', //blue green
   DarkShades: '#262430', //dark purple
   VeryDarkShade: '#000000', //blach
+  White: '#ffffff',
   Grey: '#cdccd6',
 } as const
 function ColorLuminance(hex: string, lum: any) {
@@ -44,10 +45,10 @@ console.log(
 export const colors = {
   //TODO: work on colors
   red: [
-    ColorLuminance(newColors.LightRed, 0.6),
     // ColorLuminance(newColors.LightRed, -0.2),
     // ColorLuminance(newColors.LightRed, -0.6),
-    ColorLuminance(newColors.LightRed, 0.4),
+    ColorLuminance(newColors.LightRed, 0),
+    ColorLuminance(newColors.LightRed, -0.1),
     ColorLuminance(newColors.MainColor, 0),
     ColorLuminance(newColors.MainColor, -0.4),
     ColorLuminance(newColors.MainColor, -0.8),
@@ -71,11 +72,11 @@ export const colors = {
     ColorLuminance(newColors.DarkAccent, -0.8),
   ],
   gray: [
-    ColorLuminance(newColors.Grey, 0.8),
-    ColorLuminance(newColors.Grey, 0),
-    ColorLuminance(newColors.Grey, -0.2),
-    ColorLuminance(newColors.Grey, -0.4),
-    ColorLuminance(newColors.Grey, -0.8),
+    ColorLuminance(newColors.LightShades, 0.05),
+    ColorLuminance(newColors.LightShades, 0),
+    ColorLuminance(newColors.LightShades, -0.2),
+    ColorLuminance(newColors.LightShades, -0.4),
+    ColorLuminance(newColors.LightShades, -0.8),
   ],
   aqua: [
     ColorLuminance(newColors.LightAccent, 0.3),

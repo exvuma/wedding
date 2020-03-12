@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import Media from 'react-media'
 import { HamburgerSpin } from 'react-animated-burgers'
 import { colors, fontFamily, breakpoints, newColors } from '../theme'
+import { Title } from './utils/Title'
 
 export type NavProps = {
   activeTab: TabId
@@ -102,7 +103,7 @@ const NavbarWrapper = styled.header`
   left: 0;
   width: 100%;
   background: ${colors.gray[1]};
-  border-bottom: solid 1px ${colors.gray[3]};
+  border-bottom: solid 1px ${colors.rose[0]};
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 `
 
@@ -131,8 +132,8 @@ const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
   line-height: 0;
   font-family: ${({ fancy }) =>
     fancy ? fontFamily.script : fontFamily.sansserif};
-  color: ${({ active }) => (active ? colors.red[2] : newColors.LightShades)};
-  text-decoration: ${({ active }) => (active ? 'underline' : 'none')};
+  color: ${({ active }) => (active ? colors.red[2] : colors.rose[3])};
+  /* text-decoration: ${({ active }) => (active ? 'underline' : 'none')}; */
   font-size: ${({ fancy }) => (fancy ? '1.5em' : '1em')};
   white-space: nowrap;
   transition: all 0.2s ease-out;
