@@ -1,26 +1,47 @@
 import { ContainerSmall } from '../Container'
-import { ColoredBlade } from '../ColoredBlade'
+// import { ColoredBlade } from '../ColoredBlade'
 import { Flex, Box } from 'reflexbox'
 import { PlaneAnimation } from '../PlaneAnimation'
-import { space, colors, fontSizes, fontFamily } from '../../theme'
+import { space, colors, fontSizes, fontFamily, newColors } from '../../theme'
 import React from 'react'
 import styled from '@emotion/styled'
 import registerScreenShotUrl2 from '../../img/Register_screenshot2.png'
+import { Title } from '../utils/Title'
 
-export const BookContent: React.FC = () => (
+const BookContentEl: React.FC = ({ children }) => (
   <ContainerSmall>
-    <div>
-      <p>
-        We’re getting married at the beautiful Hyatt Ziva in Cancun Mexico. We
-        want you there to share our special day with us more than any gift on a
-        registry.
-      </p>
-      <p>Book your hotel reservation as soon as possible by: </p>
+    <div style={{ color: newColors.DarkShade }}>
+      <p>{children}</p>
     </div>
   </ContainerSmall>
 )
-const CardWrapper = styled.div`
-  background: white;
+
+export const BookContent: React.FC = () => (
+  <>
+    <p>
+      We’re getting married at the beautiful Hyatt Ziva in Cancun Mexico. We
+      want you there to share our special day with us more than any gift on a
+      registry.
+    </p>
+    <p>Book your hotel reservation as soon as possible by: </p>
+  </>
+)
+export const BookContentAlso: React.FC = () => (
+  <p>
+    To travel to Cancun also:
+    <ul>
+      <li>Have a passport</li>
+      <li>Book flights with or without help of travel agent</li>
+    </ul>
+  </p>
+)
+const Notice = styled.div`
+  margin: 1em 0;
+  font-family: ${fontFamily.sansserif};
+  font-size: ${fontSizes[2]}em;
+`
+const StepWrapper = styled.div`
+  background: ${newColors.LightShades};
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000001' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   border-radius: 3px;
   padding: ${space[2]}em;
@@ -31,7 +52,7 @@ const CardWrapper = styled.div`
   transform: scale(1);
   transition: all 0.2s ease-out;
   height: 100%;
-  border-top: solid 8px ${colors.red[5]};
+  border-top: solid 8px ${colors.red[2]};
   &:hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -54,14 +75,13 @@ const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
   margin: 0 auto;
   padding: ${space[2]}em;
   border-radius: 100%;
-  // border: solid 15px ${colors.gray[1]};
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${colors.red[5]};
+  background: ${colors.red[2]};
   & > div {
-    color: white;
+    color: ${newColors.LightShades};
     font-size: ${fontSizes[5]}em;
   }
 `
@@ -76,12 +96,12 @@ const Button = styled('a')`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${colors.red[5]};
+  background: ${colors.rose[2]};
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
   & > div {
-    color: white;
+    color: ${newColors.LightShades};
     font-size: ${fontSizes[2]}em;
   }
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -96,12 +116,13 @@ const Button = styled('a')`
 const StepsTitle = styled.h2`
   font-family: ${fontFamily.serif};
   margin: 1em 0 0 0;
+  color: ${newColors.VeryDarkShade};
 `
 const StepsDetails = styled.p`
   font-family: ${fontFamily.sansserif};
   font-size: 0.8em;
   letter-spacing: 1px;
-  color: ${colors.gray[5]};
+  color: ${newColors.DarkShades};
   font-size: ${fontSizes[2]}em;
   margin: ${space[1]}em 0 ${space[1]}em 0;
   transition: all 0.3s linear;
@@ -139,10 +160,10 @@ const ContentDetails3: React.FC = () => (
 )
 
 export const Steps: React.FC = () => (
-  <Flex p={100}>
+  <Flex px={6} py={0}>
     <Box style={{ flex: 1, margin: space[6] * 6 }}>
       {/* <Box style={{ flex: 1, margin: space[6] }}> */}
-      <CardWrapper>
+      <StepWrapper>
         <CircleFrame offset={[0, 0]}>
           <div>1</div>
         </CircleFrame>
@@ -153,10 +174,10 @@ export const Steps: React.FC = () => (
         <Button href="https://www.destinationweddings.com/Weddings/Guests/AttendaWedding.aspx?dw_weddingcode=MARRYTHEJOHN&dw_bname=Bernard">
           <div>Book Now</div>
         </Button>
-      </CardWrapper>
+      </StepWrapper>
     </Box>
     <Box style={{ flex: 1, margin: space[6] * 6 }}>
-      <CardWrapper>
+      <StepWrapper>
         <CircleFrame offset={[0, 0]}>
           <div>2</div>
         </CircleFrame>
@@ -164,10 +185,10 @@ export const Steps: React.FC = () => (
         <StepsDetails>
           <ContentDetails2></ContentDetails2>
         </StepsDetails>
-      </CardWrapper>
+      </StepWrapper>
     </Box>
     <Box style={{ flex: 1, margin: space[6] * 6 }}>
-      <CardWrapper>
+      <StepWrapper>
         <CircleFrame offset={[0, 0]}>
           <div>3</div>
         </CircleFrame>
@@ -175,43 +196,27 @@ export const Steps: React.FC = () => (
         <StepsDetails>
           <ContentDetails3></ContentDetails3>
         </StepsDetails>
-      </CardWrapper>
+      </StepWrapper>
     </Box>
   </Flex>
 )
 export const Book: React.FC = () => {
   return (
-    <>
-      <ColoredBlade base="gray" index={3}>
-        <Flex mx={space[6]}>
-          {/* <Flex pt={space[7] + 'em'} pb={space[4] + 'em'}> */}
-          <Box style={{ position: 'relative' }} flex={1}>
-            <PlaneAnimation numPlanes={4} />
-          </Box>
-          <Box flex={1} style={{ position: 'relative', textAlign: 'center' }}>
-            <PlaneAnimation numPlanes={0} />
-            <h2
-              style={{
-                fontSize: '3em',
-                marginTop: space[3] + 'em',
-                marginBottom: space[1] + 'em',
-              }}
-            >
-              Book
-            </h2>
-          </Box>
-          <Box style={{ position: 'relative' }} flex={1}>
-            <PlaneAnimation numPlanes={4} />
-          </Box>
-        </Flex>
-      </ColoredBlade>
-      <ColoredBlade base="red" index={6}>
-        <Box p={space[4] + 'em'} textAlign="center">
-          <h2 style={{ fontSize: '3em' }}>Do NOT Book Off the Room Block!</h2>
-        </Box>
-      </ColoredBlade>
-      <BookContent />
+    <div>
+      {/* <div style={{ background: newColors.DarkShades }}> */}
+      <Title>Book</Title>
+      <BookContentEl>
+        <BookContent />
+      </BookContentEl>
       <Steps />
-    </>
+      {/* <ColoredBlade base="gold" index={5} theme={{}}> */}
+      <Box p={space[1] + 'em'} textAlign="center" color={colors.aqua[2]}>
+        <Notice>Do not book off the room block!</Notice>
+      </Box>
+      {/* </ColoredBlade> */}
+      <BookContentEl>
+        <BookContentAlso />
+      </BookContentEl>
+    </div>
   )
 }

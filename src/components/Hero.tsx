@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
                 fontSize: fontSizes[3] + 'em',
                 marginTop: space[3] + 'em',
                 marginBottom: -space[1] + 'em',
-                color: colors.gray[6],
+                color: colors.aqua[3],
               }}
             >
               John Fawcett &amp; Victoria Bernard
@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
               style={{
                 fontFamily: fontFamily.serif,
                 fontSize: fontSizes[6] + 'em',
-                color: colors.gray[7],
+                color: colors.purple[4],
               }}
             >
               Getting Married
@@ -51,10 +51,11 @@ export const Hero: React.FC = () => {
   )
 }
 
-const SubHeading = styled.h2`
+export const SubHeading = styled.h2`
   font-family: ${fontFamily.sansserif};
   font-size: 0.8em;
   letter-spacing: 1.3px;
   text-transform: uppercase;
   margin-top: -${space[2]}em;
+  color: ${colors.purple[4]};
 `

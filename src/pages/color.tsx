@@ -14,9 +14,9 @@ const ColorGrid: React.FC = () => {
   return (
     <div style={{ display: 'flex' }}>
       <ColorGridCol color="red" />
-      <ColorGridCol color="gold" />
-      <ColorGridCol color="green" />
-      <ColorGridCol color="blue" />
+      <ColorGridCol color="aqua" />
+      <ColorGridCol color="rose" />
+      <ColorGridCol color="purple" />
       <ColorGridCol color="gray" />
     </div>
   )
@@ -43,7 +43,7 @@ const ColorBox: React.FC<{
       padding: '1em',
       margin: '0.2em',
       background: colors[props.color][props.index],
-      color: props.index > 3 ? colors[props.color][0] : colors[props.color][7],
+      color: props.index > 3 ? colors[props.color][0] : colors[props.color][4],
     }}
   >
     {colors[props.color][props.index]}

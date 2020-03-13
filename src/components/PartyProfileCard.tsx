@@ -1,5 +1,5 @@
 import React from 'react'
-import { space, fontFamily, colors } from '../theme'
+import { space, breakpoints, fontSizes, fontFamily, colors } from '../theme'
 import styled from '@emotion/styled'
 import { Box } from 'reflexbox'
 import { SelectableProfile } from './PartyProfileCard2'

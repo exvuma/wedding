@@ -18,6 +18,7 @@ import { Panel } from './utils/Panel'
 import lamePic from '../img/about_us/IMG_20190811_130244.jpg'
 import lamePic2 from '../img/about_us/20170527_193518.jpg'
 import { Itinerary } from './sections/Itinerary'
+import { Title } from './utils/Title'
 
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
@@ -39,9 +40,9 @@ export const HomePage: React.FC = () => {
           <Hero />
         </Panel>
         <Navbar activeTab={activeTab} />
-        {/* <Panel id="about" setActiveTab={setActiveTab}>
+        <Panel id="about" setActiveTab={setActiveTab}>
           <About />
-        </Panel> */}
+        </Panel>
         <Panel id="book" setActiveTab={setActiveTab}>
           <Book />
         </Panel>
@@ -49,26 +50,26 @@ export const HomePage: React.FC = () => {
           <Itinerary />
         </Panel>
         <Panel id="faqs" setActiveTab={setActiveTab}>
-          <ColoredBlade base="red" index={6}>
-            <Box p={space[4] + 'em'} textAlign="center">
-              <h2 style={{ fontSize: '3em' }}>FAQs</h2>
-            </Box>
-          </ColoredBlade>
+          {/* <ColoredBlade base="red" index={6}> */}
+          <Box p={space[4] + 'em'} textAlign="center">
+            <Title style={{ fontSize: '3em' }}>FAQs</Title>
+          </Box>
+          {/* </ColoredBlade> */}
           <ContainerSmall>
             <Faq />
           </ContainerSmall>
         </Panel>
         <Panel id="party" setActiveTab={setActiveTab}>
           <Box marginY={space[3] + 'em'}>
-            <ColoredBlade base="red" index={0}>
-              <Box
-                paddingY={space[3] + 'em'}
-                textAlign="center"
-                fontFamily={fontFamily.sansserif}
-              >
-                <h2 style={{ fontSize: '3em' }}>Meet the wedding party</h2>
-              </Box>
-            </ColoredBlade>
+            {/* <ColoredBlade base="red" index={0}> */}
+            <Box
+              paddingY={space[3] + 'em'}
+              textAlign="center"
+              fontFamily={fontFamily.sansserif}
+            >
+              <Title style={{ fontSize: '3em' }}>Meet the wedding party</Title>
+            </Box>
+            {/* </ColoredBlade> */}
             <Box marginTop={space[5] + 'em'}>
               <Container>
                 <PartyProfileCards
@@ -76,13 +77,13 @@ export const HomePage: React.FC = () => {
                 />
               </Container>
             </Box>
-            <Box marginTop={space[5] + 'em'}>
+            {/* <Box marginTop={space[5] + 'em'}>
               <Container>
                 <PartyProfileCards2
                   onSelect={profile => setSelectedProfile(profile)}
                 />
               </Container>
-            </Box>
+            </Box> */}
           </Box>
         </Panel>
       </DefaultLayout>

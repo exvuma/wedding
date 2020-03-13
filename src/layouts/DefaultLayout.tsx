@@ -9,6 +9,7 @@ import {
   fontFamily,
   breakpoints,
   mobileBaseFontSize,
+  newColors,
 } from '../theme/theme'
 import { baseFontSize } from '../theme/theme'
 
@@ -58,14 +59,13 @@ export const DefaultLayout: React.FC = ({ children }) => (
         <Global
           styles={css`
             html {
-              /* background: ${colors.red[0]}; */
-              background: white;
+              background: ${newColors.White};
             }
 
             body {
               font-family: ${fontFamily.serif};
               font-size: ${baseFontSize};
-              color: ${colors.gray[7]};
+              color: ${newColors.DarkShades};
             }
 
             @media screen and (max-width: ${breakpoints.mobile}em) {
@@ -81,6 +81,7 @@ export const DefaultLayout: React.FC = ({ children }) => (
             h5 {
               font-family: ${fontFamily.sansserif};
               font-weight: 400;
+              color: ${colors.red[2]};
             }
 
             p,
@@ -95,9 +96,10 @@ export const DefaultLayout: React.FC = ({ children }) => (
 
             a {
               text-decoration: none;
-              color: ${colors.blue[5]};
+              color: ${colors.red[2]};
               &:hover {
                 text-decoration: underline;
+                color: ${colors.red[2]};
               }
             }
           `}
