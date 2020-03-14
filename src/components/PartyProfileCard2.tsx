@@ -62,7 +62,7 @@ const CardTitle = styled.h3`
   font-size: 0.8em;
   letter-spacing: 2.2px;
   text-transform: uppercase;
-  color: ${colors.gray[4]};
+  color: ${colors.red[2]};
   font-size: 0.8em;
   margin: ${space[1]}em 0 0 0;
 `

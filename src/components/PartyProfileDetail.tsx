@@ -1,7 +1,7 @@
 import React, { Component, useRef } from 'react'
 import { Flipped } from 'react-flip-toolkit'
 import { Profile } from './PartyProfileSection'
-import { colors, fontFamily } from '../theme'
+import { colors, fontFamily, newColors } from '../theme'
 import styled from '@emotion/styled'
 
 export const PartyProfileDetail: React.FC<{
@@ -27,7 +27,7 @@ export const PartyProfileDetail: React.FC<{
         className="details__deco"
         data-fade-in
         style={{
-          background: colors.red[5],
+          background: colors.red[4],
         }}
       />
       <h3 className="details__subtitle" data-fade-in>
@@ -72,7 +72,7 @@ const Details = styled.div`
   & .details__bg--up {
     top: 0;
     height: 100vh;
-    background: white;
+    background: ${newColors.LightShades};
   }
 
   & .details__bg--down {
@@ -97,7 +97,7 @@ const Details = styled.div`
   & .details__title {
     margin: -1.5em 0 0.1em;
     font-size: 2.5em;
-    color: ${colors.gray[7]};
+    color: ${colors.gray[4]};
     font-family: ${fontFamily.serif};
     font-weight: 700;
   }
@@ -113,7 +113,7 @@ const Details = styled.div`
     letter-spacing: 0.115em;
     font-size: 1.75em;
     font-family: ${fontFamily.sansserif};
-    color: ${colors.gray[6]};
+    color: ${colors.red[2]};
   }
 
   & .details__description {
@@ -131,7 +131,7 @@ const Details = styled.div`
     background: none;
     cursor: pointer;
     font-size: 0.85em;
-    color: ${colors.gray[5]};
+    color: ${newColors.DarkShades};
   }
 
   & .icon {

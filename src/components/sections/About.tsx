@@ -127,7 +127,7 @@ const JohnStory: React.FC<{
       night from a trip to California.
     </p>
     <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-      <SmallHr color={colors.gold[5]} />
+      <SmallHr color={colors.rose[2]} />
     </div>
     <p>
       I had been stressing about just <em>what I was going to do</em> pop the
