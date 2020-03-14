@@ -1,8 +1,8 @@
 import { ContainerSmall } from '../Container'
 import styled from '@emotion/styled'
 import { CSSProperties } from 'react'
-import { CardWrapper } from '../utils/CardWrapper'
 import { colors } from '../../theme/theme'
+import { Title } from '../utils/Title'
 
 const itineraryItems = [
   { description: 'Rehearsal Dinner', date: 'November 19th, 2020' },
@@ -16,24 +16,22 @@ const itineraryItems = [
 ] as const
 export const Itinerary: React.FC = () => (
   <ContainerSmall>
+    <Title>Itinerary</Title>
     <div style={{ marginBottom: '1em' }}>
-      <CardWrapper>
-        <h1>Itinerary</h1>
-        <p>More details coming soon! All you need to know now is:</p>
-        <div>
-          <Table>
-            <tbody>
-              {itineraryItems.map(item => (
-                <Tr>
-                  <Td>{item.description}:</Td>
-                  <Td>{item.time ? item.time : ''}</Td>
-                  <Td>{item.date}</Td>
-                </Tr>
-              ))}
-            </tbody>
-          </Table>
-        </div>
-      </CardWrapper>
+      <p>More details coming soon! All you need to know now is:</p>
+      <div>
+        <Table>
+          <tbody>
+            {itineraryItems.map(item => (
+              <Tr>
+                <Td>{item.description}:</Td>
+                <Td>{item.time ? item.time : ''}</Td>
+                <Td>{item.date}</Td>
+              </Tr>
+            ))}
+          </tbody>
+        </Table>
+      </div>
     </div>
   </ContainerSmall>
 )

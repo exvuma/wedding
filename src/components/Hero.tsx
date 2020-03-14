@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
             </div>
             <h2
               style={{
-                fontFamily: fontFamily.serif,
+                fontFamily: fontFamily.sansserif,
                 fontSize: fontSizes[3] + 'em',
                 marginTop: space[3] + 'em',
                 marginBottom: -space[1] + 'em',
@@ -56,6 +56,6 @@ export const SubHeading = styled.h2`
   font-size: 0.8em;
   letter-spacing: 1.3px;
   text-transform: uppercase;
-  margin-top: -${space[2]}em;
-  color: ${colors.purple[4]};
+  /* margin-top: -${space[2]}em; */
+  color: ${colors.red[4]};
 `
