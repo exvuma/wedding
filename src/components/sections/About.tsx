@@ -7,6 +7,8 @@ import { space, colors } from '../../theme'
 import backgroundUrl from '../../img/about_us/IMG_20200203_123018.jpg'
 import photo1Url from '../../img/about_us/IMG_20191017_183439.jpg'
 import { SmallHr } from '../Hr'
+import { SubHeading } from '../Hero'
+import { Title } from '../utils/Title'
 
 export const About: React.FC = () => (
   <Box marginBottom={space[5] + 'em'}>
@@ -22,6 +24,7 @@ export const About: React.FC = () => (
       </Background>
     </ColoredBlade>
     <Container>
+      <Title>About</Title>
       <Flex
         flexWrap="wrap"
         ml={[0, -space[4] + 'em']}
@@ -76,9 +79,7 @@ const JohnStory: React.FC<> = () => (
   <>
     <h2>Can you believe it?</h2>
     <SmallHr color={colors.red[2]} />
-    <h3>
-      <em>A foreward from John</em>
-    </h3>
+    <SubHeading>A foreward from John</SubHeading>
     <p>I proposed to Victoria and she said yes.</p>
     <p>
       No, it didn't happen at the capitol. It was simple; Just me, Graham,

@@ -54,6 +54,11 @@ export const DefaultLayout: React.FC = ({ children }) => (
                 'https://fonts.googleapis.com/css?family=Cormorant+SC|Calligraffitti&display=swap',
               rel: 'stylesheet',
             },
+            {
+              href:
+                'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap',
+              rel: 'stylesheet',
+            },
           ]}
         />
         <Global

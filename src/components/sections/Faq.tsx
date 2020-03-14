@@ -17,9 +17,15 @@ export const Faq: React.FC = () => (
       <Title>FAQs</Title>
       <p>
         <strong>Why do I have to book on the room block?</strong>
-        <br />I - Victoria - was personally very confused about also. It is
-        crucial you book on the room block otherwise you can get escorted out of
-        the wedding activities
+        <br />
+        We were personally very confused about also. It is crucial you book on
+        the room block otherwise you can get escorted out of the wedding
+        activities. Sorry I don't have more info I am working on a clearer
+        explanantion. In the meantime check out:
+        <a href="https://lmgtfy.com/?q=why+are+room+blocks+required+for+weddings">
+          JK I'll remove this
+        </a>{' '}
+        😂
       </p>
       <p>
         <strong>
@@ -29,14 +35,6 @@ export const Faq: React.FC = () => (
         For convenience and affordability, we recommend Southwest airlines. SW
         Southwest has direct flights from: Austin, Denver, Houston, and New
         Orleans.
-      </p>
-
-      <p>
-        <strong>Can I book through Hyatt directly? Or another resort?</strong>
-        <br />
-        No. Really please don’t this will severely complicate things for our
-        wedding. The resorts for these type of weddings depend on the guests
-        stat
       </p>
       <p>
         <strong>What day should I arrive? Leave?</strong>
@@ -63,6 +61,13 @@ export const Faq: React.FC = () => (
         Yes, anyone that you love we love and is welcome to come! One of the
         benefits of a destination wedding is we don’t have to sweat about head
         count.
+      </p>
+      <p>
+        <strong>Can I book through Hyatt directly? Or another resort?</strong>
+        <br />
+        No. Really please don’t this will severely complicate things for our
+        wedding. The resorts for these type of weddings depend on the guests
+        stat
       </p>
     </div>
   </ContainerSmall>
