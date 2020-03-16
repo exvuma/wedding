@@ -1,23 +1,22 @@
+import React from 'react'
+import slugify from 'slugify'
 import { ContainerSmall } from '../Container'
 import { Title } from '../utils/Title'
+import styled from '@emotion/styled'
+import { colors } from '../../theme'
 
-export const Faq: React.FC = () => (
-  <ContainerSmall>
-    <div
-      style={
-        {
-          // fontSize: '1.2em',
-          // display: 'block',
-          // fontFamily: 'Helvetica Neue',
-          // marginTop: '0em',
-          // marginBottom: '0.5em',
-        }
-      }
-    >
-      <Title>FAQs</Title>
+export type FAQ = {
+  title: string
+  body: JSX.Element
+}
+
+export type FAQWithSlug = FAQ & { slug: string }
+
+export const faqs = slugifyFaqs([
+  {
+    title: 'Why do I have to book on the room block?',
+    body: (
       <p>
-        <strong>Why do I have to book on the room block?</strong>
-        <br />
         We were personally very confused about also. It is crucial you book on
         the room block otherwise you can get escorted out of the wedding
         activities. Sorry I don't have more info I am working on a clearer
@@ -27,27 +26,34 @@ export const Faq: React.FC = () => (
         </a>{' '}
         😂
       </p>
+    ),
+  },
+  {
+    title: 'What about flights, when should I book? How should I book?',
+    body: (
       <p>
-        <strong>
-          What about flights, when should I book? How should I book?{' '}
-        </strong>
-        <br />
         For convenience and affordability, we recommend Southwest airlines. SW
         Southwest has direct flights from: Austin, Denver, Houston, and New
         Orleans.
       </p>
+    ),
+  },
+  {
+    title: 'What day should I arrive? Leave?',
+    body: (
       <p>
-        <strong>What day should I arrive? Leave?</strong>
-        <br />
         The wedding party will arrive Wednesday, 11/18. You can stay as long as
         you like, but keep in mind all guests are required to a minimum of three
         nights. We recommend coming at least the day before 11/19, staying for
         the weekend, and checking out 11/22. There will be a planned included
         group activity the day after the wedding, Saturday 11/21.
       </p>
+    ),
+  },
+  {
+    title: 'What room should I get?',
+    body: (
       <p>
-        <strong>What room should I get?</strong>
-        <br />
         This is totally up to you. The wedding guests will be spread out through
         the resort and all rooms have access to all amenities with the exception
         of the adults only Turquoise area - is a small rooftop pool area. If
@@ -55,20 +61,80 @@ export const Faq: React.FC = () => (
         Turquoise of course. We - the wedding couple - will likely stay there,
         but don’t feel bad if you don’t.
       </p>
+    ),
+  },
+  {
+    title: 'Can I invite a plus 1?',
+    body: (
       <p>
-        <strong>Can I invite a plus 1?</strong>
-        <br />
         Yes, anyone that you love we love and is welcome to come! One of the
         benefits of a destination wedding is we don’t have to sweat about head
         count.
       </p>
+    ),
+  },
+  {
+    title: 'Can I book through Hyatt directly? Or another resort?',
+    body: (
       <p>
-        <strong>Can I book through Hyatt directly? Or another resort?</strong>
-        <br />
         No. Really please don’t this will severely complicate things for our
         wedding. The resorts for these type of weddings depend on the guests
         stat
       </p>
-    </div>
+    ),
+  },
+])
+
+function slugifyFaqs(faqs: FAQ[]): FAQWithSlug[] {
+  return faqs.map(faq => ({ ...faq, slug: 'faq-' + slugify(faq.title) }))
+}
+
+export const Faqs: React.FC = () => (
+  <ContainerSmall>
+    <Title>FAQs</Title>
+    {faqs.map(faq => (
+      <Faq key={faq.slug} faq={faq} />
+    ))}
   </ContainerSmall>
 )
+
+export const Faq: React.FC<{ faq: FAQWithSlug }> = ({ faq }) => (
+  <FaqBody>
+    <FaqTitle id={faq.slug}>
+      <a href={`#${faq.slug}`}>{faq.title}</a>
+    </FaqTitle>
+    {faq.body}
+  </FaqBody>
+)
+
+const FaqTitle = styled.h3`
+  position: relative;
+  margin-bottom: 0.5em;
+
+  a {
+    color: ${colors.gray[4]};
+    &:before {
+      content: '🔗';
+      display: inline-block;
+      position: absolute;
+      width: 40px;
+      margin-left: -40px;
+      opacity: 0;
+      transition: opacity 0.1s linear;
+    }
+
+    &:hover:before {
+      opacity: 1;
+    }
+  }
+`
+
+const FaqBody = styled.div`
+  ${FaqTitle} + p {
+    margin-top: 0;
+  }
+
+  & ~ & {
+    margin-top: 2.5em;
+  }
+`

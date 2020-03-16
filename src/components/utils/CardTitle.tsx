@@ -6,8 +6,8 @@ export const CardTitle = styled.h3`
   font-size: 0.8em;
   letter-spacing: 2.2px;
   text-transform: uppercase;
-  color: ${colors.red[2]};
+  color: ${colors.gray[3]};
   font-size: ${fontSizes[2]}em;
   margin: ${space[1]}em 0 0 0;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 `

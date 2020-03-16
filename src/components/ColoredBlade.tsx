@@ -23,14 +23,14 @@ function getForegroundColor(
   index: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7,
 ) {
   if (base === 'gray') {
-    if (index < 5) {
+    if (index < 2) {
       return newColors.DarkShades
     } else {
       return newColors.LightShades
     }
   }
 
-  if (index < 3) return newColors.DarkShades
+  if (index < 2) return newColors.DarkShades
 
   return newColors.LightShades
 }

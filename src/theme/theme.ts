@@ -37,10 +37,6 @@ function ColorLuminance(hex: string, lum: any) {
 
   return rgb
 }
-console.log(
-  '    ColorLuminance(newColors.MainColor, 0.99),',
-  ColorLuminance(newColors.MainColor, 0.99),
-)
 
 export const colors = {
   //TODO: work on colors

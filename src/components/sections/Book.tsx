@@ -3,8 +3,10 @@ import { Flex, Box } from 'reflexbox'
 import { space, colors, fontSizes, fontFamily, newColors } from '../../theme'
 import React from 'react'
 import styled from '@emotion/styled'
-import registerScreenShotUrl2 from '../../img/Register_screenshot2.png'
+import registerScreenShotUrl from '../../img/Register_screenshot3.png'
 import { Title } from '../utils/Title'
+import { CardWrapper } from '../utils/CardWrapper'
+import { ColoredBlade } from '../ColoredBlade'
 
 const BookContentEl: React.FC = ({ children }) => (
   <ContainerSmall>
@@ -21,6 +23,9 @@ export const BookContent: React.FC = () => (
       want you there to share our special day with us more than any gift on a
       registry.
     </p>
+    <Notice base="rose" index={2}>
+      Do not book off the room block!
+    </Notice>
     <p>Book your hotel reservation as soon as possible by: </p>
   </>
 )
@@ -33,32 +38,25 @@ export const BookContentAlso: React.FC = () => (
     </ul>
   </p>
 )
-const Notice = styled.div`
+const Notice = styled(ColoredBlade)`
   margin: 1em 0;
   font-family: ${fontFamily.sansserif};
-  /* color: ${colors.rose[3]}; */
   font-size: ${fontSizes[2]}em;
-`
-const StepWrapper = styled.div`
-  background: ${newColors.LightShades};
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000001' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-  border-radius: 3px;
-  padding: ${space[2]}em;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  border-radius: 5px;
   text-align: center;
-  font-family: ${fontFamily.sansserif};
-  cursor: pointer;
-  transform: scale(1);
-  transition: all 0.2s ease-out;
+`
+
+const StepWrapper = styled(CardWrapper)`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   height: 100%;
-  border-top: solid 8px ${colors.red[2]};
+  padding: 1em 2em;
+  cursor: initial;
   &:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  & img {
-    width: 100%;
-    max-width: 100%;
+    transform: none;
+    box-shadow: initial;
   }
 `
 
@@ -71,7 +69,7 @@ const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
   display: inline-block;
   width: 70px;
   height: 70px;
-  margin: 0 auto;
+  margin: 2em auto 0;
   padding: ${space[2]}em;
   border-radius: 100%;
   overflow: hidden;
@@ -79,9 +77,11 @@ const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
   align-items: center;
   justify-content: center;
   background: ${colors.red[2]};
+  line-height: 0;
   & > div {
     color: ${newColors.LightShades};
     font-size: ${fontSizes[5]}em;
+    margin-top: -3px;
   }
 `
 const Button = styled('a')`
@@ -99,47 +99,50 @@ const Button = styled('a')`
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
-  & > div {
-    color: ${newColors.LightShades};
-    font-size: ${fontSizes[2]}em;
-  }
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: ${newColors.LightShades};
+  font-size: ${fontSizes[2]}em;
+  transition: all 0.05s linear;
 
   :hover {
+    color: ${newColors.LightShades};
     text-decoration: none;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background: ${colors.rose[1]};
   }
 `
 
 const StepsTitle = styled.h2`
-  font-family: ${fontFamily.serif};
-  margin: 1em 0 0 0;
+  font-family: ${fontFamily.sansserif};
+  margin: 1em 0;
   color: ${newColors.VeryDarkShade};
 `
-const StepsDetails = styled.p`
-  font-family: ${fontFamily.sansserif};
-  font-size: 0.8em;
-  letter-spacing: 1px;
+const StepsDetails = styled.div`
+  flex: 1;
+  font-family: ${fontFamily.serif};
+  font-size: 1em;
   color: ${newColors.DarkShades};
   font-size: ${fontSizes[2]}em;
   margin: ${space[1]}em 0 ${space[1]}em 0;
   transition: all 0.3s linear;
   text-align: left;
 `
+
+const StepAction = styled.div`
+  padding: 1em 0;
+`
+
 const ContentTitle1 = `Go to Site`
 const ContentTitle2 = `Register an account`
 const ContentTitle3 = `Book Room`
 const ContentDetails1: React.FC = () => (
   <>
-    Visit our travel agent’s booking site, go to "Find a Wedding" and submit:
+    <p>
+      Visit our travel agent’s booking site, go to "Find a Wedding" and submit:
+    </p>
     <ul>
       <li>
-        {' '}
         Wedding couple’s last name: <strong>Fawcett</strong>
       </li>
       <li>
-        {' '}
         Wedding code: <strong>MARRYTHEJOHN</strong>
       </li>
     </ul>
@@ -147,14 +150,13 @@ const ContentDetails1: React.FC = () => (
 )
 const ContentDetails2: React.FC = () => (
   <>
-    You’ll be redirect to a page to register for an account
-    <img src={registerScreenShotUrl2}></img>
+    <p>You’ll be redirected to a page to register for an account.</p>
+    <img src={registerScreenShotUrl}></img>
   </>
 )
 const ContentDetails3: React.FC = () => (
   <>
-    You’ll find all the details on the hotel, rooms and policy here. Select your
-    room and dates of choice
+    <p>Select your room and dates of choice and pay the $100 deposit.</p>
   </>
 )
 
@@ -170,9 +172,11 @@ export const Steps: React.FC = () => (
         <StepsDetails>
           <ContentDetails1></ContentDetails1>
         </StepsDetails>
-        <Button href="https://www.destinationweddings.com/Weddings/Guests/AttendaWedding.aspx?dw_weddingcode=MARRYTHEJOHN&dw_bname=Bernard">
-          <div>Book Now</div>
-        </Button>
+        <StepAction>
+          <Button href="https://www.destinationweddings.com/Weddings/Guests/AttendaWedding.aspx?dw_weddingcode=MARRYTHEJOHN&dw_bname=Bernard">
+            Book Now
+          </Button>
+        </StepAction>
       </StepWrapper>
     </Box>
     <Box style={{ flex: 1, margin: space[6] * 6 }}>
@@ -209,13 +213,6 @@ export const Book: React.FC = () => {
       </BookContentEl>
       <Steps />
       <BookContentEl>
-        <Box
-          p={space[1] + 'em'}
-          textAlign="center"
-          style={{ background: colors.aqua[1] }}
-        >
-          <Notice>Do not book off the room block!</Notice>
-        </Box>
         <BookContentAlso />
       </BookContentEl>
     </div>

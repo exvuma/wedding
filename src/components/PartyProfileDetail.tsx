@@ -58,7 +58,7 @@ const Details = styled.div`
   flex-direction: column;
   align-items: flex-start;
   overflow-y: scroll;
-  background: ${colors.red[0]};
+  background: white;
 
   & * {
     z-index: 1;
@@ -72,13 +72,13 @@ const Details = styled.div`
   & .details__bg--up {
     top: 0;
     height: 100vh;
-    background: ${newColors.LightShades};
+    background: ${colors.red[0]};
   }
 
   & .details__bg--down {
     top: 40vh;
     height: 60vh;
-    background: ${colors.red[0]};
+    background: white;
   }
 
   & .details__bg {

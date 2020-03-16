@@ -12,7 +12,7 @@ import { Book } from './sections/Book'
 import { Flipper } from 'react-flip-toolkit'
 import { PartyProfileDetail } from './PartyProfileDetail'
 import { Navbar, TabId } from './Navbar'
-import { Faq } from './sections/Faq'
+import { Faqs } from './sections/Faq'
 import { About } from './sections/About'
 import { Panel } from './utils/Panel'
 import lamePic from '../img/about_us/IMG_20190811_130244.jpg'
@@ -50,7 +50,7 @@ export const HomePage: React.FC = () => {
           <Itinerary />
         </Panel>
         <Panel id="faqs" setActiveTab={setActiveTab}>
-          <Faq />
+          <Faqs />
         </Panel>
         <Panel id="party" setActiveTab={setActiveTab}>
           <Box marginY={space[3] + 'em'}>

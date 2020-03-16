@@ -4,6 +4,7 @@ import Media from 'react-media'
 import { HamburgerSpin } from 'react-animated-burgers'
 import { colors, fontFamily, breakpoints, newColors } from '../theme'
 import { Title } from './utils/Title'
+import { css } from '@emotion/core'
 
 export type NavProps = {
   activeTab: TabId
@@ -99,12 +100,16 @@ const NavbarMobile: React.FC<NavProps> = ({ activeTab }) => {
 const NavbarWrapper = styled.header`
   position: sticky;
   z-index: 1000;
-  top: 0;
+  /* -1px to account for the border-top */
+  top: -1px;
   left: 0;
   width: 100%;
   background: ${colors.gray[1]};
-  border-bottom: solid 1px ${colors.rose[0]};
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10h10v10H0V10zM10 0h10v10H10V0z' fill='%23dbd6d3' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 7px;
+  text-shadow: 0 1px 0 #fff;
+  border-top: solid 1px ${colors.gray[3]};
+  border-bottom: solid 1px ${colors.gray[3]};
 `
 
 const NavbarNav = styled.ul`
@@ -133,10 +138,15 @@ const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
   font-family: ${({ fancy }) =>
     fancy ? fontFamily.script : fontFamily.sansserif};
   color: ${({ active }) => (active ? colors.red[2] : colors.rose[3])};
+  ${({ fancy }) =>
+    fancy &&
+    css`
+      font-family: ${fontFamily.script};
+      color: ${colors.gray[4]};
+    `}
   /* text-decoration: ${({ active }) => (active ? 'underline' : 'none')}; */
   font-size: ${({ fancy }) => (fancy ? '1.5em' : '1em')};
   white-space: nowrap;
-  transition: all 0.2s ease-out;
 `
 
 const MobileNavbarWrapper = styled.div`

@@ -36,7 +36,7 @@ export const About: React.FC = () => {
 
   return (
     <Box marginBottom={space[5] + 'em'}>
-      <ColoredBlade base="blue" index={7}>
+      <ColoredBlade base="aqua" index={4}>
         <Background>
           <ContainerSmall>
             <Box
@@ -68,7 +68,7 @@ export const About: React.FC = () => {
                   <Flipped flipId={activeSectionPhoto.id}>
                     <Photo src={activeSectionPhoto.src} />
                   </Flipped>
-                  <PhotoBorder />
+                  {/* <PhotoBorder /> */}
                 </PhotoFrame>
               </Flipper>
             </div>
@@ -89,22 +89,25 @@ const PhotoFrame = styled.div`
   position: relative;
   padding: ${space[3]}em;
   text-align: center;
+  /* background: ${colors.purple[1]}; */
 `
 
-const PhotoBorder = styled.div`
-  width: 100%;
-  height: 5em;
-  background: ${colors.red[0]};
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-`
+// const PhotoBorder = styled.div`
+//   width: 100%;
+//   height: 5em;
+//   background: ${colors.red[0]};
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   z-index: 1;
+// `
 
 const Photo = styled.img`
   position: relative;
   z-index: 2;
   max-height: calc(100vh - 8em /* height of navbar + some other offset */);
+  box-shadow: 10px 9px 0 #eee;
+  border: solid 8px ${colors.gray[4]};
 `
 
 const JohnStory: React.FC<{
@@ -116,7 +119,7 @@ const JohnStory: React.FC<{
       onEnter={() => props.onSectionEnter('intro')}
     />
     <h2>Can you believe it?</h2>
-    <SmallHr color={colors.red[5]} />
+    <SmallHr color={colors.red[3]} />
     <h3>
       <em>A foreward from John</em>
     </h3>
@@ -127,7 +130,7 @@ const JohnStory: React.FC<{
       night from a trip to California.
     </p>
     <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-      <SmallHr color={colors.rose[2]} />
+      <SmallHr color={colors.gray[3]} />
     </div>
     <p>
       I had been stressing about just <em>what I was going to do</em> pop the
@@ -154,7 +157,7 @@ const JohnStory: React.FC<{
       mountain? At any rate, the ring didn't arrive on time anyway.
     </p>
     <h2>How did we get here?</h2>
-    <SmallHr color={colors.gray[5]} />
+    <SmallHr color={colors.gray[3]} />
     <p>Victoria and I met at Cloudflare.</p>
     <p>
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium

@@ -43,7 +43,7 @@ const ColorBox: React.FC<{
       padding: '1em',
       margin: '0.2em',
       background: colors[props.color][props.index],
-      color: props.index > 3 ? colors[props.color][0] : colors[props.color][4],
+      color: props.index > 1 ? colors[props.color][0] : colors[props.color][4],
     }}
   >
     {colors[props.color][props.index]}
