@@ -134,7 +134,7 @@ const NavbarNavItem = styled.li`
 const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
   display: inline-block;
   /* fancy is script font */
-  padding: ${({ fancy }) => (fancy ? '1.7em 2em 1.3em' : '')};
+  padding: ${({ fancy }) => (fancy ? '1.6em 2em 1.4em' : '')};
   line-height: 0;
   font-family: ${({ fancy }) =>
     fancy ? fontFamily.script : fontFamily.sansserif};

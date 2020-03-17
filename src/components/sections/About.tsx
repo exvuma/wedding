@@ -11,6 +11,7 @@ import photoNewZealandUrl from '../../img/about_us/IMG_20190811_130244.jpg'
 import photoBeachurl from '../../img/about_us/IMG_20200202_141428.jpg'
 import { SmallHr } from '../Hr'
 import { Waypoint } from 'react-waypoint'
+import { Subtitle } from '../utils/Title'
 
 const sectionPhotos = [
   { id: 'intro', src: photoRingUrl },
@@ -119,10 +120,8 @@ const JohnStory: React.FC<{
       onEnter={() => props.onSectionEnter('intro')}
     />
     <h2>Can you believe it?</h2>
-    <SmallHr color={colors.red[3]} />
-    <h3>
-      <em>A foreward from John</em>
-    </h3>
+    <SmallHr color={colors.rose[2]} />
+    <h3>A foreward from John</h3>
     <p>I proposed to Victoria and she said yes.</p>
     <p>
       No, it didn't happen at the capitol. It was simple; Just me, Graham,

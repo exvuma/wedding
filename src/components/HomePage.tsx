@@ -18,7 +18,7 @@ import { Panel } from './utils/Panel'
 import lamePic from '../img/about_us/IMG_20190811_130244.jpg'
 import lamePic2 from '../img/about_us/20170527_193518.jpg'
 import { Itinerary } from './sections/Itinerary'
-import { Title } from './utils/Title'
+import { Title, Subtitle } from './utils/Title'
 
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
@@ -36,11 +36,9 @@ export const HomePage: React.FC = () => {
           />
         )}
         {/* Todo make this responsive */}
-        <Panel id="home" setActiveTab={setActiveTab}>
-          <Hero />
-        </Panel>
+        <Hero />
         <Navbar activeTab={activeTab} />
-        <Panel id="about" setActiveTab={setActiveTab}>
+        <Panel id="home" setActiveTab={setActiveTab}>
           <About />
         </Panel>
         <Panel id="book" setActiveTab={setActiveTab}>
@@ -54,22 +52,12 @@ export const HomePage: React.FC = () => {
         </Panel>
         <Panel id="party" setActiveTab={setActiveTab}>
           <Box marginY={space[3] + 'em'}>
-            {/* <ColoredBlade base="red" index={0}> */}
-            <Box
-              paddingY={space[3] + 'em'}
-              textAlign="center"
-              fontFamily={fontFamily.sansserif}
-            >
-              <Title style={{ fontSize: '3em' }}>Meet the wedding party</Title>
-            </Box>
-            {/* </ColoredBlade> */}
-            <Box marginTop={space[5] + 'em'}>
-              <Container>
-                <PartyProfileCards
-                  onSelect={profile => setSelectedProfile(profile)}
-                />
-              </Container>
-            </Box>
+            <Title style={{ fontSize: '3em' }}>Wedding Party</Title>
+            <Container>
+              <PartyProfileCards
+                onSelect={profile => setSelectedProfile(profile)}
+              />
+            </Container>
             {/* <Box marginTop={space[5] + 'em'}>
               <Container>
                 <PartyProfileCards2
