@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '../components/Container'
+import { Container } from '../components/utils/Container'
 import { colors, ThemeColor } from '../theme'
 
 const ColorPage: React.FC = () => {

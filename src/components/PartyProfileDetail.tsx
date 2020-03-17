@@ -58,7 +58,7 @@ const Details = styled.div`
   flex-direction: column;
   align-items: flex-start;
   overflow-y: scroll;
-  background: white;
+  background: ${colors.gray[0]};
 
   & * {
     z-index: 1;

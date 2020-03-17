@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Box, Flex } from 'reflexbox'
 import { DefaultLayout } from '../layouts/DefaultLayout'
-import { ContainerSmall, Container } from './Container'
+import { ContainerSmall, Container } from './utils/Container'
 import { fontFamily, space } from '../theme'
 import { ColoredBlade } from './ColoredBlade'
 import { Hero } from './Hero'

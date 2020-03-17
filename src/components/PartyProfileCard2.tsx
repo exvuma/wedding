@@ -1,7 +1,7 @@
 import React from 'react'
-import { space, breakpoints, fontSizes, fontFamily, colors } from '../theme'
+import { space, fontFamily, colors } from '../theme'
 import styled from '@emotion/styled'
-import { Box, Flex } from 'reflexbox'
+import { Box } from 'reflexbox'
 import { Grid, GridItem } from './Grid'
 import { profiles } from '../profiles'
 import { Flipped } from 'react-flip-toolkit'
@@ -49,7 +49,7 @@ export const PartyProfileCard2: React.FC<PartyProfileCard2Props> = props => {
           </CardPhotoFrame>
         </CardBackground>
       </Flipped>
-      <Box marginTop={space[1] + 'em'}>
+      <Box marginTop={space[0] + 'em'}>
         <CardName>{props.profile.name}</CardName>
         <CardTitle>Groomsman</CardTitle>
       </Box>

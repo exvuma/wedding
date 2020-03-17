@@ -10,7 +10,7 @@ import {
 import styled from '@emotion/styled'
 import { Box, Flex } from 'reflexbox'
 import { ColoredBlade } from './ColoredBlade'
-import { Container } from './Container'
+import { Container } from './utils/Container'
 
 export type Profile = {
   name: string

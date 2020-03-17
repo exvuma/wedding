@@ -1,4 +1,4 @@
-import { ContainerSmall } from '../Container'
+import { ContainerSmall } from '../utils/Container'
 import { Flex, Box } from 'reflexbox'
 import { space, colors, fontSizes, fontFamily, newColors } from '../../theme'
 import React from 'react'

@@ -1,9 +1,10 @@
 import React from 'react'
 import slugify from 'slugify'
-import { ContainerSmall } from '../Container'
+import { ContainerSmall } from '../utils/Container'
 import { Title } from '../utils/Title'
 import styled from '@emotion/styled'
 import { colors } from '../../theme'
+import { CardSection } from '../utils/CardSection'
 
 export type FAQ = {
   title: string
@@ -92,9 +93,11 @@ function slugifyFaqs(faqs: FAQ[]): FAQWithSlug[] {
 export const Faqs: React.FC = () => (
   <ContainerSmall>
     <Title>FAQs</Title>
-    {faqs.map(faq => (
-      <Faq key={faq.slug} faq={faq} />
-    ))}
+    <CardSection>
+      {faqs.map(faq => (
+        <Faq key={faq.slug} faq={faq} />
+      ))}
+    </CardSection>
   </ContainerSmall>
 )
 
