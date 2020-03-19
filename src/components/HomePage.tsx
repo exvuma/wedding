@@ -8,7 +8,7 @@ import { Hero } from './Hero'
 import { Profile } from './PartyProfileSection'
 import { PartyProfileCards } from './PartyProfileCards'
 import { PartyProfileCards2 } from './PartyProfileCard2'
-import { Book } from './sections/Book'
+import { Book2 } from './sections/Book2'
 import { Flipper } from 'react-flip-toolkit'
 import { PartyProfileDetail } from './PartyProfileDetail'
 import { Navbar, TabId } from './Navbar'
@@ -42,7 +42,7 @@ export const HomePage: React.FC = () => {
           <About />
         </Panel>
         <Panel id="book" setActiveTab={setActiveTab}>
-          <Book />
+          <Book2 />
         </Panel>
         <Panel id="itinerary" setActiveTab={setActiveTab}>
           <Itinerary />

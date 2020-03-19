@@ -4,9 +4,11 @@ import { space, colors, fontSizes, fontFamily, newColors } from '../../theme'
 import React from 'react'
 import styled from '@emotion/styled'
 import registerScreenShotUrl from '../../img/Register_screenshot3.png'
-import { Title } from '../utils/Title'
+// import { Title } from '../utils/Title'
 import { CardWrapper } from '../utils/CardWrapper'
 import { ColoredBlade } from '../ColoredBlade'
+import { CardSection } from '../utils/CardSection'
+import { Title } from '../utils/Title'
 
 const BookContentEl: React.FC = ({ children }) => (
   <ContainerSmall>
@@ -23,7 +25,7 @@ export const BookContent: React.FC = () => (
       want you there to share our special day with us more than any gift on a
       registry.
     </p>
-    <Toast base="rose" index={2}>
+    <Toast base="rose" index={1}>
       Do not book off the room block!
     </Toast>
     <p>Book your hotel reservation as soon as possible by: </p>
@@ -39,37 +41,74 @@ export const BookContentAlso: React.FC = () => (
   </p>
 )
 const Toast = styled(ColoredBlade)`
-  margin: 1em 0;
+  margin: 0.5em 0;
   font-family: ${fontFamily.sansserif};
   font-size: ${fontSizes[2]}em;
-  padding: 1em;
+  color: ${colors.gray[0]};
+  padding: 0.8em;
   border-radius: 5px;
   text-align: center;
 `
 
-const StepWrapper = styled(CardWrapper)`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  height: 100%;
-  padding: 1em 2em;
-  cursor: initial;
-  &:hover {
-    transform: none;
-    box-shadow: initial;
-  }
+const StepsContent = styled('div')`
+  padding: 25px 0 23px 106px;
 `
 
-//  remove this remove hvoer
-// & ${StepsTitle} {
-//   color: ${colors.red[4]};
-// }
+const Bar = styled('div')`
+  &::before {
+    content: '';
+    display: block;
+    /* position: absolute; */
+    top: 14px;
+    border-bottom: 2px solid ${colors.red[1]};
+    left: 0;
+    right: 0;
+  }
+`
+const Number = styled('span')`
+  position: relative;
+  z-index: 2;
+  display: block;
+  float: left;
+  min-width: 58px;
+  padding: 6px 0 8px;
+  margin-left: 20px;
+  border-radius: 5px;
+  color: #959595;
+  border: 5px solid #959595;
+  border-top-color: ${colors.red[2]};
+  border-right-color: ${colors.red[2]};
+  border-bottom-color: ${colors.red[2]};
+  border-left-color: ${colors.red[2]};
+  background: #fff;
+  line-height: 26px;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.7px;
+`
+const BreneTitle = styled('span')`
+  position: relative;
+  z-index: 1;
+  display: block;
+  /* padding: 25px 0 23px 106px; */
+  color: #1c2d3f;
+  font-family: ${fontFamily.sansserif};
+  line-height: 29px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+`
+
 const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
   position: relative;
-  display: inline-block;
+  z-index: 2;
+  display: block;
+  float: left;
+  min-width: 58px;
   width: 70px;
   height: 70px;
-  margin: 2em auto 0;
+  /* margin: 2em auto 0; */
   padding: ${space[2]}em;
   border-radius: 100%;
   overflow: hidden;
@@ -83,6 +122,7 @@ const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
     font-size: ${fontSizes[5]}em;
     margin-top: -3px;
   }
+  margin-top: -1.5em;
 `
 const Button = styled('a')`
   position: relative;
@@ -160,61 +200,44 @@ const ContentDetails3: React.FC = () => (
   </>
 )
 
-export const Steps: React.FC = () => (
-  <Flex px={6} py={0}>
-    <Box style={{ flex: 1, margin: space[6] * 6 }}>
-      {/* <Box style={{ flex: 1, margin: space[6] }}> */}
-      <StepWrapper>
-        <CircleFrame offset={[0, 0]}>
-          <div>1</div>
-        </CircleFrame>
-        <StepsTitle>{ContentTitle1}</StepsTitle>
-        <StepsDetails>
-          <ContentDetails1></ContentDetails1>
-        </StepsDetails>
-        <StepAction>
-          <Button href="https://www.destinationweddings.com/Weddings/Guests/AttendaWedding.aspx?dw_weddingcode=MARRYTHEJOHN&dw_bname=Bernard">
-            Book Now
-          </Button>
-        </StepAction>
-      </StepWrapper>
-    </Box>
-    <Box style={{ flex: 1, margin: space[6] * 6 }}>
-      <StepWrapper>
-        <CircleFrame offset={[0, 0]}>
-          <div>2</div>
-        </CircleFrame>
-        <StepsTitle>{ContentTitle2}</StepsTitle>
-        <StepsDetails>
-          <ContentDetails2></ContentDetails2>
-        </StepsDetails>
-      </StepWrapper>
-    </Box>
-    <Box style={{ flex: 1, margin: space[6] * 6 }}>
-      <StepWrapper>
-        <CircleFrame offset={[0, 0]}>
-          <div>3</div>
-        </CircleFrame>
-        <StepsTitle>{ContentTitle3}</StepsTitle>
-        <StepsDetails>
-          <ContentDetails3></ContentDetails3>
-        </StepsDetails>
-      </StepWrapper>
-    </Box>
-  </Flex>
-)
-export const Book: React.FC = () => {
+export const BreneBlock: React.FC = () => {
   return (
-    <div>
-      {/* <div style={{ background: newColors.DarkShades }}> */}
+    <>
+      <BookContent />
+      <Bar />
+      <CircleFrame>
+        <div>1</div>
+      </CircleFrame>
+      <StepsContent>
+        <BreneTitle>{ContentTitle1}</BreneTitle>
+        <ContentDetails1 />
+      </StepsContent>
+      <Bar />
+      <CircleFrame>
+        <div>2</div>
+      </CircleFrame>
+      <StepsContent>
+        <BreneTitle>{ContentTitle2}</BreneTitle>
+        <ContentDetails2 />
+      </StepsContent>
+      <Bar />
+      <CircleFrame>
+        <div>3</div>
+      </CircleFrame>
+      <StepsContent>
+        <BreneTitle>{ContentTitle3}</BreneTitle>
+        <ContentDetails3 />
+      </StepsContent>
+    </>
+  )
+}
+export const Book2: React.FC = () => {
+  return (
+    <>
       <Title>Book</Title>
-      <BookContentEl>
-        <BookContent />
-      </BookContentEl>
-      <Steps />
-      <BookContentEl>
-        <BookContentAlso />
-      </BookContentEl>
-    </div>
+      <CardSection>
+        <BreneBlock />
+      </CardSection>
+    </>
   )
 }

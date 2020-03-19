@@ -91,14 +91,14 @@ function slugifyFaqs(faqs: FAQ[]): FAQWithSlug[] {
 }
 
 export const Faqs: React.FC = () => (
-  <ContainerSmall>
+  <>
     <Title>FAQs</Title>
     <CardSection>
       {faqs.map(faq => (
         <Faq key={faq.slug} faq={faq} />
       ))}
     </CardSection>
-  </ContainerSmall>
+  </>
 )
 
 export const Faq: React.FC<{ faq: FAQWithSlug }> = ({ faq }) => (
