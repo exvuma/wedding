@@ -8,79 +8,39 @@ export const newColors = {
   // main
   LightShades: '#F4F0ED', // off white
   LightAccent: '#9ACABD', // rose goldish
-  MainColor: '#B70315', // red
+  MainColor: '#B70315', // red hsla(354, 97%, 36%, 1);
   DarkAccent: '#B58C83', //blue green
   DarkShades: '#262430', //dark purple
   VeryDarkShade: '#000000', //blach
   White: '#ffffff',
   Grey: '#cdccd6',
 } as const
-function ColorLuminance(hex: string, lum: any) {
-  // validate hex string
-  hex = String(hex).replace(/[^0-9a-f]/gi, '')
-  if (hex.length < 6) {
-    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2]
-  }
-  lum = lum || 0
+export const HSLnewColors = {
+  MainColor: [354, 97, 36], // red
+  DarkAccent: '#B58C83', //blue green
+  DarkShades: '#262430', //dark purple
+  VeryDarkShade: '#000000', //blach
+  White: '#ffffff',
+  Grey: '#cdccd6',
+} as const
 
-  // convert to decimal and change luminosity
-  var rgb = '#',
-    part,
-    i
-  for (i = 0; i < 3; i++) {
-    part = parseInt(hex.substr(i * 2, 2), 16)
-    part = Math.round(Math.min(Math.max(0, part + part * lum), 255)).toString(
-      16,
-    )
-    rgb += ('00' + part).substr(part.length)
-  }
-
-  return rgb
-}
-
+const deltas = [
+  // { l: 97, sx: 50 },
+  { l: 91, sx: 20 },
+  { l: 82, sx: 23 },
+  // { l: 70, sx: 12 },
+  { l: 58, sx: 4 },
+  // { l: 49, sx: -5 },
+  { l: 40, sx: 4 },
+  // { l: 33, sx: 8 },
+  { l: 25, sx: 22 },
+]
 export const colors = {
-  //TODO: work on colors
-  red: [
-    // ColorLuminance(newColors.LightRed, -0.2),
-    // ColorLuminance(newColors.LightRed, -0.6),
-    ColorLuminance(newColors.LightRed, 0),
-    ColorLuminance(newColors.LightRed, -0.1),
-    ColorLuminance(newColors.MainColor, 0),
-    ColorLuminance(newColors.MainColor, -0.4),
-    ColorLuminance(newColors.MainColor, -0.8),
-  ],
-  purple: [
-    ColorLuminance(newColors.DarkShades, 0.8),
-    // ColorLuminance(newColors.DarkShades, 0.7),
-    ColorLuminance(newColors.DarkShades, 0.3),
-    ColorLuminance(newColors.DarkShades, 0),
-    ColorLuminance(newColors.DarkShades, -0.2),
-    // ColorLuminance(newColors.DarkShades, -0.4),
-    ColorLuminance(newColors.DarkShades, -0.8),
-  ],
-  rose: [
-    ColorLuminance(newColors.DarkAccent, 0.8),
-    // ColorLuminance(newColors.DarkAccent, 0.7),
-    // ColorLuminance(newColors.DarkAccent, 0.3),
-    ColorLuminance(newColors.DarkAccent, 0),
-    ColorLuminance(newColors.DarkAccent, -0.2),
-    ColorLuminance(newColors.DarkAccent, -0.4),
-    ColorLuminance(newColors.DarkAccent, -0.8),
-  ],
-  gray: [
-    ColorLuminance(newColors.LightShades, 0.05),
-    ColorLuminance(newColors.LightShades, 0),
-    ColorLuminance(newColors.LightShades, -0.2),
-    ColorLuminance(newColors.LightShades, -0.4),
-    ColorLuminance(newColors.LightShades, -0.8),
-  ],
-  aqua: [
-    ColorLuminance(newColors.LightAccent, 0.3),
-    ColorLuminance(newColors.LightAccent, 0),
-    ColorLuminance(newColors.LightAccent, -0.2),
-    ColorLuminance(newColors.LightAccent, -0.4),
-    ColorLuminance(newColors.LightAccent, -0.8),
-  ],
+  rose: deltas.map(delta => `hsl(${11},${25 + delta.sx}%, ${delta.l}%)`),
+  red: deltas.map(delta => `hsl(${0},${70 + delta.sx}%, ${delta.l}%)`),
+  gray: deltas.map(delta => `hsl(${0},${0}%, ${delta.l}%)`),
+  purple: deltas.map(delta => `hsl(${246},${14 + delta.sx}%, ${delta.l}%)`),
+  aqua: deltas.map(delta => `hsl(${161},${31 + delta.sx}%, ${delta.l}%)`),
 } as const
 
 // const showHex = () => {
@@ -95,10 +55,10 @@ export const colors = {
 // showHex()
 
 export type ThemeColor =
-  | typeof colors.red[number]
-  | typeof colors.purple[number]
   | typeof colors.rose[number]
+  | typeof colors.red[number]
   | typeof colors.gray[number]
+  | typeof colors.purple[number]
   | typeof colors.aqua[number]
 
 export const breakpoints = {
@@ -115,6 +75,7 @@ export const fontFamily = {
 
 export const baseFontSize = '20px'
 export const mobileBaseFontSize = '15px'
+export const thickFont = 600
 
 export const fontSizes = [0, 0.5, 1, 1.5, 2, 2.25, 2.8, 3.2, 5] as const
 
