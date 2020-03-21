@@ -62,7 +62,7 @@ const CardTitle = styled.h3`
   font-size: 0.8em;
   letter-spacing: 2.2px;
   text-transform: uppercase;
-  color: ${colors.red[2]};
+  color: ${colors.red[4]};
   font-size: 0.8em;
   margin: ${space[1]}em 0 0 0;
 `
@@ -77,7 +77,7 @@ const CardPhotoFrame = styled.div`
 
 const CardBackground = styled.div`
   flex: 1;
-  background: ${colors.red[0]};
+  background: ${colors.rose[0]};
   padding: 2em;
 `
 

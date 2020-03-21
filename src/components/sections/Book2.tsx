@@ -12,7 +12,7 @@ import { Title } from '../utils/Title'
 
 const BookContentEl: React.FC = ({ children }) => (
   <ContainerSmall>
-    <div style={{ color: newColors.DarkShades }}>
+    <div style={{ color: colors.purple[6] }}>
       <p>{children}</p>
     </div>
   </ContainerSmall>
@@ -44,7 +44,7 @@ const Toast = styled(ColoredBlade)`
   margin: 0.5em 0;
   font-family: ${fontFamily.sansserif};
   font-size: ${fontSizes[2]}em;
-  color: ${colors.gray[0]};
+  color: ${colors.red[4]};
   padding: 0.8em;
   border-radius: 5px;
   text-align: center;
@@ -60,7 +60,7 @@ const Bar = styled('div')`
     display: block;
     /* position: absolute; */
     top: 14px;
-    border-bottom: 2px solid ${colors.red[1]};
+    border-bottom: 2px solid ${colors.rose[1]};
     left: 0;
     right: 0;
   }
@@ -92,7 +92,7 @@ const BreneTitle = styled('span')`
   z-index: 1;
   display: block;
   /* padding: 25px 0 23px 106px; */
-  color: #1c2d3f;
+  color: ${colors.red[4]};
   font-family: ${fontFamily.sansserif};
   line-height: 29px;
   text-align: left;
@@ -115,7 +115,7 @@ const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${colors.red[2]};
+  background: ${colors.red[4]};
   line-height: 0;
   & > div {
     color: ${newColors.LightShades};

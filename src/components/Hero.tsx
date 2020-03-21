@@ -4,7 +4,6 @@ import styled from '@emotion/styled'
 import { ContainerSmall } from './utils/Container'
 import floralUrl from '../img/Reef_made.png'
 
-
 export const Hero: React.FC = () => {
   return (
     <ContainerSmall>
@@ -28,7 +27,7 @@ export const Hero: React.FC = () => {
                 fontSize: fontSizes[3] + 'em',
                 marginTop: space[3] + 'em',
                 marginBottom: -space[1] + 'em',
-                color: colors.aqua[3],
+                color: colors.aqua[4],
               }}
             >
               John Fawcett &amp; Victoria Bernard
@@ -39,7 +38,7 @@ export const Hero: React.FC = () => {
               style={{
                 fontFamily: fontFamily.serif,
                 fontSize: fontSizes[6] + 'em',
-                color: colors.purple[4],
+                color: colors.purple[6],
               }}
             >
               Getting Married
@@ -58,5 +57,5 @@ export const SubHeading = styled.h2`
   letter-spacing: 1.3px;
   text-transform: uppercase;
   /* margin-top: -${space[2]}em; */
-  color: ${colors.red[4]};
+  color: ${colors.gray[6]};
 `

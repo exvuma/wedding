@@ -64,13 +64,14 @@ export const DefaultLayout: React.FC = ({ children }) => (
         <Global
           styles={css`
             html {
+              /* background: ${colors.rose[0]}; */
               background: ${newColors.White};
             }
 
             body {
               font-family: ${fontFamily.serif};
               font-size: ${baseFontSize};
-              color: ${newColors.DarkShades};
+              color: ${colors.purple[6]};
             }
 
             @media screen and (max-width: ${breakpoints.mobile}em) {
@@ -88,7 +89,7 @@ export const DefaultLayout: React.FC = ({ children }) => (
               font-weight: 400;
             }
             h3 {
-              color: ${colors.rose[2]};
+              color: ${colors.rose[3]};
             }
 
             p,
@@ -103,9 +104,9 @@ export const DefaultLayout: React.FC = ({ children }) => (
 
             a {
               text-decoration: none;
-              color: ${colors.red[2]};
+              color: ${colors.red[4]};
               &:hover {
-                color: ${colors.red[2]};
+                color: ${colors.red[4]};
               }
             }
           `}

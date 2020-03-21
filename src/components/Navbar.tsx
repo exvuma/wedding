@@ -104,12 +104,12 @@ const NavbarWrapper = styled.header`
   top: -1px;
   left: 0;
   width: 100%;
-  background: ${colors.gray[1]};
+  background: ${colors.gray[0]};
   /* background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10h10v10H0V10zM10 0h10v10H10V0z' fill='%23dbd6d3' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E"); */
   background-size: 7px;
   text-shadow: 0 1px 0 #fff;
-  border-top: solid 1px ${colors.gray[3]};
-  border-bottom: solid 1px ${colors.gray[3]};
+  border-top: solid 1px ${colors.gray[1]};
+  border-bottom: solid 1px ${colors.gray[1]};
 `
 
 const NavbarNav = styled.ul`
@@ -138,12 +138,12 @@ const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
   line-height: 0;
   font-family: ${({ fancy }) =>
     fancy ? fontFamily.script : fontFamily.sansserif};
-  color: ${({ active }) => (active ? colors.red[2] : colors.rose[3])};
+  color: ${({ active }) => (active ? colors.red[4] : colors.purple[6])};
   ${({ fancy, active }) =>
     fancy &&
     css`
       font-family: ${fontFamily.script};
-      color: ${active ? colors.red[2] : colors.gray[4]};
+      color: ${active ? colors.red[4] : colors.gray[4]};
     `}
   /* text-decoration: ${({ active }) => (active ? 'underline' : 'none')}; */
   font-size: ${({ fancy }) => (fancy ? '1.5em' : '1em')};
@@ -152,7 +152,7 @@ const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
   &:after {
     content: '';
     display: inline-block;
-    border-top: 1px solid ${colors.red[2]};
+    border-top: 1px solid ${colors.red[4]};
     vertical-align: middle;
     width: 20px;
     margin: 0 0.8em;

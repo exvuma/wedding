@@ -120,7 +120,7 @@ const JohnStory: React.FC<{
       onEnter={() => props.onSectionEnter('intro')}
     />
     <h2>Can you believe it?</h2>
-    <SmallHr color={colors.rose[2]} />
+    <SmallHr color={colors.rose[3]} />
     <h3>A foreward from John</h3>
     <p>I proposed to Victoria and she said yes.</p>
     <p>

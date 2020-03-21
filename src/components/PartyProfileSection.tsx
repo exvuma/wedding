@@ -16,6 +16,7 @@ export type Profile = {
   name: string
   bio: React.ReactElement
   photoUrl: string
+  role: 'Groomsmen' | 'Bridesmaid' | 'MOH' | 'BM'
 }
 
 type PartyProfileSectionProps = {
