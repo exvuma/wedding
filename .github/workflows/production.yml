@@ -1,9 +1,9 @@
-name: Deploy staging site
+name: Deploy production site
 
 on:
   push:
     branches:
-      - staging
+      - production
 
 jobs:
   build:
@@ -24,4 +24,4 @@ jobs:
       with:
         apiKey: ${{ secrets.CF_API_KEY }}
         email: ${{ secrets.CF_EMAIL }}
-        environment: "staging"
+        environment: "production"
