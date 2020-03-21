@@ -14,6 +14,7 @@ export const profiles = [
   {
     name: 'Eric Fawcett',
     photoUrl: ericPhotoUrl,
+    role: 'Groomsmen',
     bio: (
       <>
         <p>
@@ -43,6 +44,7 @@ export const profiles = [
   {
     name: 'Kris Fawcett',
     photoUrl: krisPhotoUrl,
+    role: 'Groomsmen',
     bio: (
       <>
         <p>
@@ -72,6 +74,7 @@ export const profiles = [
   {
     name: 'Corey Fawcett',
     photoUrl: krisPhotoUrl,
+    role: 'Groomsmen',
     bio: (
       <>
         <p>
@@ -101,6 +104,7 @@ export const profiles = [
   {
     name: 'Paul Frazee',
     photoUrl: paulPhotoUrl,
+    role: 'Groomsmen',
     bio: (
       <>
         <p>
@@ -130,6 +134,7 @@ export const profiles = [
   {
     name: 'Brian Carlson',
     photoUrl: brianPhotoUrl,
+    role: 'Groomsmen',
     bio: (
       <>
         <p>
@@ -159,6 +164,7 @@ export const profiles = [
   {
     name: 'CJ Thompson',
     photoUrl: paulPhotoUrl,
+    role: 'Groomsmen',
     bio: (
       <>
         <p>
@@ -188,6 +194,7 @@ export const profiles = [
   {
     name: 'Stephen Lake',
     photoUrl: brianPhotoUrl,
+    role: 'Groomsmen',
     bio: (
       <>
         <p>
@@ -217,6 +224,7 @@ export const profiles = [
   {
     name: 'Laura Olivares',
     photoUrl: lauraPhotoUrl,
+    role: 'Bridesmaid',
     bio: (
       <>
         <p>
@@ -235,6 +243,7 @@ export const profiles = [
   {
     name: 'Amy Razouk',
     photoUrl: amyPhotoUrl,
+    role: 'Bridesmaid',
     bio: (
       <>
         <p>
@@ -253,6 +262,7 @@ export const profiles = [
   {
     name: 'Guliette Bernard',
     photoUrl: guliettePhotoUrl,
+    role: 'Bridesmaid',
     bio: (
       <>
         <p>
@@ -271,6 +281,7 @@ export const profiles = [
   {
     name: 'Sofia Knöppel',
     photoUrl: sofiaPhotoUrl,
+    role: 'Bridesmaid',
     bio: (
       <>
         <p>
@@ -287,6 +298,7 @@ export const profiles = [
   {
     name: 'Christina Sunseri',
     photoUrl: christinaPhotoUrl,
+    role: 'Bridesmaid',
     bio: (
       <>
         <p>
@@ -303,6 +315,7 @@ export const profiles = [
   {
     name: 'Amanda Trillo',
     photoUrl: amandaPhotoUrl,
+    role: 'Bridesmaid',
     bio: (
       <>
         <p>
@@ -317,6 +330,7 @@ export const profiles = [
   {
     name: 'Tanya Faris',
     photoUrl: tanyaPhotoUrl,
+    role: 'Bridesmaid',
     bio: (
       <>
         <p>

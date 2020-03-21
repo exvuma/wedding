@@ -10,6 +10,7 @@ export type Profile = {
   name: string
   bio: React.ReactElement
   photoUrl: string
+  role: 'Groomsmen' | 'Bridesmaid' | 'MOH' | 'BM'
 }
 
 type PartyProfileCardProps = SelectableProfile & {
@@ -27,7 +28,7 @@ export const PartyProfileCard: React.FC<PartyProfileCardProps> = props => {
       </Box>
       <Box>
         <CardName>{props.profile.name}</CardName>
-        <CardTitle>Groomsman</CardTitle>
+        <CardTitle>{props.profile.role}</CardTitle>
       </Box>
     </CardWrapper>
   )
