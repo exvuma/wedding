@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '../components/Container'
+import { Container } from '../components/utils/Container'
 import { colors, ThemeColor } from '../theme'
 
 const ColorPage: React.FC = () => {
@@ -14,9 +14,9 @@ const ColorGrid: React.FC = () => {
   return (
     <div style={{ display: 'flex' }}>
       <ColorGridCol color="red" />
-      {/* <ColorGridCol color="blue" /> */}
-      <ColorGridCol color="green" />
-      <ColorGridCol color="gold" />
+      <ColorGridCol color="aqua" />
+      <ColorGridCol color="rose" />
+      <ColorGridCol color="purple" />
       <ColorGridCol color="gray" />
     </div>
   )
@@ -38,12 +38,12 @@ const ColorBox: React.FC<{
 }> = props => (
   <div
     style={{
-      width: '5em',
-      height: '4em',
+      width: '6em',
+      height: '3em',
       padding: '1em',
       margin: '0.2em',
       background: colors[props.color][props.index],
-      color: props.index > 3 ? colors[props.color][0] : colors[props.color][7],
+      color: props.index > 1 ? colors[props.color][0] : colors[props.color][4],
     }}
   >
     {colors[props.color][props.index]}

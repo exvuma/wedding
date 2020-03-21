@@ -10,7 +10,7 @@ export const DetailsList = styled.dl`
 
 export const DetailsRow = styled.div`
   padding: ${space[1]}em;
-  border-bottom: dotted 1px ${colors.gray[3]};
+  border-bottom: dotted 1px ${colors.gray[2]};
   display: flex;
 `
 

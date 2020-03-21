@@ -4,7 +4,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import 'modern-normalize'
 import { Global, css } from '@emotion/core'
 import styled from '@emotion/styled'
-import { colors, fontFamily } from '../theme/theme'
+import {
+  colors,
+  fontFamily,
+  breakpoints,
+  mobileBaseFontSize,
+  newColors,
+} from '../theme/theme'
 import { baseFontSize } from '../theme/theme'
 
 const PageWrapper = styled.div``
@@ -48,18 +54,41 @@ export const DefaultLayout: React.FC = ({ children }) => (
                 'https://fonts.googleapis.com/css?family=Cormorant+SC|Calligraffitti&display=swap',
               rel: 'stylesheet',
             },
+            {
+              href:
+                'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap',
+              rel: 'stylesheet',
+            },
           ]}
         />
         <Global
           styles={css`
             html {
-              background: ${colors.red[0]};
+              background: ${newColors.White};
             }
 
             body {
               font-family: ${fontFamily.serif};
               font-size: ${baseFontSize};
-              color: ${colors.gray[6]};
+              color: ${newColors.DarkShades};
+            }
+
+            @media screen and (max-width: ${breakpoints.mobile}em) {
+              body {
+                font-size: ${mobileBaseFontSize};
+              }
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+              font-family: ${fontFamily.sansserif};
+              font-weight: 400;
+            }
+            h3 {
+              color: ${colors.rose[2]};
             }
 
             p,
@@ -68,14 +97,15 @@ export const DefaultLayout: React.FC = ({ children }) => (
             }
 
             img {
+              display: inline-block;
               max-width: 100%;
             }
 
             a {
               text-decoration: none;
-              color: ${colors.blue[5]};
+              color: ${colors.red[2]};
               &:hover {
-                text-decoration: underline;
+                color: ${colors.red[2]};
               }
             }
           `}

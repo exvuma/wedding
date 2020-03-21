@@ -1,75 +1,120 @@
+export const newColors = {
+  Primary: '#cb1b21', // "Thunderbird",
+  Info: ' #151e1a', //	 "RacingGreen",
+  Success: '#728342', // "Dingley",
+  Warning: '#ef720a', // "Christine",
+  LightRed: '#fff7fa',
+  Danger: '#f44336', // "Pomegranate",
+  // main
+  LightShades: '#F4F0ED', // off white
+  LightAccent: '#9ACABD', // rose goldish
+  MainColor: '#B70315', // red
+  DarkAccent: '#B58C83', //blue green
+  DarkShades: '#262430', //dark purple
+  VeryDarkShade: '#000000', //blach
+  White: '#ffffff',
+  Grey: '#cdccd6',
+} as const
+function ColorLuminance(hex: string, lum: any) {
+  // validate hex string
+  hex = String(hex).replace(/[^0-9a-f]/gi, '')
+  if (hex.length < 6) {
+    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2]
+  }
+  lum = lum || 0
+
+  // convert to decimal and change luminosity
+  var rgb = '#',
+    part,
+    i
+  for (i = 0; i < 3; i++) {
+    part = parseInt(hex.substr(i * 2, 2), 16)
+    part = Math.round(Math.min(Math.max(0, part + part * lum), 255)).toString(
+      16,
+    )
+    rgb += ('00' + part).substr(part.length)
+  }
+
+  return rgb
+}
+
 export const colors = {
   //TODO: work on colors
   red: [
-    '#fff8fa', // TODO: remove these heinous pinks
-    '#fcc9d8',
-    '#f99bb7',
-    '#ec4b78',
-    '#d51647',
-    '#b70315', // More important shade of red
-    '#800017',
-    '#47000a',
+    // ColorLuminance(newColors.LightRed, -0.2),
+    // ColorLuminance(newColors.LightRed, -0.6),
+    ColorLuminance(newColors.LightRed, 0),
+    ColorLuminance(newColors.LightRed, -0.1),
+    ColorLuminance(newColors.MainColor, 0),
+    ColorLuminance(newColors.MainColor, -0.4),
+    ColorLuminance(newColors.MainColor, -0.8),
   ],
-  blue: [
-    '#fcfeff', //TODO: remove these even more heinous blues
-    '#e1f0fc',
-    '#c6e3f9',
-    '#95c4ec',
-    '#6ea1d5',
-    '#4e79b2',
-    '#334d80',
-    '#1b2647',
+  purple: [
+    ColorLuminance(newColors.DarkShades, 0.8),
+    // ColorLuminance(newColors.DarkShades, 0.7),
+    ColorLuminance(newColors.DarkShades, 0.3),
+    ColorLuminance(newColors.DarkShades, 0),
+    ColorLuminance(newColors.DarkShades, -0.2),
+    // ColorLuminance(newColors.DarkShades, -0.4),
+    ColorLuminance(newColors.DarkShades, -0.8),
   ],
-  green: [
-    '#b2c4b8',
-    '#a2c2ac',
-    '#93bfa1',
-    '#74b389',
-    '#5a9e72',
-    '#407d58',
-    '#275038',
-    '#0d1c14',
+  rose: [
+    ColorLuminance(newColors.DarkAccent, 0.8),
+    // ColorLuminance(newColors.DarkAccent, 0.7),
+    // ColorLuminance(newColors.DarkAccent, 0.3),
+    ColorLuminance(newColors.DarkAccent, 0),
+    ColorLuminance(newColors.DarkAccent, -0.2),
+    ColorLuminance(newColors.DarkAccent, -0.4),
+    ColorLuminance(newColors.DarkAccent, -0.8),
   ],
   gray: [
-    '#fafafa',
-    '#f6f6f6',
-    '#f2f2f2',
-    '#e2e2e2',
-    '#c6c6c6',
-    '#9a9a9a',
-    '#5d5d5d',
-    '#171717',
+    ColorLuminance(newColors.LightShades, 0.05),
+    ColorLuminance(newColors.LightShades, 0),
+    ColorLuminance(newColors.LightShades, -0.2),
+    ColorLuminance(newColors.LightShades, -0.4),
+    ColorLuminance(newColors.LightShades, -0.8),
   ],
-  gold: [
-    '#faf4e3',
-    '#f7e7bd',
-    '#f3db98',
-    '#e5bf56',
-    '#cca129',
-    '#a67e0e',
-    '#715302',
-    '#332500',
+  aqua: [
+    ColorLuminance(newColors.LightAccent, 0.3),
+    ColorLuminance(newColors.LightAccent, 0),
+    ColorLuminance(newColors.LightAccent, -0.2),
+    ColorLuminance(newColors.LightAccent, -0.4),
+    ColorLuminance(newColors.LightAccent, -0.8),
   ],
 } as const
 
+// const showHex = () => {
+//   const allColors = Object.keys(colors)
+//     .map(key => colors[key].map(color => color))
+//     .reduce((prev, cur) => [...prev, ...cur], [])
+//     .map(color => {
+//       return { color }
+//     })
+//   console.log('allColors', allColors)
+// }
+// showHex()
+
 export type ThemeColor =
   | typeof colors.red[number]
-  | typeof colors.blue[number]
-  | typeof colors.green[number]
+  | typeof colors.purple[number]
+  | typeof colors.rose[number]
   | typeof colors.gray[number]
-  | typeof colors.gold[number]
+  | typeof colors.aqua[number]
 
 export const breakpoints = {
   mobile: 40,
 }
 
 export const fontFamily = {
-  sansserif: 'sans-serif',
-  serif: "'Cormorant SC', serif",
+  sansserif:
+    '-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif',
+  // serif: "'Cormorant SC', serif",
+  serif: "'Playfair Display'",
   script: "'Calligraffitti', cursive",
 }
 
-export const baseFontSize = '15px'
+export const baseFontSize = '20px'
+export const mobileBaseFontSize = '15px'
 
 export const fontSizes = [0, 0.5, 1, 1.5, 2, 2.25, 2.8, 3.2, 5] as const
 
