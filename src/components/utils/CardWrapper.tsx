@@ -13,13 +13,13 @@ export const CardWrapper = styled.div`
   transform: scale(1);
   transition: all 0.2s ease-out;
   border: solid 1px ${colors.gray[2]};
-  border-top: solid 8px ${colors.rose[2]};
+  border-top: solid 8px ${colors.red[4]};
   &:hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
     & ${CardTitle} {
-      color: ${colors.red[2]};
+      color: ${colors.red[4]};
     }
   }
 `

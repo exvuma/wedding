@@ -31,7 +31,7 @@ export const PartyProfileDetail: React.FC<{
         }}
       />
       <h3 className="details__subtitle" data-fade-in>
-        Groomsman
+        {props.profile.role}
       </h3>
       <div className="details__description">{props.profile.bio}</div>
       <button className="details__close" onClick={props.onClose}>
@@ -97,7 +97,7 @@ const Details = styled.div`
   & .details__title {
     margin: -1.5em 0 0.1em;
     font-size: 2.5em;
-    color: ${colors.gray[4]};
+    color: ${colors.gray[5]};
     font-family: ${fontFamily.serif};
     font-weight: 700;
   }
@@ -113,7 +113,7 @@ const Details = styled.div`
     letter-spacing: 0.115em;
     font-size: 1.75em;
     font-family: ${fontFamily.sansserif};
-    color: ${colors.red[2]};
+    color: ${colors.red[4]};
   }
 
   & .details__description {

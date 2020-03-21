@@ -13,7 +13,7 @@ export const newColors = {
   DarkShades: '#262430', //dark purple
   VeryDarkShade: '#000000', //blach
   White: '#ffffff',
-  Grey: '#cdccd6',
+  // Grey: '#cdccd6',
 } as const
 export const HSLnewColors = {
   MainColor: [354, 97, 36], // red
@@ -26,6 +26,7 @@ export const HSLnewColors = {
 
 const deltas = [
   // { l: 97, sx: 50 },
+  { l: 98, sx: 40 },
   { l: 91, sx: 20 },
   { l: 82, sx: 23 },
   // { l: 70, sx: 12 },
@@ -34,12 +35,13 @@ const deltas = [
   { l: 40, sx: 4 },
   // { l: 33, sx: 8 },
   { l: 25, sx: 22 },
+  { l: 15, sx: 19 },
 ]
 export const colors = {
   rose: deltas.map(delta => `hsl(${11},${25 + delta.sx}%, ${delta.l}%)`),
-  red: deltas.map(delta => `hsl(${0},${70 + delta.sx}%, ${delta.l}%)`),
+  red: deltas.map(delta => `hsl(${0},${80 + delta.sx}%, ${delta.l}%)`),
   gray: deltas.map(delta => `hsl(${0},${0}%, ${delta.l}%)`),
-  purple: deltas.map(delta => `hsl(${246},${14 + delta.sx}%, ${delta.l}%)`),
+  purple: deltas.map(delta => `hsl(${255},${9 + delta.sx}%, ${delta.l}%)`),
   aqua: deltas.map(delta => `hsl(${161},${31 + delta.sx}%, ${delta.l}%)`),
 } as const
 
