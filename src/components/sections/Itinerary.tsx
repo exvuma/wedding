@@ -1,7 +1,8 @@
-import { ContainerSmall } from '../Container'
+import { Container } from '../utils/Container'
 import styled from '@emotion/styled'
 import { colors } from '../../theme/theme'
 import { Title } from '../utils/Title'
+import { CardSection } from '../utils/CardSection'
 
 const itineraryItems = [
   { description: 'Rehearsal Dinner', date: 'November 19th, 2020', time: null },
@@ -14,25 +15,28 @@ const itineraryItems = [
   },
 ] as const
 export const Itinerary: React.FC = () => (
-  <ContainerSmall>
+  <Container>
     <Title>Itinerary</Title>
-    <div style={{ marginBottom: '1em' }}>
-      <p>More details coming soon! All you need to know now is:</p>
-      <div>
-        <Table>
-          <tbody>
-            {itineraryItems.map(item => (
-              <Tr>
-                <Td>{item.description}:</Td>
-                <Td>{item.time ? item.time : ''}</Td>
-                <Td>{item.date}</Td>
-              </Tr>
-            ))}
-          </tbody>
-        </Table>
+    <CardSection>
+      <div style={{ marginBottom: '1em' }}>
+        <p>More details coming soon! All you need to know now is:</p>
+        <br />
+        <div>
+          <Table>
+            <tbody>
+              {itineraryItems.map(item => (
+                <Tr>
+                  <Td>{item.description}:</Td>
+                  <Td>{item.time ? item.time : ''}</Td>
+                  <Td>{item.date}</Td>
+                </Tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
       </div>
-    </div>
-  </ContainerSmall>
+    </CardSection>
+  </Container>
 )
 export const Tr = styled('tr')``
 export const Td = styled<'td', {}>('td')`
@@ -44,7 +48,9 @@ export const Td = styled<'td', {}>('td')`
 
 export const Table = styled.table`
   position: relative;
-  width: 100%;
+  width: 75%;
+
+  margin: auto;
   & ${Td} :first-child {
     text-align: left;
   }

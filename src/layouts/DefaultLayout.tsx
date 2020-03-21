@@ -87,6 +87,9 @@ export const DefaultLayout: React.FC = ({ children }) => (
               font-family: ${fontFamily.sansserif};
               font-weight: 400;
             }
+            h3 {
+              color: ${colors.rose[2]};
+            }
 
             p,
             li {

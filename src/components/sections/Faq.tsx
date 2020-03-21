@@ -1,9 +1,10 @@
 import React from 'react'
 import slugify from 'slugify'
-import { ContainerSmall } from '../Container'
+import { ContainerSmall } from '../utils/Container'
 import { Title } from '../utils/Title'
 import styled from '@emotion/styled'
 import { colors } from '../../theme'
+import { CardSection } from '../utils/CardSection'
 
 export type FAQ = {
   title: string
@@ -14,17 +15,25 @@ export type FAQWithSlug = FAQ & { slug: string }
 
 export const faqs = slugifyFaqs([
   {
+    title: 'Can I book through Hyatt directly? Or another resort?',
+    body: (
+      <p>
+        No. Really please don’t this will severely complicate things for our
+        wedding. The resorts for these type of weddings depend on the guests
+        stat
+      </p>
+    ),
+  },
+  {
     title: 'Why do I have to book on the room block?',
     body: (
       <p>
-        We were personally very confused about also. It is crucial you book on
-        the room block otherwise you can get escorted out of the wedding
+        We were personally very confused about also. It actually saves the
+        guests money and makes all guests rates locked in so that guests don't
+        get competive over a better deal and feel cheated. It is crucial you
+        book on the room block otherwise you can get escorted out of the wedding
         activities. Sorry I don't have more info I am working on a clearer
-        explanantion. In the meantime check out:
-        <a href="https://lmgtfy.com/?q=why+are+room+blocks+required+for+weddings">
-          JK I'll remove this
-        </a>{' '}
-        😂
+        explanantion.
       </p>
     ),
   },
@@ -73,16 +82,6 @@ export const faqs = slugifyFaqs([
       </p>
     ),
   },
-  {
-    title: 'Can I book through Hyatt directly? Or another resort?',
-    body: (
-      <p>
-        No. Really please don’t this will severely complicate things for our
-        wedding. The resorts for these type of weddings depend on the guests
-        stat
-      </p>
-    ),
-  },
 ])
 
 function slugifyFaqs(faqs: FAQ[]): FAQWithSlug[] {
@@ -90,12 +89,14 @@ function slugifyFaqs(faqs: FAQ[]): FAQWithSlug[] {
 }
 
 export const Faqs: React.FC = () => (
-  <ContainerSmall>
+  <>
     <Title>FAQs</Title>
-    {faqs.map(faq => (
-      <Faq key={faq.slug} faq={faq} />
-    ))}
-  </ContainerSmall>
+    <CardSection>
+      {faqs.map(faq => (
+        <Faq key={faq.slug} faq={faq} />
+      ))}
+    </CardSection>
+  </>
 )
 
 export const Faq: React.FC<{ faq: FAQWithSlug }> = ({ faq }) => (
@@ -117,14 +118,14 @@ const FaqTitle = styled.h3`
       content: '🔗';
       display: inline-block;
       position: absolute;
-      width: 40px;
-      margin-left: -40px;
+      width: 20px;
+      margin-left: -35px;
       opacity: 0;
       transition: opacity 0.1s linear;
     }
 
     &:hover:before {
-      opacity: 1;
+      opacity: 0.8;
     }
   }
 `

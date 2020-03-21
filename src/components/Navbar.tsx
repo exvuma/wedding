@@ -11,11 +11,11 @@ export type NavProps = {
 }
 
 const tabTitles = [
-  { title: 'About Us', id: 'about' },
+  // { title: 'About Us', id: 'about' },
   { title: 'Book', id: 'book' },
-  { title: 'Place Holder', id: 'place' },
-  { title: 'John and Victoria', id: 'home' },
   { title: 'Itinerary', id: 'itinerary' },
+  // { title: 'Place Holder', id: 'place' },
+  { title: 'John and Victoria', id: 'home' },
   { title: 'FAQs', id: 'faqs' },
   { title: 'Wedding Party', id: 'party' },
 ] as const
@@ -105,7 +105,7 @@ const NavbarWrapper = styled.header`
   left: 0;
   width: 100%;
   background: ${colors.gray[1]};
-  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10h10v10H0V10zM10 0h10v10H10V0z' fill='%23dbd6d3' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  /* background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10h10v10H0V10zM10 0h10v10H10V0z' fill='%23dbd6d3' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E"); */
   background-size: 7px;
   text-shadow: 0 1px 0 #fff;
   border-top: solid 1px ${colors.gray[3]};
@@ -114,9 +114,10 @@ const NavbarWrapper = styled.header`
 
 const NavbarNav = styled.ul`
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 0 1em;
   list-style: none;
 
   @media screen and (max-width: ${breakpoints.mobile}em) {
@@ -130,25 +131,50 @@ const NavbarNavItem = styled.li`
   flex: 1;
   text-align: center;
 `
-
 const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
   display: inline-block;
-  padding: ${({ fancy }) => (fancy ? '1.7em 2em 1.3em' : '1.5em 2em')};
+  /* fancy is script font */
+  padding: ${({ fancy }) => (fancy ? '1.6em 2em 1.4em' : '')};
   line-height: 0;
   font-family: ${({ fancy }) =>
     fancy ? fontFamily.script : fontFamily.sansserif};
   color: ${({ active }) => (active ? colors.red[2] : colors.rose[3])};
-  ${({ fancy }) =>
+  ${({ fancy, active }) =>
     fancy &&
     css`
       font-family: ${fontFamily.script};
-      color: ${colors.gray[4]};
+      color: ${active ? colors.red[2] : colors.gray[4]};
     `}
   /* text-decoration: ${({ active }) => (active ? 'underline' : 'none')}; */
   font-size: ${({ fancy }) => (fancy ? '1.5em' : '1em')};
   white-space: nowrap;
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    border-top: 1px solid ${colors.red[2]};
+    vertical-align: middle;
+    width: 20px;
+    margin: 0 0.8em;
+    opacity: 0;
+    ${({ active }) =>
+      active &&
+      css`
+        opacity: 100;
+      `}
+  }
 `
 
+// &:after: ${({ active }) => (active ? { underline: 'none' } : '')};
+// {
+// content: '';
+//     display: inline-block;
+//     width: 60px;
+//     border-top: 3px solid ${colors.gray[3]};
+//     vertical-align: middle;
+//     margin: 0 0.5em;
+//}
+//   )};
 const MobileNavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;

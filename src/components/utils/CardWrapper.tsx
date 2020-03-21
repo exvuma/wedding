@@ -19,7 +19,7 @@ export const CardWrapper = styled.div`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
     & ${CardTitle} {
-      color: ${colors.red[3]};
+      color: ${colors.red[2]};
     }
   }
 `

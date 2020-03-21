@@ -2,7 +2,7 @@ import React from 'react'
 import { space, breakpoints, fontSizes, fontFamily, colors } from '../theme'
 import styled from '@emotion/styled'
 import floralUrl from '../img/reef_made.png'
-import { ContainerSmall } from './Container'
+import { ContainerSmall } from './utils/Container'
 
 export const Hero: React.FC = () => {
   return (
