@@ -15,6 +15,21 @@ export type FAQWithSlug = FAQ & { slug: string }
 
 export const faqs = slugifyFaqs([
   {
+    title: 'What about COVID-19 aka Coronavirus?',
+    body: (
+      <p>
+        If the virus is impacting the world by this November to a point where
+        none of us can travel to Mexico, this is scary and for reasons that go
+        well beyond our wedding. We recognize budgeting and fear of travel are
+        huge factors in attending the wedding and we are hoping to work
+        something out to make it easier for everyone to come once it’s safe. We
+        will have more information as soon as we can. For now, it is totally
+        understandable that you don’t follow normal booking procedure, just mark
+        your calendars.
+      </p>
+    ),
+  },
+  {
     title: 'Can I book through Hyatt directly? Or another resort?',
     body: (
       <p>
