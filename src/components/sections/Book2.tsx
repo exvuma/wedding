@@ -176,7 +176,11 @@ const ContentTitle3 = `Book Room`
 const ContentDetails1: React.FC = () => (
   <>
     <p>
-      Visit our travel agent’s booking site, go to "Find a Wedding" and submit:
+      Visit our{' '}
+      <a href="https://www.destinationweddings.com/Weddings/Guests/AttendaWedding.aspx?dw_weddingcode=MARRYTHEJOHN&dw_bname=Bernard">
+        travel agent’s booking site
+      </a>
+      , go to "Find a Wedding" and submit:
     </p>
     <ul>
       <li>
