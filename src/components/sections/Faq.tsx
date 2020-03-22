@@ -18,14 +18,10 @@ export const faqs = slugifyFaqs([
     title: 'What about COVID-19 aka Coronavirus?',
     body: (
       <p>
-        If the virus is impacting the world by this November to a point where
-        none of us can travel to Mexico, this is scary and for reasons that go
-        well beyond our wedding. We recognize budgeting and fear of travel are
-        huge factors in attending the wedding and we are hoping to work
-        something out to make it easier for everyone to come once it’s safe. We
-        will have more information as soon as we can. For now, it is totally
-        understandable that you don’t follow normal booking procedure, just mark
-        your calendars.
+        We're still shooting for November, but if the virus hasn't settled down
+        by then, we're all in bigger trouble than a cancelled wedding.
+        Coronavirus is a big deal, so we understand if you hold off on booking
+        travel. However, we would like you to mark your calendars.
       </p>
     ),
   },
