@@ -5,12 +5,12 @@ export const Title = styled<'h2', { color?: string }>('h2')`
   text-align: center;
   padding-top: 1em;
   font-size: 3em;
-  color: ${({ color }) => color || colors.red[2]};
+  color: ${({ color }) => color || colors.red[4]};
   &:before,
   &:after {
     content: '';
     display: inline-block;
-    border-top: 3px solid ${colors.red[2]};
+    border-top: 3px solid ${colors.red[4]};
     vertical-align: middle;
     width: 60px;
     margin: 0 0.5em;
