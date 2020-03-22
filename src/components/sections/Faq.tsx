@@ -15,6 +15,17 @@ export type FAQWithSlug = FAQ & { slug: string }
 
 export const faqs = slugifyFaqs([
   {
+    title: 'What about COVID-19 aka Coronavirus?',
+    body: (
+      <p>
+        We're still shooting for November, but if the virus hasn't settled down
+        by then, we're all in bigger trouble than a cancelled wedding.
+        Coronavirus is a big deal, so we understand if you hold off on booking
+        travel. However, we would like you to mark your calendars.
+      </p>
+    ),
+  },
+  {
     title: 'Can I book through Hyatt directly? Or another resort?',
     body: (
       <p>
