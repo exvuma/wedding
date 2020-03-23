@@ -28,7 +28,9 @@ export const BookContent: React.FC = () => (
     <Toast base="rose" index={1}>
       Do not book off the room block!
     </Toast>
-    <p>Book your hotel reservation as soon as possible by: </p>
+    <p style={{ paddingBottom: '2em' }}>
+      Book your hotel reservation as soon as possible by:{' '}
+    </p>
   </>
 )
 export const BookContentAlso: React.FC = () => (
@@ -195,7 +197,7 @@ const ContentDetails1: React.FC = () => (
 const ContentDetails2: React.FC = () => (
   <>
     <p>You’ll be redirected to a page to register for an account.</p>
-    <img src={registerScreenShotUrl}></img>
+    <img style={{ maxWidth: '50%' }} src={registerScreenShotUrl}></img>
   </>
 )
 const ContentDetails3: React.FC = () => (
