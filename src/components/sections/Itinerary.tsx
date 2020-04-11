@@ -1,6 +1,6 @@
 import { Container } from '../utils/Container'
 import styled from '@emotion/styled'
-import { colors } from '../../theme/theme'
+import { colors, breakpoints } from '../../theme/theme'
 import { Title } from '../utils/Title'
 import { CardSection } from '../utils/CardSection'
 
@@ -49,8 +49,12 @@ export const Td = styled<'td', {}>('td')`
 export const Table = styled.table`
   position: relative;
   width: 75%;
-
   margin: auto;
+
+  @media screen and (max-width: ${breakpoints.mobile}em) {
+    width: 100%;
+  }
+
   & ${Td} :first-child {
     text-align: left;
   }

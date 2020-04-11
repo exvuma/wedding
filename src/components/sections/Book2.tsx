@@ -1,22 +1,18 @@
-import { ContainerSmall } from '../utils/Container'
-import { Flex, Box } from 'reflexbox'
-import { space, colors, fontSizes, fontFamily, newColors } from '../../theme'
+import { ContainerSmall, Container } from '../utils/Container'
+import {
+  space,
+  colors,
+  fontSizes,
+  fontFamily,
+  newColors,
+  breakpoints,
+} from '../../theme'
 import React from 'react'
 import styled from '@emotion/styled'
 import registerScreenShotUrl from '../../img/Register_screenshot3.png'
-// import { Title } from '../utils/Title'
-import { CardWrapper } from '../utils/CardWrapper'
 import { ColoredBlade } from '../ColoredBlade'
 import { CardSection } from '../utils/CardSection'
 import { Title } from '../utils/Title'
-
-const BookContentEl: React.FC = ({ children }) => (
-  <ContainerSmall>
-    <div style={{ color: colors.purple[6] }}>
-      <p>{children}</p>
-    </div>
-  </ContainerSmall>
-)
 
 export const BookContent: React.FC = () => (
   <>
@@ -25,7 +21,7 @@ export const BookContent: React.FC = () => (
       want you there to share our special day with us more than any gift on a
       registry.
     </p>
-    <Toast base="rose" index={1}>
+    <Toast base="aqua" index={1}>
       Do not book off the room block!
     </Toast>
     <p style={{ paddingBottom: '2em' }}>
@@ -46,7 +42,6 @@ const Toast = styled(ColoredBlade)`
   margin: 0.5em 0;
   font-family: ${fontFamily.sansserif};
   font-size: ${fontSizes[2]}em;
-  color: ${colors.red[4]};
   padding: 0.8em;
   border-radius: 5px;
   text-align: center;
@@ -67,42 +62,9 @@ const Bar = styled('div')`
     right: 0;
   }
 `
-const Number = styled('span')`
-  position: relative;
-  z-index: 2;
-  display: block;
-  float: left;
-  min-width: 58px;
-  padding: 6px 0 8px;
-  margin-left: 20px;
-  border-radius: 5px;
-  color: #959595;
-  border: 5px solid #959595;
-  border-top-color: ${colors.red[2]};
-  border-right-color: ${colors.red[2]};
-  border-bottom-color: ${colors.red[2]};
-  border-left-color: ${colors.red[2]};
-  background: #fff;
-  line-height: 26px;
-  font-style: italic;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: -0.7px;
-`
-const BreneTitle = styled('span')`
-  position: relative;
-  z-index: 1;
-  display: block;
-  /* padding: 25px 0 23px 106px; */
-  color: ${colors.red[4]};
-  font-family: ${fontFamily.sansserif};
-  line-height: 29px;
-  text-align: left;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-`
+const BreneTitle = styled.h4``
 
-const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
+const CircleFrame = styled.div`
   position: relative;
   z-index: 2;
   display: block;
@@ -117,59 +79,14 @@ const CircleFrame = styled<'div', { offset: [number, number] }>('div')`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${colors.red[4]};
+  background: ${colors.purple[5]};
+  color: ${colors.purple[0]};
   line-height: 0;
   & > div {
-    color: ${newColors.LightShades};
     font-size: ${fontSizes[5]}em;
     margin-top: -3px;
   }
   margin-top: -1.5em;
-`
-const Button = styled('a')`
-  position: relative;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: ${space[1]}em;
-  margin: 0 auto;
-  padding: ${space[1]}em;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: ${colors.rose[2]};
-  padding: 15px 32px;
-  text-align: center;
-  display: inline-block;
-  color: ${newColors.LightShades};
-  font-size: ${fontSizes[2]}em;
-  transition: all 0.05s linear;
-
-  :hover {
-    color: ${newColors.LightShades};
-    text-decoration: none;
-    background: ${colors.rose[1]};
-  }
-`
-
-const StepsTitle = styled.h2`
-  font-family: ${fontFamily.sansserif};
-  margin: 1em 0;
-  color: ${newColors.VeryDarkShade};
-`
-const StepsDetails = styled.div`
-  flex: 1;
-  font-family: ${fontFamily.serif};
-  font-size: 1em;
-  color: ${newColors.DarkShades};
-  font-size: ${fontSizes[2]}em;
-  margin: ${space[1]}em 0 ${space[1]}em 0;
-  transition: all 0.3s linear;
-  text-align: left;
-`
-
-const StepAction = styled.div`
-  padding: 1em 0;
 `
 
 const ContentTitle1 = `Go to Site`
@@ -210,7 +127,6 @@ export const BreneBlock: React.FC = () => {
   return (
     <>
       <BookContent />
-      <Bar />
       <CircleFrame>
         <div>1</div>
       </CircleFrame>
@@ -218,7 +134,6 @@ export const BreneBlock: React.FC = () => {
         <BreneTitle>{ContentTitle1}</BreneTitle>
         <ContentDetails1 />
       </StepsContent>
-      <Bar />
       <CircleFrame>
         <div>2</div>
       </CircleFrame>
@@ -226,7 +141,6 @@ export const BreneBlock: React.FC = () => {
         <BreneTitle>{ContentTitle2}</BreneTitle>
         <ContentDetails2 />
       </StepsContent>
-      <Bar />
       <CircleFrame>
         <div>3</div>
       </CircleFrame>
@@ -239,11 +153,85 @@ export const BreneBlock: React.FC = () => {
 }
 export const Book2: React.FC = () => {
   return (
-    <>
+    <Container>
       <Title>Book</Title>
       <CardSection>
-        <BreneBlock />
+        <BookContent />
+        <BookStep>
+          <BookStepNumberColumn>
+            <BookStepNumberFrame index={1} />
+          </BookStepNumberColumn>
+          <BookStepContentColumn>
+            <BookStepTitle>{ContentTitle1}</BookStepTitle>
+            <ContentDetails1 />
+          </BookStepContentColumn>
+        </BookStep>
+        <BookStep>
+          <BookStepNumberColumn>
+            <BookStepNumberFrame index={2} />
+          </BookStepNumberColumn>
+          <BookStepContentColumn>
+            <BookStepTitle>{ContentTitle2}</BookStepTitle>
+            <ContentDetails2 />
+          </BookStepContentColumn>
+        </BookStep>
+        <BookStep>
+          <BookStepNumberColumn>
+            <BookStepNumberFrame index={3} />
+          </BookStepNumberColumn>
+          <BookStepContentColumn>
+            <BookStepTitle>{ContentTitle3}</BookStepTitle>
+            <ContentDetails3 />
+          </BookStepContentColumn>
+        </BookStep>
       </CardSection>
-    </>
+    </Container>
   )
 }
+
+const BookStep = styled.div`
+  display: flex;
+  & + & {
+    margin-top: 2em;
+  }
+
+  @media screen and (max-width: ${breakpoints.mobile}em) {
+    flex-direction: column;
+  }
+`
+const BookStepNumberColumn = styled.div`
+  width: 70px;
+`
+const BookStepContentColumn = styled.div`
+  flex: 1;
+  padding-left: 2em;
+  padding-top: 1em;
+
+  @media screen and (max-width: ${breakpoints.mobile}em) {
+    padding-left: 0;
+  }
+`
+const BookStepNumberFrame = styled<'div', { index: number }>('div')`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background: ${colors.red[4]};
+  color: ${colors.red[0]};
+  font-size: 2.5em;
+  &:before {
+    content: '${({ index }) => index}';
+    display: inline-block;
+    /* The 3 in our font has a hanger that goes below the baseline */
+    /* This makes it feel more centered */
+    margin-top: ${({ index }) => (index === 3 ? '-19px' : '-13px')};
+  }
+`
+const BookStepTitle = styled.h4`
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+`

@@ -151,6 +151,9 @@ const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
   &:before,
   &:after {
     content: '';
+    @media screen and (max-width: ${breakpoints.mobile}em) {
+      display: none;
+    }
     display: inline-block;
     border-top: 1px solid ${colors.red[4]};
     vertical-align: middle;
@@ -187,9 +190,16 @@ const MobileNavbarNavContainer = styled.div`
   position: fixed;
   width: 100%;
   height: 100%;
+  padding-top: 2em;
   /* Height of navbar for some reason not sure */
-  top: 4.6em;
-  padding-bottom: 4.6em;
+  top: 5.6em;
+  padding-bottom: 5.6em;
   overflow-y: scroll;
   background: ${newColors.LightShades};
+
+  ${NavbarNavLink} {
+    font-size: 1.5em;
+    padding: 1em;
+    border-bottom: dotted 2px ${colors.rose[3]};
+  }
 `

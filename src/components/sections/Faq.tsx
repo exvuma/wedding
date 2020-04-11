@@ -1,6 +1,6 @@
 import React from 'react'
 import slugify from 'slugify'
-import { ContainerSmall } from '../utils/Container'
+import { ContainerSmall, Container } from '../utils/Container'
 import { Title } from '../utils/Title'
 import styled from '@emotion/styled'
 import { colors } from '../../theme'
@@ -100,14 +100,14 @@ function slugifyFaqs(faqs: FAQ[]): FAQWithSlug[] {
 }
 
 export const Faqs: React.FC = () => (
-  <>
+  <Container>
     <Title>FAQs</Title>
     <CardSection>
       {faqs.map(faq => (
         <Faq key={faq.slug} faq={faq} />
       ))}
     </CardSection>
-  </>
+  </Container>
 )
 
 export const Faq: React.FC<{ faq: FAQWithSlug }> = ({ faq }) => (
@@ -120,24 +120,27 @@ export const Faq: React.FC<{ faq: FAQWithSlug }> = ({ faq }) => (
 )
 
 const FaqTitle = styled.h3`
+  font-size: 1.5em;
   position: relative;
   margin-bottom: 0.5em;
 
   a {
     color: ${colors.gray[4]};
-    &:before {
+    /* &:before {
       content: '🔗';
       display: inline-block;
       position: absolute;
       width: 20px;
-      margin-left: -35px;
+      margin-left: -40px;
+      margin-top: 12px;
       opacity: 0;
       transition: opacity 0.1s linear;
-    }
+      font-size: 0.6em;
+    } */
 
-    &:hover:before {
+    /* &:hover:before {
       opacity: 0.8;
-    }
+    } */
   }
 `
 

@@ -11,7 +11,6 @@ import photoNewZealandUrl from '../../img/about_us/IMG_20190811_130244.jpg'
 import photoBeachurl from '../../img/about_us/IMG_20200202_141428.jpg'
 import { SmallHr } from '../Hr'
 import { Waypoint } from 'react-waypoint'
-import { Subtitle } from '../utils/Title'
 
 const sectionPhotos = [
   { id: 'intro', src: photoRingUrl },

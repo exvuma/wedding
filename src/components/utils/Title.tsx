@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { space, colors, newColors } from '../../theme'
+import { colors, breakpoints } from '../../theme'
 
 export const Title = styled<'h2', { color?: string }>('h2')`
   text-align: center;
@@ -10,10 +10,21 @@ export const Title = styled<'h2', { color?: string }>('h2')`
   &:after {
     content: '';
     display: inline-block;
-    border-top: 3px solid ${colors.red[4]};
+    border-top: 2px solid ${colors.red[4]};
     vertical-align: middle;
     width: 60px;
     margin: 0 0.5em;
+  }
+
+  @media screen and (max-width: ${breakpoints.mobile}em) {
+    font-size: 2.5em;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 40px;
+      margin: 0 0.5em;
+    }
   }
 `
 export const Subtitle = styled<'h2', { color?: string }>('h2')`
