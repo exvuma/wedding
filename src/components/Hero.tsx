@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
                 fontSize: fontSizes[3] + 'em',
                 marginTop: space[3] + 'em',
                 marginBottom: -space[1] + 'em',
-                color: colors.aqua[4],
+                color: colors.gray[4],
               }}
             >
               John Fawcett &amp; Victoria Bernard

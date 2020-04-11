@@ -19,6 +19,7 @@ import lamePic from '../img/about_us/IMG_20190811_130244.jpg'
 import lamePic2 from '../img/about_us/20170527_193518.jpg'
 import { Itinerary } from './sections/Itinerary'
 import { Title, Subtitle } from './utils/Title'
+import { Outro } from './sections/Outro'
 
 export const HomePage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
@@ -52,7 +53,7 @@ export const HomePage: React.FC = () => {
         </Panel>
         <Panel id="party" setActiveTab={setActiveTab}>
           <Box marginY={space[3] + 'em'}>
-            <Title style={{ fontSize: '3em' }}>Wedding Party</Title>
+            <Title>Wedding Party</Title>
             <Container>
               <PartyProfileCards
                 onSelect={profile => setSelectedProfile(profile)}
@@ -67,6 +68,7 @@ export const HomePage: React.FC = () => {
             </Box> */}
           </Box>
         </Panel>
+        <Outro />
       </DefaultLayout>
     </Flipper>
   )

@@ -88,9 +88,6 @@ export const DefaultLayout: React.FC = ({ children }) => (
               font-family: ${fontFamily.sansserif};
               font-weight: 400;
             }
-            h3 {
-              color: ${colors.rose[3]};
-            }
 
             p,
             li {
@@ -107,6 +104,7 @@ export const DefaultLayout: React.FC = ({ children }) => (
               color: ${colors.red[4]};
               &:hover {
                 color: ${colors.red[4]};
+                text-decoration: underline;
               }
             }
           `}

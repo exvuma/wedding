@@ -1,7 +1,7 @@
 import React, { Component, useRef } from 'react'
 import { Flipped } from 'react-flip-toolkit'
 import { Profile } from './PartyProfileSection'
-import { colors, fontFamily, newColors } from '../theme'
+import { colors, fontFamily, newColors, breakpoints } from '../theme'
 import styled from '@emotion/styled'
 
 export const PartyProfileDetail: React.FC<{
@@ -92,6 +92,11 @@ const Details = styled.div`
     top: 10vh;
     right: 10vw;
     width: 30%;
+
+    @media screen and (max-width: ${breakpoints.mobile}em) {
+      position: absolute;
+      left: 10vw;
+    }
   }
 
   & .details__title {
@@ -121,6 +126,10 @@ const Details = styled.div`
     font-weight: 700;
     max-width: 50%;
     margin: 2em 0 0;
+
+    @media screen and (max-width: ${breakpoints.mobile}em) {
+      max-width: 88%;
+    }
   }
 
   & .details__close {
