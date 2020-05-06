@@ -9,12 +9,14 @@ import backgroundUrl from '../../img/about_us/IMG_20200203_123018.jpg'
 import photoRingUrl from '../../img/about_us/IMG_20191017_183439.jpg'
 import photoNewZealandUrl from '../../img/about_us/IMG_20190811_130244.jpg'
 import photoBeachurl from '../../img/about_us/IMG_20200202_141428.jpg'
+import photoCloudflareUrl from '../../img/about_us/MVIMG_20190913_164310_1.jpg'
 import { SmallHr } from '../Hr'
 import { Waypoint } from 'react-waypoint'
 
 const sectionPhotos = [
   { id: 'intro', src: photoRingUrl },
   { id: 'new-zealand', src: photoNewZealandUrl },
+  { id: 'cloudflare', src: photoCloudflareUrl },
   { id: 'outro', src: photoBeachurl },
 ] as const
 
@@ -115,7 +117,8 @@ const JohnStory: React.FC<{
 }> = props => (
   <>
     <Waypoint
-      bottomOffset="80%"
+      topOffset="200px"
+      bottomOffset="100%"
       onEnter={() => props.onSectionEnter('intro')}
     />
     <h2>Can you believe it?</h2>
@@ -145,7 +148,8 @@ const JohnStory: React.FC<{
       work.
     </p>
     <Waypoint
-      bottomOffset="80%"
+      topOffset="200px"
+      bottomOffset="100%"
       onEnter={() => props.onSectionEnter('new-zealand')}
     />
     <p>
@@ -155,12 +159,27 @@ const JohnStory: React.FC<{
       mountain? At any rate, the ring didn't arrive on time anyway.
     </p>
     <h2>How did we get here?</h2>
-    <SmallHr color={colors.gray[3]} />
-    <p>Victoria and I met at Cloudflare.</p>
-    <p>To be continued..</p>
     <Waypoint
-      bottomOffset="80%"
-      onEnter={() => props.onSectionEnter('outro')}
+      topOffset="200px"
+      bottomOffset="100%"
+      onEnter={() => props.onSectionEnter('cloudflare')}
     />
+    <SmallHr color={colors.gray[3]} />
+    <p>
+      Victoria and I met at work. It was hard not to fall in love with her. She
+      made dry cheesy jokes in chat that mostly fell flat for the Austin Chat
+      room but had me laughing. She championed multiple fitness groups at work
+      that kept me running after her on Town Lake Trail or doing high intensity
+      hot yoga classes. She went to technical meetups and wrote software for a
+      startup on the side. If she wasn't my soulmate, then who was?
+    </p>
+    <div>
+      <p>To be continued...</p>
+      <Waypoint
+        topOffset="200px"
+        bottomOffset="100%"
+        onEnter={() => props.onSectionEnter('outro')}
+      />
+    </div>
   </>
 )

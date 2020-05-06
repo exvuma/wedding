@@ -1,8 +1,11 @@
 import React from 'react'
-import ericPhotoUrl from './img/eric.jpg'
-import krisPhotoUrl from './img/kris.png'
-import brianPhotoUrl from './img/brian.png'
-import paulPhotoUrl from './img/paul.jpg'
+import ericPhotoUrl from './img/wedding_party/Eric.jpg'
+import krisPhotoUrl from './img/wedding_party/Kris.png'
+import brianPhotoUrl from './img/wedding_party/Brian.png'
+import paulPhotoUrl from './img/wedding_party/Paul.jpg'
+import stephenPhotoUrl from './img/wedding_party/Stephen1.jpg'
+import cjPhotoUrl from './img/wedding_party/Cj.jpg'
+import coreyPhotoUrl from './img/wedding_party/Corey.png'
 import lauraPhotoUrl from './img/wedding_party/Laura.jpg'
 import amyPhotoUrl from './img/wedding_party/Amy.jpg'
 import guliettePhotoUrl from './img/wedding_party/Guliette.jpg'
@@ -14,6 +17,7 @@ export const profiles = [
   {
     name: 'Eric Fawcett',
     photoUrl: ericPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Groomsmen',
     bio: (
       <>
@@ -44,6 +48,7 @@ export const profiles = [
   {
     name: 'Laura Olivares',
     photoUrl: lauraPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Bridesmaid',
     bio: (
       <>
@@ -63,6 +68,7 @@ export const profiles = [
   {
     name: 'Amy Razouk',
     photoUrl: amyPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Bridesmaid',
     bio: (
       <>
@@ -82,6 +88,7 @@ export const profiles = [
   {
     name: 'Guliette Bernard',
     photoUrl: guliettePhotoUrl,
+    imgOffset: [0, 0],
     role: 'Bridesmaid',
     bio: (
       <>
@@ -101,6 +108,7 @@ export const profiles = [
   {
     name: 'Sofia Knöppel',
     photoUrl: sofiaPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Bridesmaid',
     bio: (
       <>
@@ -118,6 +126,7 @@ export const profiles = [
   {
     name: 'Christina Sunseri',
     photoUrl: christinaPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Bridesmaid',
     bio: (
       <>
@@ -135,6 +144,7 @@ export const profiles = [
   {
     name: 'Amanda Trillo',
     photoUrl: amandaPhotoUrl,
+    imgOffset: [0, 5],
     role: 'Bridesmaid',
     bio: (
       <>
@@ -150,6 +160,7 @@ export const profiles = [
   {
     name: 'Tanya Faris',
     photoUrl: tanyaPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Bridesmaid',
     bio: (
       <>
@@ -168,179 +179,118 @@ export const profiles = [
   {
     name: 'Kris Fawcett',
     photoUrl: krisPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Groomsmen',
     bio: (
       <>
         <p>
-          Eric and I have been brothers since the day we met. We’ve maintained a
-          close relationship through the years, mostly through iMessage because
-          when I’m on a plane, that’s the only thing available on the free WiFi,
-          and he’s the only person that regularly responds.
+          Kris and I were mortal enemies when we were younger. I once put on all
+          of the shirts I had so I could get big and beat my older brother up.
+          Now-a-days, we all just <em>get along</em>. And I actually am bigger
+          than him now!
         </p>
 
-        <p>
-          When I was 17, Eric -- only a teenager himself -- moved to Virginia to
-          be with a lady from the internet (👋JFaw2!). Eric gave me his electric
-          guitar and sweet ass van. Even with my brother gone, the things he
-          passed on continued to influence my personality and way of thinking.
-        </p>
-
-        <p>
-          Eric was the drum major when we were in marching band together and the
-          singer for our high school rock band, Books for the Blind (Nobody
-          Special (Filthy Dogs)). We played together in a heavier rock band
-          called Allerion. He’s the reason why I got into music and still play
-          guitar today. Thanks for giving me a life-long hobby, brother.
-        </p>
+        <p>Anyway, love ya' brother. Can't wait to see you at the wedding.</p>
       </>
     ),
   },
   {
     name: 'Corey Fawcett',
-    photoUrl: krisPhotoUrl,
+    photoUrl: coreyPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Groomsmen',
     bio: (
       <>
         <p>
-          Eric and I have been brothers since the day we met. We’ve maintained a
-          close relationship through the years, mostly through iMessage because
-          when I’m on a plane, that’s the only thing available on the free WiFi,
-          and he’s the only person that regularly responds.
+          Corey has always been there for us. Giving us advice about computer
+          hardware. Giving us advice about computer networks. Giving us advice
+          on video games. Pretty much giving us advice on everything except
+          dating <em>ziiiiiiiiiiiiiiinnngggg</em>.
         </p>
-
         <p>
-          When I was 17, Eric -- only a teenager himself -- moved to Virginia to
-          be with a lady from the internet (👋JFaw2!). Eric gave me his electric
-          guitar and sweet ass van. Even with my brother gone, the things he
-          passed on continued to influence my personality and way of thinking.
+          The best part about Corey is that together with Sherry, they raised
+          the best nieces I've got. And while they are my only nieces, they are
+          pretty dang amazing! (👋 Kiera and Sydney!)
         </p>
-
-        <p>
-          Eric was the drum major when we were in marching band together and the
-          singer for our high school rock band, Books for the Blind (Nobody
-          Special (Filthy Dogs)). We played together in a heavier rock band
-          called Allerion. He’s the reason why I got into music and still play
-          guitar today. Thanks for giving me a life-long hobby, brother.
-        </p>
+        <p>Anyway, love ya' brother. Can't wait to see you at the wedding.</p>
       </>
     ),
   },
   {
     name: 'Paul Frazee',
     photoUrl: paulPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Groomsmen',
     bio: (
       <>
         <p>
-          Eric and I have been brothers since the day we met. We’ve maintained a
-          close relationship through the years, mostly throughs iMessage because
-          when I’m on a plane, that’s the only thing available on the free WiFi,
-          and he’s the only person that regularly responds.
+          I met Paul at a meetup. He was giving a talk and I was recruiting.
+          After watching his{' '}
+          <a href="https://www.youtube.com/watch?v=x-ffpAkviM0">numerous</a>{' '}
+          <a href="https://www.youtube.com/watch?v=erVREtQoMCc">sexy</a>{' '}
+          <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+            YouTube videos
+          </a>
+          , I knew we had to hire him.
         </p>
-
-        <p>
-          When I was 17, Eric -- only a teenager himself -- moved to Virginia to
-          be with a lady from the internet (👋JFaw2!). Eric gave me his electric
-          guitar and sweet ass van. Even with my brother gone, the things he
-          passed on continued to influence my personality and way of thinking.
-        </p>
-
-        <p>
-          Eric was the drum major when we were in marching band together and the
-          singer for our high school rock band, Books for the Blind (Nobody
-          Special (Filthy Dogs)). We played together in a heavier rock band
-          called Allerion. He’s the reason why I got into music and still play
-          guitar today. Thanks for giving me a life-long hobby, brother.
-        </p>
+        <p>To be continued...</p>
       </>
     ),
   },
   {
     name: 'Brian Carlson',
     photoUrl: brianPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Groomsmen',
     bio: (
       <>
-        <p>
-          Eric and I have been brothers since the day we met. We’ve maintained a
-          close relationship through the years, mostly throughs iMessage because
-          when I’m on a plane, that’s the only thing available on the free WiFi,
-          and he’s the only person that regularly responds.
-        </p>
-
-        <p>
-          When I was 17, Eric -- only a teenager himself -- moved to Virginia to
-          be with a lady from the internet (👋JFaw2!). Eric gave me his electric
-          guitar and sweet ass van. Even with my brother gone, the things he
-          passed on continued to influence my personality and way of thinking.
-        </p>
-
-        <p>
-          Eric was the drum major when we were in marching band together and the
-          singer for our high school rock band, Books for the Blind (Nobody
-          Special (Filthy Dogs)). We played together in a heavier rock band
-          called Allerion. He’s the reason why I got into music and still play
-          guitar today. Thanks for giving me a life-long hobby, brother.
-        </p>
+        <p>To be continued...</p>
       </>
     ),
   },
   {
     name: 'CJ Thompson',
-    photoUrl: paulPhotoUrl,
+    photoUrl: cjPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Groomsmen',
     bio: (
       <>
-        <p>
-          Eric and I have been brothers since the day we met. We’ve maintained a
-          close relationship through the years, mostly throughs iMessage because
-          when I’m on a plane, that’s the only thing available on the free WiFi,
-          and he’s the only person that regularly responds.
-        </p>
-
-        <p>
-          When I was 17, Eric -- only a teenager himself -- moved to Virginia to
-          be with a lady from the internet (👋JFaw2!). Eric gave me his electric
-          guitar and sweet ass van. Even with my brother gone, the things he
-          passed on continued to influence my personality and way of thinking.
-        </p>
-
-        <p>
-          Eric was the drum major when we were in marching band together and the
-          singer for our high school rock band, Books for the Blind (Nobody
-          Special (Filthy Dogs)). We played together in a heavier rock band
-          called Allerion. He’s the reason why I got into music and still play
-          guitar today. Thanks for giving me a life-long hobby, brother.
-        </p>
+        <p>To be continued...</p>
       </>
     ),
   },
   {
     name: 'Stephen Lake',
-    photoUrl: brianPhotoUrl,
+    photoUrl: stephenPhotoUrl,
+    imgOffset: [0, 0],
     role: 'Groomsmen',
     bio: (
       <>
         <p>
-          Eric and I have been brothers since the day we met. We’ve maintained a
-          close relationship through the years, mostly throughs iMessage because
-          when I’m on a plane, that’s the only thing available on the free WiFi,
-          and he’s the only person that regularly responds.
+          Stephen and I have been friends since we played in a band together for
+          the 8th grade talent show. Even though we didn't win the competition,
+          we continued to play in rock bands together thoughout highschool. We
+          recorded multiple demos together and almost dropped out of college for
+          a year to go on the road. Even though we wound up at different
+          schools, we remained great friends.
         </p>
-
         <p>
-          When I was 17, Eric -- only a teenager himself -- moved to Virginia to
-          be with a lady from the internet (👋JFaw2!). Eric gave me his electric
-          guitar and sweet ass van. Even with my brother gone, the things he
-          passed on continued to influence my personality and way of thinking.
+          On April 20th, 2014, Stephen and I embarked on a road trip from
+          Dallas, TX to Seattle Washington. With Bear the dog sleeping noisily
+          in the back seat of Stephen's Tacoma, and all of his belongings in tow
+          behind us, we set out on a path that would take us through Arches
+          National Park in Utah and then straight to his new Apartment in
+          Ballard in around 32 hours flat.
         </p>
-
         <p>
-          Eric was the drum major when we were in marching band together and the
-          singer for our high school rock band, Books for the Blind (Nobody
-          Special (Filthy Dogs)). We played together in a heavier rock band
-          called Allerion. He’s the reason why I got into music and still play
-          guitar today. Thanks for giving me a life-long hobby, brother.
+          We got there on a cold rainy Seattle morning around 6am and with no
+          keys available to us, we were forced to sleep in the car until
+          Stephen's new landlord showed up. Turns out, Seattle is beautiful.
+        </p>
+        <p>
+          I've visited my friend once a year, every year since then and I have
+          no plans of stopping now. I always appreciate your advice, your
+          intellect, and craftmenship. You are a true mentor and friend.
         </p>
       </>
     ),
