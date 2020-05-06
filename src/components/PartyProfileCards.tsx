@@ -8,11 +8,7 @@ export const PartyProfileCards: React.FC<SelectableProfile> = props => (
   <Grid columns={[2, 3]}>
     {profiles.map((profile, i) => (
       <GridItem key={profile.name + i}>
-        <PartyProfileCard
-          profile={profile}
-          imgOffsset={[0, 0]}
-          onSelect={props.onSelect}
-        />
+        <PartyProfileCard profile={profile} onSelect={props.onSelect} />
       </GridItem>
     ))}
   </Grid>
