@@ -54,10 +54,11 @@ export const faqs = slugifyFaqs([
     title: 'What about flights, when should I book? How should I book?',
     body: (
       <p>
-        For convenience and affordability, we recommend Southwest airlines. SW
-        Southwest has direct flights from: Austin, Denver, Houston, and New
-        Orleans. With COVID-19 Southwest has not released schedules yet though,
-        so you can wait on flights or book through any airline.
+        Book as soon as you feel comfortable with any airline of your choice.
+        Fly into Cancun airport (CUN). For convenience and affordability, we
+        previously recommended Southwest airlines. As of June 2020 with COVID-19
+        there are only direct flights from: Denver and Houston. Airlines are
+        slowly releasing more fligths.
       </p>
     ),
   },
