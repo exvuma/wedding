@@ -136,7 +136,7 @@ export const profiles = [
           mention all the trouble we’ve gotten each other in. She’s always been
           there to adopt me, make me laugh and put my life back together no
           matter what. I knew I wanted her in my wedding since the moment she
-          exited the Valley Christian uniform one for a Castilero one.
+          exited the Valley Christian uniform one for a Castillero one.
         </p>
       </>
     ),
@@ -165,9 +165,9 @@ export const profiles = [
     bio: (
       <>
         <p>
-          My absolute best friend is Austin, even our pups Graham and Mister are
-          BFFs. We love Tanya because she motivates John and me to get up on the
-          microphone not just on karaoke night’s but every night of the week. As
+          My best friend in Austin, even our pups Graham and Mister are BFFs. We
+          love Tanya because she motivates John and me to get up on the
+          microphone not just on karaoke nights but every night of the week. As
           my beauty artist, Tauns turned me as a dull burnette into a brilliant
           blonde. She shares a deep relationship with Jesus and is one
           beautifully hilarious being.

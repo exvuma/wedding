@@ -31,7 +31,9 @@ export const faqs = slugifyFaqs([
       <p>
         No. Really please don’t this will severely complicate things for our
         wedding. The resorts for these type of weddings depend on the guests
-        stat
+        staying at the resort. For rare situations where you cannot stay the 3
+        nights or at the resort but want to attend the wedding, please contact
+        John or me.
       </p>
     ),
   },
@@ -52,9 +54,11 @@ export const faqs = slugifyFaqs([
     title: 'What about flights, when should I book? How should I book?',
     body: (
       <p>
-        For convenience and affordability, we recommend Southwest airlines. SW
-        Southwest has direct flights from: Austin, Denver, Houston, and New
-        Orleans.
+        Book as soon as you feel comfortable with any airline of your choice.
+        Fly into Cancun airport (CUN). For convenience and affordability, we
+        previously recommended Southwest airlines. As of June 2020 with COVID-19
+        there are only direct flights from: Denver and Houston. Airlines are
+        slowly releasing more fligths.
       </p>
     ),
   },
@@ -96,14 +100,14 @@ export const faqs = slugifyFaqs([
 ])
 
 function slugifyFaqs(faqs: FAQ[]): FAQWithSlug[] {
-  return faqs.map(faq => ({ ...faq, slug: 'faq-' + slugify(faq.title) }))
+  return faqs.map((faq) => ({ ...faq, slug: 'faq-' + slugify(faq.title) }))
 }
 
 export const Faqs: React.FC = () => (
   <Container>
     <Title>FAQs</Title>
     <CardSection>
-      {faqs.map(faq => (
+      {faqs.map((faq) => (
         <Faq key={faq.slug} faq={faq} />
       ))}
     </CardSection>
