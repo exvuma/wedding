@@ -1,10 +1,10 @@
 import React from 'react'
 import slugify from 'slugify'
-import { ContainerSmall, Container } from '../utils/Container'
 import { Title } from '../utils/Title'
 import styled from '@emotion/styled'
 import { colors } from '../../theme'
 import { CardSection } from '../utils/CardSection'
+import { Container } from '../utils/Container'
 
 export type FAQ = {
   title: string
@@ -21,7 +21,9 @@ export const faqs = slugifyFaqs([
         We're still shooting for November, but if the virus hasn't settled down
         by then, we're all in bigger trouble than a cancelled wedding.
         Coronavirus is a big deal, so we understand if you hold off on booking
-        travel. However, we would like you to mark your calendars.
+        travel. However, we would like you to mark your calendars. We recommend
+        checking the flight is fully refundable and definetly purchasing travel
+        insurance through the travel agent, Jessica.
       </p>
     ),
   },
@@ -41,12 +43,13 @@ export const faqs = slugifyFaqs([
     title: 'Why do I have to book on the room block?',
     body: (
       <p>
-        We were personally very confused about also. It actually saves the
-        guests money and makes all guests rates locked in so that guests don't
-        get competive over a better deal and feel cheated. It is crucial you
-        book on the room block otherwise you can get escorted out of the wedding
-        activities. Sorry I don't have more info I am working on a clearer
-        explanantion.
+        This can seem confusing at first. It actually saves the guests money
+        when families are sharing rooms. If you are interested in sharing a room
+        with another guest(s), please let us know and we can pair you with
+        someone. The block also makes all guests rates locked in so guests don't
+        have to track fluctuating prices and don't get competitive over a better
+        deal and feel cheated. It is crucial you book on the room block
+        otherwise you can get escorted out of the wedding
       </p>
     ),
   },
@@ -75,25 +78,23 @@ export const faqs = slugifyFaqs([
     ),
   },
   {
-    title: 'What room should I get?',
-    body: (
-      <p>
-        This is totally up to you. The wedding guests will be spread out through
-        the resort and all rooms have access to all amenities with the exception
-        of the adults only Turquoise area - is a small rooftop pool area. If
-        you’re into luxury and don’t have kids feel welcome to stay at the
-        Turquoise of course. We - the wedding couple - will likely stay there,
-        but don’t feel bad if you don’t.
-      </p>
-    ),
-  },
-  {
     title: 'Can I invite a plus 1?',
     body: (
       <p>
         Yes, anyone that you love we love and is welcome to come! One of the
         benefits of a destination wedding is we don’t have to sweat about head
         count.
+      </p>
+    ),
+  },
+  {
+    title: 'I still have questions about getting to the wedding',
+    body: (
+      <p>
+        Should you need further information/help with booking please contact
+        Jessica (jbull@destinationweddings.com | (763) 568-3536). She is our wonderful
+        travel agent, tell her your room needs and she will get you all settled
+        with a direct invoice.
       </p>
     ),
   },
