@@ -22,8 +22,8 @@ export const faqs = slugifyFaqs([
         by then, we're all in bigger trouble than a cancelled wedding.
         Coronavirus is a big deal, so we understand if you hold off on booking
         travel. However, we would like you to mark your calendars. We recommend
-        checking the flight is fully refundable and definetly purchasing travel
-        insurance through the travel agent, Jessica.
+        getting a fully refundable flight and separately purchashing travel
+        insurance through our travel agent, Jessica.
       </p>
     ),
   },
@@ -45,11 +45,12 @@ export const faqs = slugifyFaqs([
       <p>
         This can seem confusing at first. It actually saves the guests money
         when families are sharing rooms. If you are interested in sharing a room
-        with another guest(s), please let us know and we can pair you with
-        someone. The block also makes all guests rates locked in so guests don't
-        have to track fluctuating prices and don't get competitive over a better
-        deal and feel cheated. It is crucial you book on the room block
-        otherwise you can get escorted out of the wedding
+        with another guest, please let us know and we can pair you with someone.
+        All rates are locked in on the room block.{' '}
+        <em>
+          If you do not book on the room block, you may not be able to attend
+          the wedding or spend time with the wedding party.
+        </em>
       </p>
     ),
   },
@@ -91,24 +92,23 @@ export const faqs = slugifyFaqs([
     title: 'I still have questions about getting to the wedding',
     body: (
       <p>
-        Should you need further information/help with booking please contact
-        Jessica (jbull@destinationweddings.com | (763) 568-3536). She is our wonderful
-        travel agent, tell her your room needs and she will get you all settled
-        with a direct invoice.
+        Please contact Jessica (jbull@destinationweddings.com | (763) 568-3536).
+        She is our wonderful travel agent, tell her your room needs and she will
+        get you taken care of.
       </p>
     ),
   },
 ])
 
 function slugifyFaqs(faqs: FAQ[]): FAQWithSlug[] {
-  return faqs.map((faq) => ({ ...faq, slug: 'faq-' + slugify(faq.title) }))
+  return faqs.map(faq => ({ ...faq, slug: 'faq-' + slugify(faq.title) }))
 }
 
 export const Faqs: React.FC = () => (
   <Container>
     <Title>FAQs</Title>
     <CardSection>
-      {faqs.map((faq) => (
+      {faqs.map(faq => (
         <Faq key={faq.slug} faq={faq} />
       ))}
     </CardSection>
