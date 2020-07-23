@@ -134,14 +134,14 @@ const JohnStory: React.FC<{
       <SmallHr color={colors.gray[3]} />
     </div>
     <p>
-      I had been stressing about just <em>what I was going to do</em> pop the
+      I had been stressing about just <em>what I was going to do</em> to pop the
       question. I had certainly gone through a lot ideas. At first, I was sure
       that I was going to write a song. It'd be just like any other day. I'd be
       playing a song and hopefully Victoria would recognize it was new and start
       listening.
     </p>
     <p>
-      I realized as I was writing the chorus, that it was going to be a awkward
+      I realized as I was writing the chorus, that it was going to be awkward
       to deliver the hook, <em>"will you marry me?"</em> Does the song just end?
       Do I put the guitar down and get down on one knee? What if she didn't hear
       it? What if I messed it up? Logistically, this idea just wasn't going to

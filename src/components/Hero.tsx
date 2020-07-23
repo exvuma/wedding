@@ -44,6 +44,13 @@ export const Hero: React.FC = () => {
               Getting Married
             </h1>
             <SubHeading>November 20th, 2020 - Cancún, Mexico</SubHeading>
+            <CantMakeIt>
+              Can't make it?{' '}
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScNTtPxdosf-pkdo7VparHbKWMCrom15jqQuSVYPTeozbTP2g/viewform?usp=sf_link">
+                Let us know
+              </a>
+              .
+            </CantMakeIt>
           </div>
         </div>
       </div>
@@ -58,4 +65,10 @@ export const SubHeading = styled.h2`
   text-transform: uppercase;
   /* margin-top: -${space[2]}em; */
   color: ${colors.gray[6]};
+`
+
+const CantMakeIt = styled.p`
+  font-size: 0.8em;
+  color: ${colors.gray[4]};
+  margin-top: 2em;
 `
