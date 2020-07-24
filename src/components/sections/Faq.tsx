@@ -67,15 +67,25 @@ export const faqs = slugifyFaqs([
     ),
   },
   {
+    title: 'How do I get from the airport to the hotel?',
+    body: (
+      <p>
+        A hotel shuttle is included with your booking. When you book your room,
+        Jessica will ask for your arrival time and will coordinate a shuttle to
+        take you to the resort.
+      </p>
+    ),
+  },
+  {
     title: 'What day should I arrive? Leave?',
     body: (
       <p>
-        The wedding couple will be arriving Tuesday, 11/17. The wedding party will
-        arrive Wednesday, 11/18. You can stay as long as you like, but keep in mind
-        all guests are required to a minimum of three
-        nights. We recommend coming at least the day before 11/19, staying for
-        the weekend, and checking out 11/22. There will be a planned included
-        group activity the day after the wedding, Saturday 11/21.
+        The wedding couple will be arriving Tuesday, 11/17. The wedding party
+        will arrive Wednesday, 11/18. You can stay as long as you like, but keep
+        in mind all guests are required to a minimum of three nights. We
+        recommend coming at least the day before 11/19, staying for the weekend,
+        and checking out 11/22. There will be a planned included group activity
+        the day after the wedding, Saturday 11/21.
       </p>
     ),
   },
