@@ -9,3 +9,7 @@ export const CardSection = styled.div`
   padding: ${space[4]}em;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 `
+
+export const CardSectionSubTitle = styled.h2`
+  text-align: center;
+`

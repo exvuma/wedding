@@ -31,11 +31,11 @@ export const faqs = slugifyFaqs([
     title: 'Can I book through Hyatt directly? Or another resort?',
     body: (
       <p>
-        No. Really please don’t this will severely complicate things for our
+        No. Really please don’t. This will severely complicate things for our
         wedding. The resorts for these type of weddings depend on the guests
         staying at the resort. For rare situations where you cannot stay the 3
         nights or at the resort but want to attend the wedding, please contact
-        John or me.
+        John or Victoria.
       </p>
     ),
   },
