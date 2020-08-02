@@ -85,6 +85,15 @@ export const Itinerary: React.FC = () => (
               this time.
             </DescriptiveTd>
           </Tr>
+          <Tr>
+            <Td>Deadline to RSVP</Td>
+            <Td>October 9th, 2020</Td>
+          </Tr>
+          <Tr>
+            <DescriptiveTd colSpan={2}>
+              Hard deadline to let us know if you are coming to the wedding events
+            </DescriptiveTd>
+          </Tr>
         </tbody>
       </Table>
     </CardSection>
