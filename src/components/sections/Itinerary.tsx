@@ -86,7 +86,10 @@ export const Itinerary: React.FC = () => (
             </DescriptiveTd>
           </Tr>
           <Tr>
-            <Td>Deadline to RSVP</Td>
+            <Td>Deadline to <a href="https://forms.gle/QbSNJyRrjPbYnQkn8">
+              RSVP
+            </a>
+            </Td>
             <Td>October 9th, 2020</Td>
           </Tr>
           <Tr>
