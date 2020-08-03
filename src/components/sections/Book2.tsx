@@ -89,9 +89,21 @@ const CircleFrame = styled.div`
   margin-top: -1.5em;
 `
 
+const ContentTitle0 = `RSVP`
 const ContentTitle1 = `Go to Site`
 const ContentTitle2 = `Register an account`
 const ContentTitle3 = `Book Room`
+const ContentDetails0: React.FC = () => (
+  <>
+    <p>
+      Let us know by filling out this{' '}
+      <a href="https://forms.gle/QbSNJyRrjPbYnQkn8">
+        Google Form
+      </a>
+      .
+    </p>
+  </>
+)
 const ContentDetails1: React.FC = () => (
   <>
     <p>
@@ -128,6 +140,13 @@ export const BreneBlock: React.FC = () => {
     <>
       <BookContent />
       <CircleFrame>
+        <div>0</div>
+      </CircleFrame>
+      <StepsContent>
+        <BreneTitle>{ContentTitle0}</BreneTitle>
+        <ContentDetails0 />
+      </StepsContent>
+      <CircleFrame>
         <div>1</div>
       </CircleFrame>
       <StepsContent>
@@ -162,13 +181,22 @@ export const Book2: React.FC = () => {
             <BookStepNumberFrame index={1} />
           </BookStepNumberColumn>
           <BookStepContentColumn>
+            <BookStepTitle>{ContentTitle0}</BookStepTitle>
+            <ContentDetails0 />
+          </BookStepContentColumn>
+        </BookStep>
+        <BookStep>
+          <BookStepNumberColumn>
+            <BookStepNumberFrame index={2} />
+          </BookStepNumberColumn>
+          <BookStepContentColumn>
             <BookStepTitle>{ContentTitle1}</BookStepTitle>
             <ContentDetails1 />
           </BookStepContentColumn>
         </BookStep>
         <BookStep>
           <BookStepNumberColumn>
-            <BookStepNumberFrame index={2} />
+            <BookStepNumberFrame index={3} />
           </BookStepNumberColumn>
           <BookStepContentColumn>
             <BookStepTitle>{ContentTitle2}</BookStepTitle>
@@ -177,7 +205,7 @@ export const Book2: React.FC = () => {
         </BookStep>
         <BookStep>
           <BookStepNumberColumn>
-            <BookStepNumberFrame index={3} />
+            <BookStepNumberFrame index={4} />
           </BookStepNumberColumn>
           <BookStepContentColumn>
             <BookStepTitle>{ContentTitle3}</BookStepTitle>
