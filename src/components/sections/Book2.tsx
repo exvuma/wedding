@@ -97,10 +97,7 @@ const ContentDetails0: React.FC = () => (
   <>
     <p>
       Let us know by filling out this{' '}
-      <a href="https://forms.gle/QbSNJyRrjPbYnQkn8">
-        Google Form
-      </a>
-      .
+      <a href="https://forms.gle/QbSNJyRrjPbYnQkn8">Google Form</a>.
     </p>
   </>
 )

@@ -15,15 +15,24 @@ export type FAQWithSlug = FAQ & { slug: string }
 
 export const faqs = slugifyFaqs([
   {
-    title: 'What about COVID-19 aka Coronavirus?',
+    title: 'What if I already booked?',
     body: (
       <p>
-        We're still shooting for November, but if the virus hasn't settled down
-        by then, we're all in bigger trouble than a cancelled wedding.
-        Coronavirus is a big deal, so we understand if you hold off on booking
-        travel. However, we would like you to mark your calendars. We recommend
-        getting a fully refundable flight and separately purchashing travel
-        insurance through our travel agent, Jessica.
+        Great news, you did everything right by booking ahead of time. Your
+        options are a) Move all that you paid to the new date, travel insurance
+        and 100% of funds transfer to the new date. b) If you want cash back,
+        you can get it all cash back with the exception of the $75/adult
+        insurance and have the option to rebook later if you like. c) Want to
+        keep your Nov 2020 trip to Cancun regardless of our wedding? Talk to V.
+      </p>
+    ),
+  },
+  {
+    title: 'Why Oct. 2021?',
+    body: (
+      <p>
+        Our ideal date is post-COVID, post-hurricane, and pre-flu season.
+        October is the month that fits all 3.
       </p>
     ),
   },
@@ -31,11 +40,20 @@ export const faqs = slugifyFaqs([
     title: 'Can I book through Hyatt directly? Or another resort?',
     body: (
       <p>
-        No. Really please don’t. This will severely complicate things for our
-        wedding. The resorts for these type of weddings depend on the guests
-        staying at the resort. For rare situations where you cannot stay the 3
-        nights or at the resort but want to attend the wedding, please contact
-        John or Victoria.
+        While you can book through the Hyatt directly, you will not receive any
+        of the benefits of the group: free transportation to/from airport,
+        welcome drinks, and easy coordination for the wedding coordinator.
+      </p>
+    ),
+  },
+  {
+    title: 'Why is this resort expensive?',
+    body: (
+      <p>
+        The resort is all inclusive. Meaning food, 24/7 room service, premium
+        beverages, and activites all included. The resort is located at one of
+        the most gorgeous areas in Cancun on a peninsula. Also family friendly.
+        Let us know if you're interested in sharing a room.
       </p>
     ),
   },
@@ -44,9 +62,10 @@ export const faqs = slugifyFaqs([
     body: (
       <p>
         This can seem confusing at first. It actually saves the guests money
-        when families are sharing rooms. If you are interested in sharing a room
-        with another guest, please let us know and we can pair you with someone.
-        All rates are locked in on the room block.{' '}
+        when families are sharing rooms. There are group benefits to sharing
+        rooms: free transportation to/from airport, locked in rate, welcome
+        drinks, and easy coordination for the wedding coordinator especially in
+        emergency situation such as COVID-19.
         <em>
           If you do not book on the room block, you may not be able to attend
           the wedding or spend time with the wedding party.
@@ -77,19 +96,6 @@ export const faqs = slugifyFaqs([
     ),
   },
   {
-    title: 'What day should I arrive? Leave?',
-    body: (
-      <p>
-        The wedding couple will be arriving Tuesday, 11/17. The wedding party
-        will arrive Wednesday, 11/18. You can stay as long as you like, but keep
-        in mind all guests are required to a minimum of three nights. We
-        recommend coming at least the day before 11/19, staying for the weekend,
-        and checking out 11/22. There will be a planned included group activity
-        the day after the wedding, Saturday 11/21.
-      </p>
-    ),
-  },
-  {
     title: 'Can I invite a plus 1?',
     body: (
       <p>
@@ -112,14 +118,14 @@ export const faqs = slugifyFaqs([
 ])
 
 function slugifyFaqs(faqs: FAQ[]): FAQWithSlug[] {
-  return faqs.map(faq => ({ ...faq, slug: 'faq-' + slugify(faq.title) }))
+  return faqs.map((faq) => ({ ...faq, slug: 'faq-' + slugify(faq.title) }))
 }
 
 export const Faqs: React.FC = () => (
   <Container>
     <Title>FAQs</Title>
     <CardSection>
-      {faqs.map(faq => (
+      {faqs.map((faq) => (
         <Faq key={faq.slug} faq={faq} />
       ))}
     </CardSection>

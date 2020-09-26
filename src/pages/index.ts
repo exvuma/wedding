@@ -1,1 +1,1 @@
-export { HomePage as default } from '../components/HomePage'
+export { RescheduleUpdateHomepage as default } from '../components/RescheduleUpdateHomepage'

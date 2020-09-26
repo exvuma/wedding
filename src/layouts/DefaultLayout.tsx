@@ -66,6 +66,7 @@ export const DefaultLayout: React.FC = ({ children }) => (
             html {
               /* background: ${colors.rose[0]}; */
               background: ${newColors.White};
+              scroll-padding-top: 100px;
             }
 
             body {
