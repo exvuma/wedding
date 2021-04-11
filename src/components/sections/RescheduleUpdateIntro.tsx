@@ -20,27 +20,11 @@ export const RescheduleUpdateIntro: React.FC<RescheduleUpdateIntroProps> = () =>
         <h2>Reschedule Update</h2>
         <SmallHr color={colors.rose[3]} />
         <p>
-          After much thought, we are pushing the wedding to{' '}
-          <strong>October 22nd, 2021</strong>. We have family from all the
-          hotspots in the country and the virus clearly isn’t going away. Health
-          is one of the most important gifts God gives us and the worst way to
-          start our lives together would be by exposing our family’s health and
-          well-being to this heinous virus. Also V admittedly couldn’t resist
-          hugging, kissing and dancing with loved ones mask free on her wedding
-          day. We are willing to wait for all that and October 2021 was the best
-          time.
+          The new wedding date is October 22nd, 2021! We patiently waited for
+          this moment because celebrating safely with you meant so much to us.
         </p>
-
         <p>
-          If you already booked,{' '}
-          <a href="#faq-What-if-I-already-booked">click here</a>. If you need to
-          book, <a href="#book">click here</a>.
-        </p>
-
-        <p>
-          We appreciate your understanding,
-          <br />
-          <em>-J&amp;V</em>
+          <a href="#book">Book now</a>!
         </p>
       </ContainerSmall>
     </Box>
