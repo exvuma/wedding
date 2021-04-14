@@ -1,5 +1,5 @@
 import React from 'react'
-import { space, breakpoints, fontSizes, fontFamily, colors } from '../theme'
+import { space, fontSizes, fontFamily, colors } from '../theme'
 import styled from '@emotion/styled'
 import { ContainerSmall } from './utils/Container'
 import floralUrl from '../img/Reef_made.png'
@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
             >
               Getting Married
             </h1>
-            <SubHeading>November 20th, 2020 - Cancún, Mexico</SubHeading>
+            <SubHeading>October 22nd, 2021 - Cancún, Mexico</SubHeading>
             <CantMakeIt>
               Can't make it?{' '}
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScNTtPxdosf-pkdo7VparHbKWMCrom15jqQuSVYPTeozbTP2g/viewform?usp=sf_link">
