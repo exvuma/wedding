@@ -1,6 +1,6 @@
 import { Container } from '../utils/Container'
 import styled from '@emotion/styled'
-import { colors, breakpoints } from '../../theme/theme'
+import { breakpoints } from '../../theme/theme'
 import { Title } from '../utils/Title'
 import { CardSection, CardSectionSubTitle } from '../utils/CardSection'
 import { Box } from 'reflexbox'
@@ -53,8 +53,19 @@ export const Itinerary: React.FC = () => (
       <Table>
         <tbody>
           <Tr>
+            <Td>Final Payment due without Insurance</Td>
+            <Td>May 15th, 2021</Td>
+          </Tr>
+          <Tr>
+            <DescriptiveTd colSpan={2}>
+              This is the last day you can book a room without the travel
+              insurance. The full amount should be paid. Note we recommend
+              travel insurance.
+            </DescriptiveTd>
+          </Tr>
+          <Tr>
             <Td>Room block booking</Td>
-            <Td>August 1st, 2020</Td>
+            <Td>June 1st, 2021</Td>
           </Tr>
           <Tr>
             <DescriptiveTd colSpan={2}>
@@ -64,19 +75,8 @@ export const Itinerary: React.FC = () => (
             </DescriptiveTd>
           </Tr>
           <Tr>
-            <Td>Travel protection cancellation</Td>
-            <Td>September 1st, 2020</Td>
-          </Tr>
-          <Tr>
-            <DescriptiveTd colSpan={2}>
-              This is our <em>go or no-go</em> date. It's basically the last day
-              we have to get a full refund. If we had to cancel after this date,
-              guests would not get a cash refund, but rather a travel voucher.
-            </DescriptiveTd>
-          </Tr>
-          <Tr>
             <Td>Final call for bookings and payment</Td>
-            <Td>September 13th, 2020</Td>
+            <Td>August 11th, 2021</Td>
           </Tr>
           <Tr>
             <DescriptiveTd colSpan={2}>
@@ -89,12 +89,12 @@ export const Itinerary: React.FC = () => (
             <Td>
               Deadline to <a href="https://forms.gle/QbSNJyRrjPbYnQkn8">RSVP</a>
             </Td>
-            <Td>October 9th, 2020</Td>
+            <Td>September 7th, 2021</Td>
           </Tr>
           <Tr>
             <DescriptiveTd colSpan={2}>
-              Hard deadline to let us know if you are coming to the wedding
-              events
+              Hard deadline to let us know if and what wedding events you will
+              be attending.
             </DescriptiveTd>
           </Tr>
         </tbody>
