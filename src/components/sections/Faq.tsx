@@ -43,7 +43,7 @@ export const faqs = slugifyFaqs([
         when families are sharing rooms. There are group benefits to sharing
         rooms: free transportation to/from airport, locked in rate, welcome
         drinks, and easy coordination for the wedding coordinator especially in
-        emergency situation such as COVID-19.
+        emergency situation such as COVID-19.{' '}
         <em>
           If you do not book on the room block, you may not be able to attend
           the wedding or spend time with the wedding party.
