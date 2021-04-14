@@ -11,7 +11,7 @@ const itineraryItems = [
     date: 'October 20th, 2021',
     time: null,
   },
-  { description: 'Rehearsal Dinner', date: 'October 21th, 2021', time: null },
+  { description: 'Rehearsal Dinner', date: 'October 21st, 2021', time: null },
   { description: 'Ceremony', date: 'October 22nd, 2021', time: '3pm' },
   { description: 'Reception', date: 'October 22nd, 2021', time: '6pm' },
   {
