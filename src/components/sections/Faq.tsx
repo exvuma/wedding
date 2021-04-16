@@ -15,28 +15,6 @@ export type FAQWithSlug = FAQ & { slug: string }
 
 export const faqs = slugifyFaqs([
   {
-    title: 'What if I already booked?',
-    body: (
-      <p>
-        Great news, you did everything right by booking ahead of time. Your
-        options are a) Move all that you paid to the new date, travel insurance
-        and 100% of funds transfer to the new date. b) If you want cash back,
-        you can get it all cash back with the exception of the $75/adult
-        insurance and have the option to rebook later if you like. c) Want to
-        keep your Nov 2020 trip to Cancun regardless of our wedding? Talk to V.
-      </p>
-    ),
-  },
-  {
-    title: 'Why Oct. 2021?',
-    body: (
-      <p>
-        Our ideal date is post-COVID, post-hurricane, and pre-flu season.
-        October is the month that fits all 3.
-      </p>
-    ),
-  },
-  {
     title: 'Can I book through Hyatt directly? Or another resort?',
     body: (
       <p>
@@ -65,7 +43,7 @@ export const faqs = slugifyFaqs([
         when families are sharing rooms. There are group benefits to sharing
         rooms: free transportation to/from airport, locked in rate, welcome
         drinks, and easy coordination for the wedding coordinator especially in
-        emergency situation such as COVID-19.
+        emergency situation such as COVID-19.{' '}
         <em>
           If you do not book on the room block, you may not be able to attend
           the wedding or spend time with the wedding party.
@@ -79,9 +57,7 @@ export const faqs = slugifyFaqs([
       <p>
         Book as soon as you feel comfortable with any airline of your choice.
         Fly into Cancun airport (CUN). For convenience and affordability, we
-        previously recommended Southwest airlines. As of June 2020 with COVID-19
-        there are only direct flights from: Denver and Houston. Airlines are
-        slowly releasing more fligths.
+        previously recommended Southwest airlines.
       </p>
     ),
   },
@@ -112,6 +88,17 @@ export const faqs = slugifyFaqs([
         Please contact Jessica (jbull@destinationweddings.com | (763) 568-3536).
         She is our wonderful travel agent, tell her your room needs and she will
         get you taken care of.
+      </p>
+    ),
+  },
+  {
+    title: "Soooo.. did y'all get married in 2020?",
+    body: (
+      <p>
+        No! Having you all at the wedding with us to celebrate safely was so
+        important to us, we resisted the urge to elope during the pandemic.
+        Though Graham and Cersei may not be legitamate children, the wedding
+        will be. PS Please get your dang COVID shot.
       </p>
     ),
   },
