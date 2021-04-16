@@ -93,8 +93,7 @@ export const Itinerary: React.FC = () => (
           </Tr>
           <Tr>
             <DescriptiveTd colSpan={2}>
-              Hard deadline to let us know if and what wedding events you will
-              be attending.
+            The hard deadline to let us know which wedding events (if any) you will be attending.
             </DescriptiveTd>
           </Tr>
         </tbody>

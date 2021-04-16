@@ -95,7 +95,7 @@ export const faqs = slugifyFaqs([
     title: "Soooo.. did y'all get married in 2020?",
     body: (
       <p>
-        No! Having you all at the wedding with us to celebrate safety was so
+        No! Having you all at the wedding with us to celebrate safely was so
         important to us, we resisted the urge to elope during the pandemic.
         Though Graham and Cersei may not be legitamate children, the wedding
         will be. PS Please get your dang COVID shot.
