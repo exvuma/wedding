@@ -6,11 +6,6 @@ import { CardSection, CardSectionSubTitle } from '../utils/CardSection'
 import { Box } from 'reflexbox'
 
 const itineraryItems = [
-  {
-    description: 'A special event (ask V or John for details)',
-    date: 'October 20th, 2021',
-    time: null,
-  },
   { description: 'Rehearsal Dinner', date: 'October 21st, 2021', time: null },
   { description: 'Ceremony', date: 'October 22nd, 2021', time: '3pm' },
   { description: 'Reception', date: 'October 22nd, 2021', time: '6pm' },
@@ -93,7 +88,8 @@ export const Itinerary: React.FC = () => (
           </Tr>
           <Tr>
             <DescriptiveTd colSpan={2}>
-            The hard deadline to let us know which wedding events (if any) you will be attending.
+              The hard deadline to let us know which wedding events (if any) you
+              will be attending.
             </DescriptiveTd>
           </Tr>
         </tbody>
