@@ -25,6 +25,14 @@ export const faqs = slugifyFaqs([
     ),
   },
   {
+    title: 'What days should I come?',
+    body: (
+      <p>
+       John and V will be staying at the resort from October 19th - 24th. Group activities are October 21st - 23rd. You are welcome to stay longer or shorter, but there is a three-day minimum stay. If you need an exception, you can talk with our travel agent when making the reservation. 
+      </p>
+    ),
+  },
+    {
     title: 'Why is this resort expensive?',
     body: (
       <p>
