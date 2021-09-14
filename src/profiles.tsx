@@ -8,11 +8,11 @@ import cjPhotoUrl from './img/wedding_party/Cj.jpg'
 import coreyPhotoUrl from './img/wedding_party/Corey.png'
 import lauraPhotoUrl from './img/wedding_party/Laura.jpg'
 import amyPhotoUrl from './img/wedding_party/Amy.jpg'
+import guliettePhotoUrl from './img/wedding_party/Guliette.jpg'
 import sofiaPhotoUrl from './img/wedding_party/Sofia.jpg'
 import christinaPhotoUrl from './img/wedding_party/Christina.jpg'
 import amandaPhotoUrl from './img/wedding_party/Amanda.jpg'
 import tanyaPhotoUrl from './img/wedding_party/Tanya.jpg'
-import jennaPhotoUrl from './img/wedding_party/Jen.jpg'
 export const profiles = [
   {
     name: 'Eric Fawcett',
@@ -86,28 +86,22 @@ export const profiles = [
     ),
   },
   {
-    name: 'Jenna Schier',
-    photoUrl: jennaPhotoUrl,
+    name: 'Guliette Bernard',
+    photoUrl: guliettePhotoUrl,
     imgOffset: [0, 0],
     role: 'Bridesmaid',
     bio: (
       <>
         <p>
-          Jenna is my ride-or-die, she’s always been there for me for anything & everything! Our love for each other rapidly flourished into soul sisters. We met by matching on Bumble BFF on Tuesday, February, 7th, 2017 in Austin, Texas. For those of you unfamiliar with 🐝BFF; it’s an app that matches BFF’s based on similarities and swipes!  
+          There is no one with quite as many funny stories as Guliette. She’s my
+          slightly older middle sister. Best friends from the days of Barbie
+          Dolls, and putting fire ant piles down each others pants, we know how
+          to keep each other laughing, and right out of the midst of trouble.
+          The saying two peas in a pod used to make us bashful, but we now find
+          it endearing. The love we have for one another will continue to thrive
+          far beyond the childhood we once shared in the backwoods of rural
+          Texas, and in the buzzing streets of Silicon Valley.
         </p>
-
-        <p>
-          My first in-person BFF date with Jenna was after a very long workweek; on Friday, February, 17th, 2017 at the Craft Pride beer bar on Rainey Street in Austin, Texas where we discovered our shared love for Craft Pride’s Girl Scout Cookies beer. 🍻
-        </p>
-
-        <p>
-          Jenna and I have laughed, loved, and cried together throughout the years. We’ve seen one another go through the hard times and we’ve always helped each other blossom into the lovely ladies we are today. From girls nights, game nights, buying homes in Austin, Lake days, and vacationing together, to rollerblading wipeouts and countless other cherished memories. One thing remains to only grow stronger in time; our irrevocable love for each other.
-        </p>
-
-        <p>
-          My friendship with Jenna began before John and I started dating and I know without a doubt that she has my back no matter what; as do I for her, so of course, I’d want her to be by my side as my bridesmaid. ❤️ 
-        </p>
-        
       </>
     ),
   },
@@ -301,5 +295,4 @@ export const profiles = [
       </>
     ),
   },
-  
 ] as const
