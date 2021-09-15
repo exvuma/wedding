@@ -15,10 +15,30 @@ import tanyaPhotoUrl from './img/wedding_party/Tanya.jpg'
 import jennaPhotoUrl from './img/wedding_party/JenRes.jpg'
 export const profiles = [
   {
+    name: 'Amy Razouk',
+    photoUrl: amyPhotoUrl,
+    imgOffset: [0, 0],
+    role: 'Maid of Honor',
+    bio: (
+      <>
+        <p>
+          Amy is my oldest sister and when I was born I became her real life
+          baby doll. Though having an extreme overprotective older sister your
+          whole life may not have seemed that much fun for me, Amy was a cool
+          surrogate mom (...well aside from holding my hand in parking lots
+          until 16 wasn’t that cool). From constant hip-riding, diaper changes,
+          and prom night party chaperoning our love has never wavered. Amy says
+          she couldn’t be prouder of me, her little ‘puker’, she claims to have
+          ‘raised’ for finding such a man like John.
+        </p>
+      </>
+    ),
+  },
+  {
     name: 'Eric Fawcett',
     photoUrl: ericPhotoUrl,
     imgOffset: [0, 0],
-    role: 'Groomsmen',
+    role: 'Best Man',
     bio: (
       <>
         <p>
@@ -66,22 +86,20 @@ export const profiles = [
     ),
   },
   {
-    name: 'Amy Razouk',
-    photoUrl: amyPhotoUrl,
+    name: 'Kris Fawcett',
+    photoUrl: krisPhotoUrl,
     imgOffset: [0, 0],
-    role: 'Bridesmaid',
+    role: 'Groomsmen',
     bio: (
       <>
         <p>
-          Amy is my oldest sister and when I was born I became her real life
-          baby doll. Though having an extreme overprotective older sister your
-          whole life may not have seemed that much fun for me, Amy was a cool
-          surrogate mom (...well aside from holding my hand in parking lots
-          until 16 wasn’t that cool). From constant hip-riding, diaper changes,
-          and prom night party chaperoning our love has never wavered. Amy says
-          she couldn’t be prouder of me, her little ‘puker’, she claims to have
-          ‘raised’ for finding such a man like John.
+          Kris and I were mortal enemies when we were younger. I once put on all
+          of the shirts I had so I could get big and beat my older brother up.
+          Now-a-days, we all just <em>get along</em>. And I actually am bigger
+          than him now!
         </p>
+
+        <p>Anyway, love ya' brother. Can't wait to see you at the wedding.</p>
       </>
     ),
   },
@@ -112,95 +130,6 @@ export const profiles = [
     ),
   },
   {
-    name: 'Sofia Knöppel',
-    photoUrl: sofiaPhotoUrl,
-    imgOffset: [0, 0],
-    role: 'Bridesmaid',
-    bio: (
-      <>
-        <p>
-          At UCLA Sofia and I became friends through a love of venturing from
-          Westwood into LA’s party capital - Hollywood. What started out as a
-          relationship based on partying quickly evolved as we recognized a
-          shared drive for fitness and career goals. Sofia made me family by
-          introducing me to Sofia’s phenomenal sister, Christina, where we were
-          all three roommates.
-        </p>
-      </>
-    ),
-  },
-  {
-    name: 'Christina Sunseri',
-    photoUrl: christinaPhotoUrl,
-    imgOffset: [0, 0],
-    role: 'Bridesmaid',
-    bio: (
-      <>
-        <p>
-          Since middle school Christina and I have been through so much
-          together: car accidents, diagnoses, abandoned Christmases and not to
-          mention all the trouble we’ve gotten each other in. She’s always been
-          there to adopt me, make me laugh and put my life back together no
-          matter what. I knew I wanted her in my wedding since the moment she
-          exited the Valley Christian uniform one for a Castillero one.
-        </p>
-      </>
-    ),
-  },
-  {
-    name: 'Amanda Trillo',
-    photoUrl: amandaPhotoUrl,
-    imgOffset: [0, 5],
-    role: 'Bridesmaid',
-    bio: (
-      <>
-        <p>
-          Amanda we call Trillo because though her name is shared by many, she
-          is a true one of a kind. I have known Amanda since middle school and
-          we got to really be friends on the cheer squad at Pioneer High. We
-          were roommates in LA where we turned into true life long friends.
-        </p>
-      </>
-    ),
-  },
-  {
-    name: 'Tanya Faris',
-    photoUrl: tanyaPhotoUrl,
-    imgOffset: [0, 0],
-    role: 'Bridesmaid',
-    bio: (
-      <>
-        <p>
-          My best friend in Austin, even our pups Graham and Mister are BFFs. We
-          love Tanya because she motivates John and me to get up on the
-          microphone not just on karaoke nights but every night of the week. As
-          my beauty artist, Tauns turned me as a dull burnette into a brilliant
-          blonde. She shares a deep relationship with Jesus and is one
-          beautifully hilarious being.
-        </p>
-      </>
-    ),
-  },
-
-  {
-    name: 'Kris Fawcett',
-    photoUrl: krisPhotoUrl,
-    imgOffset: [0, 0],
-    role: 'Groomsmen',
-    bio: (
-      <>
-        <p>
-          Kris and I were mortal enemies when we were younger. I once put on all
-          of the shirts I had so I could get big and beat my older brother up.
-          Now-a-days, we all just <em>get along</em>. And I actually am bigger
-          than him now!
-        </p>
-
-        <p>Anyway, love ya' brother. Can't wait to see you at the wedding.</p>
-      </>
-    ),
-  },
-  {
     name: 'Corey Fawcett',
     photoUrl: coreyPhotoUrl,
     imgOffset: [0, 0],
@@ -219,6 +148,53 @@ export const profiles = [
           pretty dang amazing! (👋 Kiera and Sydney!)
         </p>
         <p>Anyway, love ya' brother. Can't wait to see you at the wedding.</p>
+      </>
+    ),
+  },
+  {
+    name: 'Sofia Knöppel',
+    photoUrl: sofiaPhotoUrl,
+    imgOffset: [0, 0],
+    role: 'Bridesmaid',
+    bio: (
+      <>
+        <p>
+          At UCLA Sofia and I became friends through a love of venturing from
+          Westwood into LA’s party capital - Hollywood. What started out as a
+          relationship based on partying quickly evolved as we recognized a
+          shared drive for fitness and career goals. Sofia made me family by
+          introducing me to Sofia’s phenomenal sister, Christina, where we were
+          all three roommates.
+        </p>
+      </>
+    ),
+  },
+  {
+    name: 'Brian Carlson',
+    photoUrl: brianPhotoUrl,
+    imgOffset: [0, 0],
+    role: 'Groomsmen',
+    bio: (
+      <>
+        <p>To be continued...</p>
+      </>
+    ),
+  },
+  {
+    name: 'Christina Sunseri',
+    photoUrl: christinaPhotoUrl,
+    imgOffset: [0, 0],
+    role: 'Bridesmaid',
+    bio: (
+      <>
+        <p>
+          Since middle school Christina and I have been through so much
+          together: car accidents, diagnoses, abandoned Christmases and not to
+          mention all the trouble we’ve gotten each other in. She’s always been
+          there to adopt me, make me laugh and put my life back together no
+          matter what. I knew I wanted her in my wedding since the moment she
+          exited the Valley Christian uniform one for a Castillero one.
+        </p>
       </>
     ),
   },
@@ -244,13 +220,18 @@ export const profiles = [
     ),
   },
   {
-    name: 'Brian Carlson',
-    photoUrl: brianPhotoUrl,
-    imgOffset: [0, 0],
-    role: 'Groomsmen',
+    name: 'Amanda Trillo',
+    photoUrl: amandaPhotoUrl,
+    imgOffset: [0, 5],
+    role: 'Bridesmaid',
     bio: (
       <>
-        <p>To be continued...</p>
+        <p>
+          Amanda we call Trillo because though her name is shared by many, she
+          is a true one of a kind. I have known Amanda since middle school and
+          we got to really be friends on the cheer squad at Pioneer High. We
+          were roommates in LA where we turned into true life long friends.
+        </p>
       </>
     ),
   },
@@ -262,6 +243,24 @@ export const profiles = [
     bio: (
       <>
         <p>To be continued...</p>
+      </>
+    ),
+  },
+  {
+    name: 'Tanya Faris',
+    photoUrl: tanyaPhotoUrl,
+    imgOffset: [0, 0],
+    role: 'Bridesmaid',
+    bio: (
+      <>
+        <p>
+          My best friend in Austin, even our pups Graham and Mister are BFFs. We
+          love Tanya because she motivates John and me to get up on the
+          microphone not just on karaoke nights but every night of the week. As
+          my beauty artist, Tauns turned me as a dull burnette into a brilliant
+          blonde. She shares a deep relationship with Jesus and is one
+          beautifully hilarious being.
+        </p>
       </>
     ),
   },
@@ -301,5 +300,4 @@ export const profiles = [
       </>
     ),
   },
-  
 ] as const
