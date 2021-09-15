@@ -12,7 +12,7 @@ import sofiaPhotoUrl from './img/wedding_party/Sofia.jpg'
 import christinaPhotoUrl from './img/wedding_party/Christina.jpg'
 import amandaPhotoUrl from './img/wedding_party/Amanda.jpg'
 import tanyaPhotoUrl from './img/wedding_party/Tanya.jpg'
-import jennaPhotoUrl from './img/wedding_party/Jen.jpg'
+import jennaPhotoUrl from './img/wedding_party/JenRes.jpg'
 export const profiles = [
   {
     name: 'Eric Fawcett',
