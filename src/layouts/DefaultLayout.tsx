@@ -108,6 +108,12 @@ export const DefaultLayout: React.FC = ({ children }) => (
                 text-decoration: underline;
               }
             }
+
+            blockquote {
+              border-left: solid 10px ${colors.red[4]};
+              margin: 0;
+              padding: 0.1em 2em;
+            }
           `}
         />
         <PageWrapper>{children}</PageWrapper>
