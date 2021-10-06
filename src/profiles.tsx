@@ -11,8 +11,9 @@ import amyPhotoUrl from './img/wedding_party/Amy.jpg'
 import sofiaPhotoUrl from './img/wedding_party/Sofia.jpg'
 import christinaPhotoUrl from './img/wedding_party/Christina.jpg'
 import amandaPhotoUrl from './img/wedding_party/Amanda.jpg'
-import tanyaPhotoUrl from './img/wedding_party/Tanya.jpg'
+import tanyaPhotoUrl from './img/wedding_party/Tanya2.jpg'
 import jennaPhotoUrl from './img/wedding_party/JenRes.jpg'
+import guliettePhotoUrl from './img/wedding_party/Guliette.jpg'
 export const profiles = [
   {
     name: 'Amy Razouk',
@@ -296,6 +297,27 @@ export const profiles = [
           I've visited my friend once a year, every year since then and I have
           no plans of stopping now. I always appreciate your advice, your
           intellect, and craftmenship. You are a true mentor and friend.
+        </p>
+      </>
+    ),
+  },
+  {
+    name: 'Guliette Bernard',
+    photoUrl: guliettePhotoUrl,
+    imgOffset: [0, 0],
+    role: 'Bridesmaid',
+    bio: (
+      <>
+        <p>
+          There is no one with quite as many funny stories as Guliette. She’s 
+          my slightly older middle sister. Best friends from the days
+          of Barbie Dolls, and putting fire ant piles down each others
+          pants, we know how to keep each other laughing, and right out of
+          the midst of trouble.
+          The saying two peas in a pod used to make us bashful, but now we 
+          find it endearing. The love we have for one antoher will continue 
+          to thrive far beyond the childhood we once shared in the backwoods 
+          of rural Texas, and in the buzzing streets of Silicon Valley. 
         </p>
       </>
     ),
