@@ -16,7 +16,6 @@ import { Panel } from './utils/Panel'
 import { Itinerary } from './sections/Itinerary'
 import { Title } from './utils/Title'
 import { Outro } from './sections/Outro'
-// import { RescheduleUpdateIntro } from './sections/RescheduleUpdateIntro'
 
 export const RescheduleUpdateHomepage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState(null as Profile | null)
@@ -33,7 +32,6 @@ export const RescheduleUpdateHomepage: React.FC = () => {
             onClose={() => setSelectedProfile(null)}
           />
         )}
-        {/* <RescheduleUpdateIntro /> */}
         {/* <Hero /> */}
         <Navbar activeTab={activeTab} />
         <Panel id="home" setActiveTab={setActiveTab}>

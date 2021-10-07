@@ -305,19 +305,18 @@ export const profiles = [
     name: 'Guliette Bernard',
     photoUrl: guliettePhotoUrl,
     imgOffset: [0, 0],
-    role: 'Bridesmaid',
+    role: 'Sister of the Bride',
     bio: (
       <>
         <p>
-          There is no one with quite as many funny stories as Guliette. She’s 
-          my slightly older middle sister. Best friends from the days
-          of Barbie Dolls, and putting fire ant piles down each others
-          pants, we know how to keep each other laughing, and right out of
-          the midst of trouble.
-          The saying two peas in a pod used to make us bashful, but now we 
-          find it endearing. The love we have for one antoher will continue 
-          to thrive far beyond the childhood we once shared in the backwoods 
-          of rural Texas, and in the buzzing streets of Silicon Valley. 
+          Wasn't Victoria's sister a bridesmaid?
+        </p>
+        <p>
+          No... Victoria did not kick Guliette - her middle sister - out 
+          of the wedding. Turmoil over the last 5 years has existed between 
+          the two. Guliette threatened to cancel at a bad time late in the game.
+          The show went on, and Guliette has decided to lovingly apologize in
+          very sweet, creative ways that were not necessarily appreciated.
         </p>
       </>
     ),

@@ -114,7 +114,7 @@ export const faqs = slugifyFaqs([
     title: "How do I coordinate with folks?",
     body: (
       <p>
-        The best way to communicate is to join our slack <a href='https://turnonthefawcetts.slack.com/join/invite/enQtMjQ1MDMzNjY5MDkxOS05OWFhMzAxZDkwZDFlYzJiZmFmODZmNDg1ZWE4YWE0MTg1MzcyMDBlNmEwZDY4ZTgzNDAwZTA3MjFhYTgyMDYz#/credentials'>here!</a>
+        The best way to communicate is to join our slack!
       </p>
     ),
   },

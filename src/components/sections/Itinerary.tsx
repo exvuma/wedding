@@ -14,11 +14,7 @@ const itineraryItems = [
   {}, //empty column for seperation & aesthetics
   { description: 'Photos for Party', location: 'Dock + Other', date: 'October 22nd, 2021', time: '4pm' },
   { description: 'Reception', location: 'Sky Terrace', date: 'October 22nd, 2021', time: '6pm' },
-  // {
-  //   description: 'Group Event',
-  //   time: 'TBD',
-  //   date: 'October 23rd, 2021',
-  // },
+  
 ] as const
 export const Itinerary: React.FC = () => (
   <Container>
@@ -33,7 +29,7 @@ export const Itinerary: React.FC = () => (
           >
             Let us know
           </a>{' '}
-          which events you can make it to by downloading and accepting the slack invite!
+          which events you can make it to on the sheet we sent in the email.
         </p>
         <Table>
           <tbody>
