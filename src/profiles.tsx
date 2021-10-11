@@ -11,8 +11,9 @@ import amyPhotoUrl from './img/wedding_party/Amy.jpg'
 import sofiaPhotoUrl from './img/wedding_party/Sofia.jpg'
 import christinaPhotoUrl from './img/wedding_party/Christina.jpg'
 import amandaPhotoUrl from './img/wedding_party/Amanda.jpg'
-import tanyaPhotoUrl from './img/wedding_party/Tanya.jpg'
+import tanyaPhotoUrl from './img/wedding_party/Tanya2.jpg'
 import jennaPhotoUrl from './img/wedding_party/JenRes.jpg'
+import guliettePhotoUrl from './img/wedding_party/Guliette.jpg'
 export const profiles = [
   {
     name: 'Amy Razouk',
@@ -296,6 +297,26 @@ export const profiles = [
           I've visited my friend once a year, every year since then and I have
           no plans of stopping now. I always appreciate your advice, your
           intellect, and craftmenship. You are a true mentor and friend.
+        </p>
+      </>
+    ),
+  },
+  {
+    name: 'Guliette Bernard',
+    photoUrl: guliettePhotoUrl,
+    imgOffset: [0, 0],
+    role: 'Sister of the Bride',
+    bio: (
+      <>
+        <p>
+          Wasn't Victoria's sister a bridesmaid?
+        </p>
+        <p>
+          No... Victoria did not kick Guliette - her middle sister - out 
+          of the wedding. Turmoil over the last 5 years has existed between 
+          the two. Guliette threatened to cancel at a bad time late in the game.
+          The show went on, and Guliette has decided to lovingly apologize in
+          very sweet, creative ways that were not necessarily appreciated.
         </p>
       </>
     ),

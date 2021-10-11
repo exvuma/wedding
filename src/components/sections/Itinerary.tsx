@@ -7,13 +7,14 @@ import { Box } from 'reflexbox'
 
 const itineraryItems = [
   { description: 'Rehearsal Dinner', date: 'October 21st, 2021', time: null },
-  { description: 'Ceremony', date: 'October 22nd, 2021', time: '3pm' },
-  { description: 'Reception', date: 'October 22nd, 2021', time: '6pm' },
-  {
-    description: 'Group Event',
-    time: 'TBD',
-    date: 'October 23rd, 2021',
-  },
+  {}, //empty column for seperation & aesthetics
+  { description: 'Getting Ready (Wedding Party)', location: 'TBD', date: 'October 22nd, 2021', time: '10 - 2pm' },
+  { description: 'Ceremony', location: 'Lighthouse', date: 'October 22nd, 2021', time: '3pm' },
+  { description: 'Cocktail Hour', location: 'Firepits', date: 'October 22nd, 2021', time: '4pm' },
+  {}, //empty column for seperation & aesthetics
+  { description: 'Photos for Party', location: 'Dock + Other', date: 'October 22nd, 2021', time: '4pm' },
+  { description: 'Reception', location: 'Sky Terrace', date: 'October 22nd, 2021', time: '6pm' },
+  
 ] as const
 export const Itinerary: React.FC = () => (
   <Container>
@@ -28,13 +29,14 @@ export const Itinerary: React.FC = () => (
           >
             Let us know
           </a>{' '}
-          which events you can make it to.
+          which events you can make it to on the sheet we sent in the email.
         </p>
         <Table>
           <tbody>
             {itineraryItems.map((item) => (
               <Tr>
                 <Td>{item.description}</Td>
+                <Td>{item.location}</Td>
                 <Td>{item.time ? item.time : ''}</Td>
                 <Td>{item.date}</Td>
               </Tr>

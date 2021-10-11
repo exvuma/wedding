@@ -110,6 +110,15 @@ export const faqs = slugifyFaqs([
       </p>
     ),
   },
+  {
+    title: "How do I coordinate with folks?",
+    body: (
+      <p>
+        The best way to communicate is to join our slack!
+      </p>
+    ),
+  },
+
 ])
 
 function slugifyFaqs(faqs: FAQ[]): FAQWithSlug[] {
