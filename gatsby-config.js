@@ -19,6 +19,13 @@ module.exports = {
         icon: 'src/img/favico.png',
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Playfair Display`],
+        display: 'swap',
+      },
+    },
     // {
     //   resolve: 'gatsby-plugin-react-svg',
     //   options: {
