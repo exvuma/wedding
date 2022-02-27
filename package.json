@@ -28,7 +28,7 @@
     "gatsby-plugin-emotion": "^4.3.11",
     "gatsby-plugin-manifest": "^2.4.31",
     "gatsby-plugin-react-helmet": "^3.3.11",
-    "gatsby-plugin-sharp": "^2.6.36",
+    "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-typescript": "^2.4.20",
     "gatsby-transformer-remark": "^2.8.35",
     "modern-normalize": "^1.0.0",
