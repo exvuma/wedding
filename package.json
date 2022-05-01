@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@cloudflare/wrangler": "^1.19.8",
-    "@emotion/core": "^10.0.35",
+    "@emotion/core": "^10.3.1",
     "@emotion/styled": "^10.3.0",
     "@types/react-sticky": "^6.0.3",
     "emotion-theming": "^11.0.0",
