@@ -45,7 +45,7 @@
     "react-use": "^17.3.2",
     "react-waypoint": "^10.1.0",
     "reflexbox": "^4.0.6",
-    "remark-gfm": "^2.0.0",
+    "remark-gfm": "^3.0.1",
     "slugify": "^1.6.5",
     "styled-components": "^5.2.0"
   },
