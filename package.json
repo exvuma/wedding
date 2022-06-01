@@ -33,7 +33,7 @@
     "gatsby-transformer-remark": "^2.8.35",
     "modern-normalize": "^1.0.0",
     "node-fetch": "^3.2.4",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-animated-burgers": "^1.2.8",
     "react-dom": "^16.13.1",
     "react-flip-toolkit": "^7.0.14",
