@@ -31,7 +31,7 @@
     "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-typescript": "^2.12.1",
     "gatsby-transformer-remark": "^2.8.35",
-    "modern-normalize": "^1.0.0",
+    "modern-normalize": "^1.1.0",
     "node-fetch": "^3.2.4",
     "react": "^16.13.1",
     "react-animated-burgers": "^1.2.8",
