@@ -54,7 +54,7 @@
     "@types/reflexbox": "^4.0.5",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-svg": "^3.1.0",
-    "prettier": "^2.6.2",
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   },
   "version": "0.0.0"
