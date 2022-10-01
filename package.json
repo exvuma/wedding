@@ -17,7 +17,7 @@
     "node": "12.*"
   },
   "dependencies": {
-    "@cloudflare/wrangler": "^1.19.12",
+    "@cloudflare/wrangler": "^1.19.13",
     "@emotion/core": "^10.3.1",
     "@emotion/styled": "^10.3.0",
     "@types/react-sticky": "^6.0.4",
