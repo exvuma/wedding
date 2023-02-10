@@ -46,9 +46,9 @@ export const About: React.FC = () => {
         <p>We got married on October 22nd after planning and replanning our wedding during
           the pandemic. What a journey and magical set of events it turned out to be. Thank you everyone
           who got the chance to share the special day with us. Here is a video to recap the magic</p>
-        <h3>The short film of the wedding in Mexico</h3>
+        <p><b>The short film of the wedding in Mexico</b></p>
         <Stream controls src={"43f079a9cb999ceeae25ebb7f7fe83b9"} />
-        <h3>Don't got an hour for that? Here is the shorter one...</h3>
+        <p><b>Don't got an hour for that? Here is the shorter one...</b></p>
         <Stream controls src={"b982b094cd1e8be57c6e357c5bbbcd9f"} />
 
       </Container>
