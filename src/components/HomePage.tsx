@@ -38,15 +38,6 @@ export const HomePage: React.FC = () => {
         <Panel id="home" setActiveTab={setActiveTab}>
           <About />
         </Panel>
-        <Panel id="book" setActiveTab={setActiveTab}>
-          <Book2 />
-        </Panel>
-        <Panel id="itinerary" setActiveTab={setActiveTab}>
-          <Itinerary />
-        </Panel>
-        <Panel id="faqs" setActiveTab={setActiveTab}>
-          <Faqs />
-        </Panel>
         <Panel id="party" setActiveTab={setActiveTab}>
           <Box marginY={space[3] + 'em'}>
             <Title>Wedding Party</Title>

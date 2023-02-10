@@ -12,6 +12,7 @@ import photoBeachurl from '../../img/about_us/IMG_20200202_141428.jpg'
 import photoCloudflareUrl from '../../img/about_us/MVIMG_20190913_164310_1.jpg'
 import { SmallHr } from '../Hr'
 import { Waypoint } from 'react-waypoint'
+import { Stream } from "@cloudflare/stream-react";
 
 const sectionPhotos = [
   { id: 'intro', src: photoRingUrl },
@@ -38,44 +39,18 @@ export const About: React.FC = () => {
 
   return (
     <Box marginBottom={space[5] + 'em'}>
-      <ColoredBlade base="aqua" index={4}>
-        <Background>
-          <ContainerSmall>
-            <Box
-              height={['22em', '35em']}
-              paddingY={space[3] + 'em'}
-              textAlign="center"
-            ></Box>
-          </ContainerSmall>
-        </Background>
-      </ColoredBlade>
+
       <Container>
-        <Flex
-          flexWrap="wrap"
-          ml={[0, -space[4] + 'em']}
-          mr={[0, -space[4] + 'em']}
-        >
-          <Box p={space[4] + 'em'} width={[1, 1 / 2]}>
-            <JohnStory onSectionEnter={section => setCurrentSection(section)} />
-          </Box>
-          <Box
-            p={space[4] + 'em'}
-            width={[1, 1 / 2]}
-            display="flex"
-            flexDirection="column"
-          >
-            <div style={{ position: 'sticky', top: '4em' }}>
-              <Flipper flipKey={activeSectionPhoto}>
-                <PhotoFrame>
-                  <Flipped flipId={activeSectionPhoto.id}>
-                    <Photo src={activeSectionPhoto.src} />
-                  </Flipped>
-                  {/* <PhotoBorder /> */}
-                </PhotoFrame>
-              </Flipper>
-            </div>
-          </Box>
-        </Flex>
+        <h2>Recap</h2>
+        <SmallHr color={colors.rose[3]} />
+        <p>We got married on October 22nd after planning and replanning our wedding during
+          the pandemic. What a journey and magical set of events it turned out to be. Thank you everyone
+          who got the chance to share the special day with us. Here is a video to recap the magic</p>
+        <h3>The short film of the wedding in Mexico</h3>
+        <Stream controls src={""} />
+        <h3>Don't got an hour for that? Here is the shorter one...</h3>
+        <Stream controls src={"b982b094cd1e8be57c6e357c5bbbcd9f"} />
+
       </Container>
     </Box>
   )

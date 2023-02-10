@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import Media from 'react-media'
 import { HamburgerSpin } from 'react-animated-burgers'
 import { colors, fontFamily, breakpoints, newColors } from '../theme'
-import { Title } from './utils/Title'
 import { css } from '@emotion/core'
 
 export type NavProps = {
@@ -11,16 +10,12 @@ export type NavProps = {
 }
 
 const tabTitles = [
-  // { title: 'About Us', id: 'about' },
-  { title: 'Book', id: 'book' },
-  { title: 'Itinerary', id: 'itinerary' },
   // { title: 'Place Holder', id: 'place' },
   { title: 'John and Victoria', id: 'home' },
-  { title: 'FAQs', id: 'faqs' },
-  { title: 'Wedding Party', id: 'party' },
+
 ] as const
 
-const homeTab = tabTitles[2]
+const homeTab = tabTitles[0]
 
 export type TabId = typeof tabTitles[number]['id']
 
@@ -161,8 +156,8 @@ const NavbarNavLink = styled<'a', { fancy: boolean; active: boolean }>('a')`
     margin: 0 0.8em;
     opacity: 0;
     ${({ active }) =>
-      active &&
-      css`
+    active &&
+    css`
         opacity: 100;
       `}
   }
