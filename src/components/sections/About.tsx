@@ -47,7 +47,7 @@ export const About: React.FC = () => {
           the pandemic. What a journey and magical set of events it turned out to be. Thank you everyone
           who got the chance to share the special day with us. Here is a video to recap the magic</p>
         <h3>The short film of the wedding in Mexico</h3>
-        <Stream controls src={""} />
+        <Stream controls src={"43f079a9cb999ceeae25ebb7f7fe83b9"} />
         <h3>Don't got an hour for that? Here is the shorter one...</h3>
         <Stream controls src={"b982b094cd1e8be57c6e357c5bbbcd9f"} />
 
