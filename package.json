@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@cloudflare/stream-react": "^1.8.0",
-    "@cloudflare/wrangler": "^1.20.0",
+    "@cloudflare/wrangler": "^1.21.0",
     "@emotion/core": "^10.3.1",
     "@emotion/styled": "^10.3.0",
     "@types/react-sticky": "^6.0.4",
