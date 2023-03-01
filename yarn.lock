@@ -1259,10 +1259,10 @@
   resolved "https://registry.yarnpkg.com/@cloudflare/stream-react/-/stream-react-1.8.0.tgz#b858b5aeb473a3c217043f9609ea11389053b24d"
   integrity sha512-Kxt4s1xA/Nf4oSAeLvWrkeUftXNhykY+Up6dFH881vrAKCJUeSKSqSGgn5gi0BV0UvjwriOxHRa1Fu0cyuOS3w==
 
-"@cloudflare/wrangler@^1.20.0":
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/wrangler/-/wrangler-1.20.0.tgz#5e72927625716480737932a0689e153169566bfb"
-  integrity sha512-WUZ81SopKz4f1ooSu7OB3lIUTliI28ubMou2Qd4LLGxMs6Rq+UDyqpXlT/D9nS2yy+LOblkMmfELwQbXwCS35A==
+"@cloudflare/wrangler@^1.21.0":
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/wrangler/-/wrangler-1.21.0.tgz#d2d3cff9ed45170922cf927b7efd19d3858bc9a2"
+  integrity sha512-rsF1cGQT+CcTbk6d/s7c/CWOnKAtKi26LSkSbjDPnXsaEMso3RGRPWdStav/xmMLbvKOeDdtL8NDoxrtimrpQg==
   dependencies:
     axios "^0.21.1"
     rimraf "^3.0.2"
