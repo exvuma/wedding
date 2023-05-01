@@ -29,7 +29,7 @@
     "gatsby-plugin-emotion": "^4.3.11",
     "gatsby-plugin-manifest": "^2.12.1",
     "gatsby-plugin-react-helmet": "^3.10.0",
-    "gatsby-plugin-sharp": "^4.25.1",
+    "gatsby-plugin-sharp": "^5.9.0",
     "gatsby-plugin-typescript": "^2.12.1",
     "gatsby-transformer-remark": "^2.16.1",
     "modern-normalize": "^1.1.0",
