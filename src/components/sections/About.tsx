@@ -50,6 +50,7 @@ export const About: React.FC = () => {
         <Stream controls src={"43f079a9cb999ceeae25ebb7f7fe83b9"} />
         <p><b>Don't got an hour for that? Here is the shorter one...</b></p>
         <Stream controls src={"b982b094cd1e8be57c6e357c5bbbcd9f"} />
+        <p><b>For footage of the yacht party, events at the resort, and other check Facebook.</b></p>
 
       </Container>
     </Box>
