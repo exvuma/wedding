@@ -3084,10 +3084,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/reflexbox@^4.0.0":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@types/reflexbox/-/reflexbox-4.0.5.tgz#670a1bea460af670ad360f1469389e97e97e363f"
-  integrity sha512-IKFFMVRo/TsqQjcQdIuqIwfp/z3aMf9pjFNk77rKiKkUQca2WF/80D8mu0oCgH/rqcJtHNrakWTa1CvwxPMP1g==
+"@types/reflexbox@^4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@types/reflexbox/-/reflexbox-4.0.6.tgz#465a83b4968792270d5332d4416e695eca7bccb9"
+  integrity sha512-M+yEb8sgYFEWfZExRQf0g5Qa7UU6CU4ouMDQfRGXx5Q5lC5auO+Z2YJe2hIBIFQvub+iRiB63LWCxbyzToUJXA==
   dependencies:
     "@emotion/react" "*"
     "@emotion/styled" "*"
