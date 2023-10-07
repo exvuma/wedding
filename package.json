@@ -51,7 +51,7 @@
     "styled-components": "^6.0.8"
   },
   "devDependencies": {
-    "@types/react-helmet": "^6.1.0",
+    "@types/react-helmet": "^6.1.7",
     "@types/reflexbox": "^4.0.6",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-svg": "^3.0.0",
