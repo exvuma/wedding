@@ -21,7 +21,7 @@
     "@cloudflare/wrangler": "^1.19.8",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.23",
-    "@types/react-sticky": "^6.0.3",
+    "@types/react-sticky": "^6.0.6",
     "emotion-theming": "^11.0.0",
     "gatsby": "^4.25.7",
     "gatsby-image": "^3.11.0",

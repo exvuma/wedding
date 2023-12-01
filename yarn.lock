@@ -3116,10 +3116,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-sticky@^6.0.3":
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/@types/react-sticky/-/react-sticky-6.0.4.tgz#cab221a099227d5eabdfcdf0b8cd2fb479058115"
-  integrity sha512-n5yneeM7PrUu4nqk7oV0c0p9LqHXO2D+17DhQ/Z7UiWhaoSvKJXBkSzAdNRRxZO/njttKd0Ch9hLnaFPqZlAdg==
+"@types/react-sticky@^6.0.6":
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/@types/react-sticky/-/react-sticky-6.0.6.tgz#a16b32dd6d6d6ffd7cfb4722397caf5c57db89d7"
+  integrity sha512-Q6SGEz3gy2caeQol7320lGsu9JqIn80c2Q63HF7P2KD4BASTA+hyBhETbOkSghbsECDriZW8OuYXZ9vut/EVnw==
   dependencies:
     "@types/react" "*"
 
