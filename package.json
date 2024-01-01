@@ -17,7 +17,7 @@
     "node": "12.*"
   },
   "dependencies": {
-    "@cloudflare/stream-react": "^1.8.0",
+    "@cloudflare/stream-react": "^1.9.1",
     "@cloudflare/wrangler": "^1.19.8",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.23",
