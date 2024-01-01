@@ -3115,10 +3115,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/reflexbox@^4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@types/reflexbox/-/reflexbox-4.0.8.tgz#f8f7efd06af487cd519be110615c8a4a83fca410"
-  integrity sha512-2+9Ng1XNohmOWoUPuBcy81rjBx2E3jEA5UTfB71Xw5EwBy2OlapcJeO0+Wqp7FBsJ7OCuQzpu5dFTVbWsk3j6Q==
+"@types/reflexbox@^4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@types/reflexbox/-/reflexbox-4.0.9.tgz#a6171ab169bd008b61b6abb8a86156bd5ec3f5c0"
+  integrity sha512-72kmeBE53iWPt2v3MpnMDGX5NJq4i32Jqgm5JFfqQPX2epdSuSdcgxW+lvwMozz9luxI2dnsmJHMKwtFB2FfqA==
   dependencies:
     "@emotion/react" "*"
     "@emotion/styled" "*"
