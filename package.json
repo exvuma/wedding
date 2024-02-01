@@ -31,7 +31,7 @@
     "gatsby-plugin-react-helmet": "^6.13.0",
     "gatsby-plugin-sharp": "^2.6.36",
     "gatsby-plugin-typescript": "^4.25.0",
-    "gatsby-transformer-remark": "^6.13.0",
+    "gatsby-transformer-remark": "^6.13.1",
     "modern-normalize": "^2.0.0",
     "node-fetch": "^3.3.2",
     "react": "^16.13.1",
