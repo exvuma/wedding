@@ -27,7 +27,7 @@
     "gatsby-image": "^3.11.0",
     "gatsby-link": "^2.4.14",
     "gatsby-plugin-emotion": "^4.3.11",
-    "gatsby-plugin-manifest": "^5.13.0",
+    "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-react-helmet": "^6.13.0",
     "gatsby-plugin-sharp": "^2.6.36",
     "gatsby-plugin-typescript": "^4.25.0",
