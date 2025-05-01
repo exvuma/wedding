@@ -1318,10 +1318,10 @@
   resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.5.4.tgz#1a89069978734e132fa4a59414ddb64e4b94fde7"
   integrity sha512-qnikpQgi30AS01aFlNQV6l8/qdZIcP76mp90ti+u4rucXHsn4afSKivQXApqxvrQG9+Ibv45STyvHizvxef/7A==
 
-"@cloudflare/stream-react@^1.9.2":
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/@cloudflare/stream-react/-/stream-react-1.9.2.tgz#18ee42e20df0c82cd610245efee7fea85d12b9a2"
-  integrity sha512-VDheZPb7O1Gkzl8yiStIkwQrAqaFsjOk/5F6Qh+ePV0SAN1+V2KsO/buuxZX7B2LvfBJhy0HAOJ/OJQuoYNAzQ==
+"@cloudflare/stream-react@^1.9.3":
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/@cloudflare/stream-react/-/stream-react-1.9.3.tgz#c82f76f9998debf0ef1c448f3a99c0b23a2f69db"
+  integrity sha512-ocr7B+zHk/jq0r/wgtFeyoz7Hr+v3Qn0Ho6yUBkWT07ahr/0GU1dhliYJESwNXMuMYCU1sZ02sFH9pW5r1/BIA==
 
 "@cloudflare/wrangler@^1.19.8":
   version "1.21.0"
