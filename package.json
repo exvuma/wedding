@@ -20,7 +20,7 @@
     "@cloudflare/stream-react": "^1.9.3",
     "@cloudflare/wrangler": "^1.19.8",
     "@emotion/core": "^10.0.35",
-    "@emotion/styled": "^10.0.23",
+    "@emotion/styled": "^11.14.1",
     "@types/react-sticky": "^6.0.6",
     "emotion-theming": "^11.0.0",
     "gatsby": "^4.25.9",
