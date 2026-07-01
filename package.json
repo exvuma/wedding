@@ -36,7 +36,7 @@
     "node-fetch": "^3.3.2",
     "react": "^19.2.6",
     "react-animated-burgers": "^1.2.8",
-    "react-dom": "^19.2.5",
+    "react-dom": "^19.2.6",
     "react-flip-toolkit": "^7.2.4",
     "react-helmet": "^6.1.0",
     "react-markdown": "^10.1.0",
