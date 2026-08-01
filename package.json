@@ -34,7 +34,7 @@
     "gatsby-transformer-remark": "^6.16.0",
     "modern-normalize": "^3.0.1",
     "node-fetch": "^3.3.2",
-    "react": "^19.2.7",
+    "react": "^19.2.8",
     "react-animated-burgers": "^1.2.8",
     "react-dom": "^19.2.6",
     "react-flip-toolkit": "^7.2.4",
